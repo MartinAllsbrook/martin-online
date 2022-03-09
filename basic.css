@@ -1,0 +1,53 @@
+/* TYPE FACES */
+
+@font-face {
+    font-family: "Akkurat";
+    src: url("fonts/AkkuratStd-Regular.otf"),
+         url("fonts/AkkuratTT-Regular.ttf");
+}
+
+
+/* BASIC ELEMENTS */
+
+body {
+    color: white;
+    background-color: black;
+
+    font-family: Akkurat;
+
+    margin: 1vw;
+    padding: 0;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 5vw;
+
+    margin: 0vw;
+    padding: 0vw;
+}
+
+p {
+    font-weight: 500;
+}
+
+
+/* CUSTOM ELEMENTS */
+
+a.biglink:link {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a.biglink:visited {
+    color: white;
+}
+
+a.biglink:hover {
+    color: rgb(60, 60, 60);
+}
+
+a.biglink:active {
+    color: #d90504;
+}
