@@ -26,11 +26,33 @@ h1 {
     margin: 0vw;
     padding: 0vw;
 }
+h2 {
+    font-weight: 600;
+
+    margin: 1vw 0vw 0.5vw 0vw;
+    padding: 0vw;
+}
+h3 {
+    font-weight: 600;
+
+    margin: 0vw 0vw 0vw 0vw;
+    padding: 0vw;
+}
 
 p {
     font-weight: 500;
+    font-size: 1vw;
+
+    margin: 0vw 0vw 2vw 0vw;
+    padding: 0vw;
 }
 
+.flex{
+    display: flex;
+}
+.flexbox{
+    flex: 1 1 0;
+}
 
 /* CUSTOM ELEMENTS */
 
