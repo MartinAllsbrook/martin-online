@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <meta charset="utf-8"> -->
+    <title>Week 4 - Serial</title>
+    <link rel="stylesheet" href="../../basic.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Week 4 - Serial</h1>
+
+    <h2>DOCUMENTATION:</h2>
+    <h3>STARTING OUT</h3>
+    <p>I started my process by trying to think of cool ways I could use the joystick’s analog output separate from serial and p5.js, this LED me to the idea of the LEDs that show which way the LED is being pushed. I already thought this was pretty cool after trying it with two LEDs, so I added another two and mapped them all to the joystick outputs using the arduino and the arduino IDE.</p>
+    <h3>FIRST STEPS WITH P5</h3>
+    <p>By this point I had already gotten my arduino connected to p5 using serial in recitation and understood the process well so I began coding in p5. The first thing I wanted to do was create a cursor that held its position while the joystick was in its resting state, and could be moved by pushing the joystick in any direction. To do this I made a variable for X and Y position and added a fraction of the X and Y joystick inputs to them every tick. I use a fraction (1/50th) of the raw X and Y inputs because the faw input values are far two large and would always result in the cursor going off the canvas.</p>
+    <h3>LASERS</h3>
+    <p>This challenge was actually one of the most difficult in the entire coding process but by the time I got the cursor to stay within the bounds of the canvas I had gained a lot of confidence. My next step was to make the cursor shoot lasers. I did this by spawning another object slightly offset from the cursor's location and adding it to an array. I then move every object in the array up or down the canvas depending on if it’s a friendly or enemy laser. This step was not nearly as difficult but it taught me that JS is super helpful when working with arrays that change size.</p>
+    <h3>ENEMIES</h3>
+    <p>I then started to add enemies. I started by just adding another square to the canvas. I proceed by trying to make the square also shoot lasers on a random interval the opposite direction. To do this I simply added a boolean to the laser class that affects the direction it travels and made the enemy spawn lasers with the bool set to true. I then made an array of these enemies and set their positions.</p>
+    <h3>MOVEMENT PATTERNS</h3>
+    <p>Finally I made the enemies move in the pattern they currently move in. Working with a set of if-else statements and counters proved to be more difficult than I thought, as there were many pieces of the pattern I had to track. I ended up making two if-else trees; one to make the enemies move on their normal path, and one that gets activated every 5 repetitions and moves the enemies down an extra 20 units.</p>
+    <h3>FINAL NOTES</h3>
+    <p>At this point the game was done. I added a “GAME OVER” and “YOU WON” screens and had some fun playing it.</p>
+
+    <h2>ARDUINO/BREADBORD IMAGES:</h2>
+    <section class="flex">
+        <img src="assets/IMG_6033.JPG" alt="">
+        <img src="assets/IMG_6034.JPG" alt="">
+        <img src="assets/IMG_6035.JPG" alt="">
+        <img src="assets/IMG_6036.jpg" alt="">
+    </section>
+
+    <h2>CIRCUT DIAGRAM:</h2>
+    <img id="circut" src="assets/Circut.svg" alt="Circut diagram">
+
+    <h2>VIDEO:</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Fgx3SuUPAwM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <h2><a class="biglink" href="https://editor.p5js.org/MartinAllsbrook/full/AhUFUvJwG" target="_blank">P5JS CODE [LINK] </a></h2>
+ 
+    <h2>ARDUINO CODE:</h2>
+    <script src="https://gist.github.com/MartinAllsbrook/b60506714aef64656e22669dd837e80a.js"></script>
+    
+  </body>
+</html>
