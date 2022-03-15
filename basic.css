@@ -23,7 +23,7 @@ h1 {
     font-weight: 600;
     font-size: 5vw;
 
-    margin: 0vw;
+    margin: 1vw 0vw 1vw 0vw;
     padding: 0vw;
 }
 h2 {
@@ -54,6 +54,19 @@ p {
     flex: 1 1 0;
 }
 
+.basic-grid{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.basic-container{
+    margin: 1vw;
+    padding: 0;
+}
+.basic-container p{
+    margin: 0;
+}
 /* CUSTOM ELEMENTS */
 
 a.biglink:link {

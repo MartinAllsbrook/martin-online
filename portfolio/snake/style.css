@@ -1,0 +1,73 @@
+h1 {
+  margin: 0.1vw 0 1.5vw 0;
+}
+h2 {
+  margin: 0;
+}
+h4 {
+  margin: 0;
+  font-size: 1.84vw
+}
+
+/* -=-=-=-=-=- Styling for game tiles -=-=-=-=-=- */
+.row {
+  display: flex;
+}
+.cell {
+  border: 1px solid white;
+  padding: 1.4vw;
+  margin: 0px;
+}
+.cellOn {
+  background-color: white;
+}
+.cellFood {
+  background-color: #d90504;
+}
+/* -=-=-=-=-=- Styling for game tiles -=-=-=-=-=- */
+
+/*General Styling*/
+#snakeBoard{
+  margin: 0px;
+  padding: 1.4vw;
+}
+#ui{
+  margin: 0px;
+  padding: 1.4vw;
+}
+li{
+  font-size: 1.4vw
+}
+.score{
+  flex-grow: 1;
+  margin: 2.6vw 0vw 1vw 0vw;
+  padding: 1.2vw 2vw 0.8vw 2vw;
+  border: 2px solid white;
+  border-radius: 0px;
+  text-align: center;
+}
+#restart {
+  margin: 1vw 0vw 2.8vw 0vw;
+  padding: 1.2vw 2vw 0.8vw 2vw;
+  flex-grow: 1;
+  font-size: 2vw;
+}
+.difficulty{
+  flex: 1 1 0px;
+  margin: 1vw 1vw 3vw 0vw;
+  padding: 0.4vw 0vw 0.2vw 0vw;
+  font-size: 1vw
+}
+.last {
+  margin: 1vw 0vw 3vw 0vw;
+}
+
+#directions{
+  margin-bottom: 0.3vw;
+}
+#header{
+  font-size: 4vw;
+}
+#links{
+  line-height: 2.4vw;
+}
