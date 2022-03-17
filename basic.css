@@ -15,7 +15,7 @@ body {
 
     font-family: Akkurat;
 
-    margin: 1vw;
+    margin: 1.5vw 2vw;
     padding: 0;
 }
 
@@ -55,8 +55,8 @@ p {
 }
 
 .basic-grid{
-    margin: 0;
-    padding: 0;
+    margin: -1vw;
+    padding: 0S;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
