@@ -7,12 +7,12 @@ let addresses =[];
 for(let i = 0; i < titles.length; i++) {
     document.getElementById('main-grid').innerHTML += '<div class="basic-container" id="cell' +[i]+ '"> </div>';
     document.getElementById('cell' + i).innerHTML += '<a href="' + handles[i] + '"><img src="clothing-assets/' + handles[i] + '/thumbnail.JPG" alt=""></a>';
-    document.getElementById('cell' + i).innerHTML += '<a class="biglink" href="' + handles[i] + '"> ' + titles[i] + ' </a>';
+    document.getElementById('cell' + i).innerHTML += '<a href="' + handles[i] + '"> ' + titles[i] + ' </a>';
 
     items.push()
 }
 
-document.getElementsByClassName('basic-container').addEventListener("click", );
+// document.getElementsByClassName('basic-container').addEventListener("click", );
 
 class ClothingItem {
   constructor(h, t) {

@@ -35,49 +35,90 @@ body{
 
 img{
     width: 100%;
+    line-height: normal;
 }
 
 h1{
     font-weight: 900;
     font-size: 3vw;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+}
+h2{
+    font-weight: 900;
+    font-size: 2vw;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+}
+p{
+    font-weight: 600;
+    font-size: 1vw;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+}
+
+a:link {
+    color: #504136;
+    text-decoration: none;
+
+    font-weight: 600;
+    font-size: 1vw;
+    line-height: normal;
+
+    margin: 0;
+    padding: 0;
+}
+a:visited {
+    color: #504136;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1vw;
+    margin: 0;
+    padding: 0;
+}
+a:hover {
+    color: #504136;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1vw;
+    margin: 0;
+    padding: 0;
+}
+a:active {
+    color: #504136;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1vw;
     margin: 0;
     padding: 0;
 }
 
-a {
-    color: #504136;
-    text-decoration: none;
-}
-
 header a:link{
-    font-size: 2vw;
+    font-size: 1vw;
     font-weight: 600;
     text-decoration: none;
 
     margin: 0vw 1vw;
 }
-
-
 header a:visited{
-    font-size: 2vw;
+    font-size: 1vw;
     font-weight: 600;
     text-decoration: none;
 
     margin: 0vw 1vw;
 }
-
-
 header a:hover{
-    font-size: 2vw;
+    font-size: 1vw;
     font-weight: 600;
     text-decoration: none;
 
     margin: 0vw 1vw;
 }
-
-
 header a:active{
-    font-size: 2vw;
+    font-size: 1vw;
     font-weight: 600;
     text-decoration: none;
 
