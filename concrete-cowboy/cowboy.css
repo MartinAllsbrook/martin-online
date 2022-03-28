@@ -2,7 +2,7 @@ body{
     background-color: white;
     color: black;
     font-family: helvetica;
-    margin: 1vw 5vw;
+    margin: 5vw 15vw;
 
 }
 .flex{
@@ -33,13 +33,20 @@ body{
     padding: 0;
 }
 
+img{
+    width: 100%;
+}
+
 h1{
     font-weight: 900;
     font-size: 3vw;
+    margin: 0;
+    padding: 0;
 }
 
 a {
-    color: #F2CB05;
+    color: #504136;
+    text-decoration: none;
 }
 
 header a:link{
