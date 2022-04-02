@@ -2,32 +2,43 @@ body{
     color: black;
     background-color: white;
 }
-img{
-    width: 33%;
-}
-#glee-basic {
-    width: 100%;
-    height: 40vw;
+/* #glee-graphic {
+    width: 35em;
+    height: 16em;
+    text-align: right;
     object-fit: cover;
-}
+} */
 
-#slideSource {
-    opacity: 1;
-    transition: opacity 1s; 
-}  
-#slideSource.fade {
-    opacity: 0;
-}
-.overlay{
-    opacity:0.8;
-    background-color: white;
-    position:fixed;
-    width:100%;
-    height:100%;
-    top:0px;
-    left:0px;
-    z-index:1000;
+/* #imagebox {
+    margin-top: -4.5em;
+} */
 
+
+/* IMAGE DISPLAY FORMATTING */
+#images {
     text-align: center;
-    color: black;
+}
+#basic {
+    width: 70em;
+    height: 25em;
+    object-fit: cover;
+    padding: 5em 0em;
+}
+#graphic {
+    width: 70em;
+    height: 35em;
+    object-fit: cover;
+    padding: 5em 0em;
+}
+#patch {
+    width: 50em;
+    height: 50em;
+    object-fit: cover;
+    padding: 5em 0em;
+}
+#circle {
+    width: 50em;
+    height: 50em;
+    object-fit: cover;
+    padding: 5em 0em;
 }

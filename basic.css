@@ -14,6 +14,7 @@ body {
     background-color: black;
 
     font-family: Akkurat;
+    font-size: 1vw;
 
     margin: 1.5vw 2vw;
     padding: 0;
@@ -21,7 +22,7 @@ body {
 
 h1 {
     font-weight: 600;
-    font-size: 5vw;
+    font-size: 5em;
 
     margin: 2vw 0vw 1vw 0vw;
     padding: 0vw;
@@ -41,7 +42,7 @@ h3 {
 
 p {
     font-weight: 500;
-    font-size: 1vw;
+    font-size: 1.5em;
 
     margin: 0vw 0vw 2vw 0vw;
     padding: 0vw;
@@ -51,8 +52,12 @@ p {
     display: flex;
 }
 .flexbox{
+    flex-grow: 1;
+}
+.flexeven{
     flex: 1 1 0;
 }
+
 
 .basic-grid{
     margin: -1vw;

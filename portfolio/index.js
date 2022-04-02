@@ -15,8 +15,8 @@ class Item {
 
 let items = [];
 
-let handles = ['type-specimen', 'hamburgefonstiv', 'big-worms', 'colorado-symphony', 'snake', 'glee-2023'];
-let titles = ['TYPE SPECIMEN POSTER', 'HAMBURGEFONSTIV', 'BIG WORMS', 'COLORADO SYMPHONY', 'SNAKE', 'GLEE 2023'];
+let handles = ['snake', 'glee-2023', 'colorado-symphony', 'big-worms', 'type-specimen',];
+let titles = ['SNAKE', 'GLEE 2023', 'COLORADO SYMPHONY', 'BIG WORMS', 'TYPE SPECIMEN POSTER'];
 
 // Testing variable passing
 var favoritemovie = "Shrek";
