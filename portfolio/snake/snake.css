@@ -4,7 +4,7 @@
 }
 .cell {
   border: 1px solid white;
-  padding: 1.4vw;
+  padding: 2.5vh;
   margin: 0px;
 }
 .cellOn {
@@ -19,10 +19,12 @@
 #snakeBoard{
   margin: 0vw;
   padding: 0vw;
+  flex-grow: 0;
 }
 #ui{
   margin: 0vw 1vw 0vw 0vw;
   padding: 0vw;
+  flex-grow: 1;
 }
 .score{
   flex-grow: 1;
@@ -33,17 +35,17 @@
   text-align: center;
 }
 #restart {
-  margin: 1vw 0vw 2.8vw 0vw;
-  padding: 1.2vw 2vw 0.8vw 2vw;
+  margin: 1vw 0vw;
+  padding: 1vw 2vw;
   flex-grow: 1;
   font-size: 2vw;
 }
 .difficulty{
   flex: 1 1 0px;
-  margin: 1vw 1vw 3vw 0vw;
-  padding: 0.4vw 0vw 0.2vw 0vw;
-  font-size: 1vw
+  font-size: 1vw;
+  margin: 0vw 1vw 0vw 0vw;
+  padding: 0.3vw 0vw;
 }
 .last {
-  margin: 1vw 0vw 3vw 0vw;
+  margin: 0vw 0vw 0vw 0vw;
 }

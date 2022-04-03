@@ -10,37 +10,43 @@
   <body>
     <section class="flex">
       <section id="ui" class="flexbox">
-        <h1 id="header">SNAKE</h1>
+        <h1 id="header">PLAY SNAKE</h1>
 
-        <h3 id="directions">DIRECTIONS:</h3>
-        <ul>
-          <li>WASD or arrow keys to move</li>
-          <li>Red squares are food</li>
-          <li>Score points and grow your snake by eating food</li>
-          <li>The game ends if the snake hits its self or the walls</li>
-        </ul>
-
+        <div class="textContent">
+          <h4 id="directions">DIRECTIONS:</h4>
+          <ul>
+            <li>WASD or arrow keys to move</li>
+            <li>Red squares are food</li>
+            <li>Score points and grow your snake by eating food</li>
+            <li>The game ends if the snake hits its self or the walls</li>
+          </ul>
+        </div>
+        
         <section id="scores" class="flex">
-          <h2 id="score" class="score">SCORE: 0</h1>
-          <h2 id="highscore" class="score">HIGH SCORE: 0</h1>
+          <h4 id="score" class="score">SCORE: 0</h4>
+          <h4 id="highscore" class="score">HIGH SCORE: 0</h4>
         </section>
 
         <section class="flex">
           <button id="restart">RESTART</button>
         </section>
 
-        <h3 id="difHead">CURRENT DIFFICULTY: MEDIUM [100ms/tick]</h3 >
-        <section class="flex" id="difficulties">
-          <button class="difficulty" id="veryhard">VERY HARD</button>
-          <button class="difficulty" id="hard">HARD</button>
-          <button class="difficulty" id="medium">MEDIUM</button>
-          <button class="difficulty" id="easy">EASY</button>
-          <button class="difficulty last" id="veryeasy">VERY EASY</button>
-        </section>
-        <section>
+        <div class="textContent">
+          <h4 id="difHead">CURRENT DIFFICULTY: MEDIUM [100ms/tick]</h4>
+            <section class="flex" id="difficulties">
+              <button class="difficulty" id="veryhard">VERY HARD</button>
+              <button class="difficulty" id="hard">HARD</button>
+              <button class="difficulty" id="medium">MEDIUM</button>
+              <button class="difficulty" id="easy">EASY</button>
+              <button class="difficulty last" id="veryeasy">VERY EASY</button>
+            </section>
+        </div>
+
+        <div class="textContent">
           <p><a class="biglink" href="https://youtu.be/YPQV93vfk50" target="_blank">PROJECT PRESENTATION</a> </p>
           <p><a class="biglink" href="../index.html">BACK</a></p>
-        </section>
+        </div>
+
       </section>
       <section id="snakeBoard" class="flexbox"></section>
     </section>

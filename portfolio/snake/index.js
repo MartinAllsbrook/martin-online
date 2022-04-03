@@ -82,7 +82,7 @@ window.addEventListener('keydown', function(e) {
 });
 
 document.getElementById("restart").addEventListener('click', function(){
-  document.getElementById("header").innerHTML = "JAVASCRIPT SNAKE";
+  document.getElementById("header").innerHTML = "PLAY SNAKE";
   if(!mainCalled){
       main()
   }
