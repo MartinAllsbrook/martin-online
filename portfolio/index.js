@@ -29,7 +29,7 @@ for(let i = 0; i < titles.length; i++) {
 for(let i = 0; i < titles.length; i++) {
     document.getElementById('main-grid').innerHTML += '<div class="basic-container" id="cell' +[i]+ '"> </div>';
     document.getElementById('cell' + i).innerHTML += '<a href="' + items[i].getHandle() + '"><img src="assets/' + items[i].getHandle() + '.svg" alt=""></a>';
-    document.getElementById('cell' + i).innerHTML += '<a class="biglink" href="' + items[i].getHandle() + '"><p> ' + items[i].getTitle() + ' </p></a>';
+    document.getElementById('cell' + i).innerHTML += '<a href="' + items[i].getHandle() + '">' + items[i].getTitle() + '</a>';
 
     document.getElementById('cell' + i).addEventListener("click", function(){
         sessionStorage.setItem('clicked item', items[i].getTitle());

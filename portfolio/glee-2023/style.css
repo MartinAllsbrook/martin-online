@@ -42,3 +42,10 @@ body{
     object-fit: cover;
     padding: 5em 0em;
 }
+
+.preview{
+    width: 45em;
+    height: 45em;
+    object-fit: cover;
+    padding: 0em;
+}

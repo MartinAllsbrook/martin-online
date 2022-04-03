@@ -1,0 +1,14 @@
+header{
+    margin-bottom: 10vw;
+}
+#textbox{
+    margin-right: 3vw;
+}
+#prevbox{
+    text-align: right;
+    margin: -1em;
+}
+.textContent{
+    margin: 0em;
+    padding: 1em 0 1em 0;
+}

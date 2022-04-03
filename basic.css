@@ -16,35 +16,51 @@ body {
     font-family: Akkurat;
     font-size: 1vw;
 
-    margin: 1.5vw 2vw;
+    margin: 1em;
     padding: 0;
 }
-
 h1 {
+    font-size: 5.5vw;
+    line-height: 4.7vw;
     font-weight: 600;
-    font-size: 5em;
 
-    margin: 2vw 0vw 1vw 0vw;
-    padding: 0vw;
+    margin: 0vw;
+    padding: 1vw 0vw;
 }
 h2 {
+    font-size: 2.5em;
     font-weight: 600;
 
-    margin: 1vw 0vw 0.5vw 0vw;
+    margin: 0.5vw 0vw 0.5vw 0vw;
     padding: 0vw;
 }
 h3 {
+    font-size: 2.5em;
+    font-style: normal;
     font-weight: 600;
 
-    margin: 0vw 0vw 0vw 0vw;
+    margin: 0vw;
     padding: 0vw;
 }
-
+h4{
+    margin-top: 0.6vw;
+    font-size: 2em;
+}
 p {
     font-weight: 500;
-    font-size: 1.5em;
+    font-size: 2em;
 
-    margin: 0vw 0vw 2vw 0vw;
+    margin: 0vw;
+    padding: 0vw;
+}
+ul{
+    margin: 0;
+}
+li{
+    font-weight: 500;
+    font-size: 2em;
+
+    margin: 0vw;
     padding: 0vw;
 }
 
@@ -74,20 +90,44 @@ p {
 }
 /* CUSTOM ELEMENTS */
 
+a:link {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+}
+a:visited {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(60, 60, 60);
+    font-weight: 500;
+    text-decoration: none;
+}
+a:active {
+    color: #d90504;
+    font-weight: 500;
+    text-decoration: none;
+}
+
 a.biglink:link {
     color: white;
     font-weight: 600;
     text-decoration: none;
 }
-
 a.biglink:visited {
     color: white;
+    font-weight: 600;
+    text-decoration: none;
 }
-
 a.biglink:hover {
     color: rgb(60, 60, 60);
+    font-weight: 600;
+    text-decoration: none;
 }
-
 a.biglink:active {
     color: #d90504;
+    font-weight: 600;
+    text-decoration: none;
 }

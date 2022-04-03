@@ -3,14 +3,16 @@
   <head>
     <title>Snake</title>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> -->
+    <link rel="stylesheet" href="../../basic.css">
+    <link rel="stylesheet" href="../portfoliostyle.css">
     <link rel="stylesheet" href="snake.css">
   </head>
   <body>
     <section class="flex">
       <section id="ui" class="flexbox">
-        <h1 id="header">JAVASCRIPT SNAKE</h1>
+        <h1 id="header">SNAKE</h1>
 
-        <h4 id="directions">DIRECTIONS:</h4>
+        <h3 id="directions">DIRECTIONS:</h3>
         <ul>
           <li>WASD or arrow keys to move</li>
           <li>Red squares are food</li>
@@ -27,7 +29,7 @@
           <button id="restart">RESTART</button>
         </section>
 
-        <h4 id="difHead">CURRENT DIFFICULTY: MEDIUM [100ms/tick]</h4>
+        <h3 id="difHead">CURRENT DIFFICULTY: MEDIUM [100ms/tick]</h3 >
         <section class="flex" id="difficulties">
           <button class="difficulty" id="veryhard">VERY HARD</button>
           <button class="difficulty" id="hard">HARD</button>
@@ -35,9 +37,9 @@
           <button class="difficulty" id="easy">EASY</button>
           <button class="difficulty last" id="veryeasy">VERY EASY</button>
         </section>
-        <section id="links">
-          <h4><a href="https://youtu.be/YPQV93vfk50" target="_blank">PROJECT PRESENTATION</a> </h4>
-          <h4><a href="../index.html">BACK</a></h4>
+        <section>
+          <p><a class="biglink" href="https://youtu.be/YPQV93vfk50" target="_blank">PROJECT PRESENTATION</a> </p>
+          <p><a class="biglink" href="../index.html">BACK</a></p>
         </section>
       </section>
       <section id="snakeBoard" class="flexbox"></section>

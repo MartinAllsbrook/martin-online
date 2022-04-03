@@ -1,37 +1,3 @@
-@font-face {
-  font-family: "Akkurat";
-  src: url("../../fonts/AkkuratStd-Regular.otf"),
-       url("../../fonts/AkkuratTT-Regular.ttf");
-}
-
-body{
-  color: white;
-  background-color: black;
-
-  font-family: Akkurat;
-
-  margin: 1.5vw 2vw;
-  padding: 0;
-}
-
-h1 {
-  margin: 0.1vw 0 1.5vw 0;
-}
-h2 {
-  margin: 0;
-}
-h4 {
-  margin: 0;
-  font-size: 1.84vw
-}
-
-.flex{
-  display: flex;
-}
-.flexbox{
-  flex: 1 1 0;
-}
-
 /* -=-=-=-=-=- Styling for game tiles -=-=-=-=-=- */
 .row {
   display: flex;
@@ -51,19 +17,16 @@ h4 {
 
 /*General Styling*/
 #snakeBoard{
-  margin: 0px;
-  padding: 1.4vw;
+  margin: 0vw;
+  padding: 0vw;
 }
 #ui{
-  margin: 0px;
-  padding: 1.4vw;
-}
-li{
-  font-size: 1.4vw
+  margin: 0vw 1vw 0vw 0vw;
+  padding: 0vw;
 }
 .score{
   flex-grow: 1;
-  margin: 2.6vw 0vw 1vw 0vw;
+  margin: 1vw 0vw;
   padding: 1.2vw 2vw 0.8vw 2vw;
   border: 2px solid white;
   border-radius: 0px;
@@ -83,14 +46,4 @@ li{
 }
 .last {
   margin: 1vw 0vw 3vw 0vw;
-}
-
-#directions{
-  margin-bottom: 0.3vw;
-}
-#header{
-  font-size: 4vw;
-}
-#links{
-  line-height: 2.4vw;
 }
