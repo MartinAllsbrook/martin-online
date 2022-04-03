@@ -42,10 +42,54 @@ body{
     object-fit: cover;
     padding: 5em 0em;
 }
-
+#prevbox{
+    white-space: nowrap; /* This is required unless you put the helper span closely near the img */
+}
 .preview{
     width: 45em;
     height: 45em;
     object-fit: cover;
+    vertical-align: middle;
     padding: 0em;
+}
+.helper{
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+
+/* Special link style for white background*/
+
+a.biglink:link {
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+}
+a.biglink:visited {
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+}
+a.biglink:hover {
+    color: rgb(195, 195, 195);
+    font-weight: 600;
+    text-decoration: none;
+}
+a.biglink:active {
+    color: #d90504;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#othergraphics{
+    text-align: center;
+}
+#othergraphics img{
+    width: 55em;
+    height: 55em;
+    object-fit: cover;
+    vertical-align: middle;
+    padding: 0em;
+    /* border: 1px solid red; */
 }

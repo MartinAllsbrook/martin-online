@@ -124,7 +124,7 @@ a.biglink:visited {
     text-decoration: none;
 }
 a.biglink:hover {
-    color: rgb(60, 60, 60);
+    color: #3c3c3c;
     font-weight: 600;
     text-decoration: none;
 }
@@ -157,4 +157,24 @@ button:active {
     font-weight: 600;
     color: #d90504;
     border: 2px solid #d90504;
+}
+
+
+#cellback svg:hover path {
+    fill: #3c3c3c;
+}
+#cellback svg:hover polygon {
+    stroke: #3c3c3c;
+}
+#cellback svg:hover line {
+    stroke: #3c3c3c;
+}
+#cellback svg:active path {
+    fill: #d90504;
+}
+#cellback svg:active polygon {
+    stroke: #d90504;
+}
+#cellback svg:active line {
+    stroke: #d90504;
 }
