@@ -43,6 +43,19 @@ let gotInput = false;
 // int to keep track of score
 let snakeScore = 0;
 
+
+//Code to link back to the correct page
+let linkedfrom = sessionStorage.getItem('linkedfrom');
+console.log(linkedfrom);
+if(linkedfrom == 'homepage'){
+  document.getElementById('backlink').innerHTML = '<a class="biglink"  href="../../index.html">BACK</a>';
+}else if(linkedfrom == 'portfolio'){
+  document.getElementById('backlink').innerHTML = '<a class="biglink"  href="../index.html">BACK</a>';
+}
+
+
+
+
 // Event listener scanning for arrow key presses
 window.addEventListener('keydown', function(e) {
   // console.log('You pressed ' + e.key); // TESTING LINE

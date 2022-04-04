@@ -178,3 +178,8 @@ button:active {
 #cellback svg:active line {
     stroke: #d90504;
 }
+
+span{
+    font-size: 0.5em;
+    display: block;
+}
