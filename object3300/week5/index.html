@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- <meta charset="utf-8"> -->
+        <title>Week 5 - H bridge and DC Motor</title>
+        <link rel="stylesheet" href="../../basic.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Week 5 - H Bridge and DC Motor</h1>
+        </header>
+        <section>
+            <h2>PROCESS:</h2>
+            <h3>Initial Steps</h3>
+            <p>Initially I copied the setup DC Motor PDF to make sure I had the H bridge connected properly. Once I got the motor functioning properly I decided to add some of my own flair to the circuit. I thought it was a little boring to make the motor run on the repeating pattern it currently followed and I really wanted to make use of the “enable” pin on the H bridge. This led me to my first modification which was to remove the code that switches the motor direction and connect a potentiometer to control the motor speed. To do this I made the potentiometer send an analog signal to the arduino which maps the inputs to the voltage range of the motor. The arduino then sends the mapped value, via PWM, to the enable pin on the H Bridge which sends a voltage to the motor.</p>
+            
+            <h3>Video of this stage</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hdFGlbbVPHQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+            <h3>Final Additions</h3>
+            <p>After I got the potentiometer to control the motor speed I also wanted to try to get a button to toggle the direction of the motor. To do this I created a simple button circuit with a pulldown resistor that could send a signal to the arduino when pressed. I then wrote some arduino code that interpolated the button presses and toggled a “motorDirection” variable whenever the button was pressed. The polarity of the signal sent to the motor is then toggled by an if statement that reads the motorDirection variable.</p>
+            <h3>Images of final circut</h3>
+            <section class="flex">
+                <img src="assets/IMG_6334.JPG" alt="">
+                <img src="assets/IMG_6335.JPG" alt="">
+                <img src="assets/IMG_6337.JPG" alt="">
+                <img src="assets/IMG_6338.JPG" alt="">
+            </section>
+
+            <h3>Video of final circut</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-OCbgLDm8wo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <h2>CIRCUT DIAGRAM:</h2>
+            <img id="circut" src="assets/circut-diagram.svg" alt="diagram of the circuit built">
+
+            <h2>FINAL CODE:</h2>
+            <script src="https://gist.github.com/MartinAllsbrook/560730a2145596f34b1cea4042128f01.js"></script>
+        </section>
+    </body>
+</html>
