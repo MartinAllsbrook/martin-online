@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <meta charset="utf-8"> -->
+    <title>Sensor Box</title>
+    <link rel="stylesheet" href="../../basic.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>LAB TWO: SENSOR BOX - HYPNOTOAD V2</h1>
+
+    <h2>Documentation:</h2>
+
+    <h4>Inspiration</h4>
+    <p>Upon reading through the lab guide for this week I began to think of ways that I could use the material from this week to upgrade my “HYPNOTOAD” from last week. Last week I left the toad with only two modes: hypnotizing and mundane, but with the use of analog sensors I could give the toads a whole range of states based on the user’s inputs. During this process I also decided that I would merge the three parts of the lab into one mega circuit and massive upgrade to the HYPNOTOAD.</p>
+
+    <h4>Upgrades</h4>
+    <p><ul>
+      <li>The three channels of the RGB LEDs can now be controlled by the user in creative ways.</li>
+      <li>Analog sensors have been added allowing the user to fine tune some inputs.</li>
+      <li>A speaker has been activated that plays audio when the toad is hypnotizing.</li>
+      <li>The LEDs now use PWM allowing for a much wider and more fluid range of outputs.</li>
+    </ul></p>
+
+    <h4>About V2</h4>
+    <p>Part one of the lab is built into the eyes of the toad. The green LEDs in the RGB LEDs are controlled by the potentiometer and some code on the arduino. The blue LEDs are controlled by a mix of the two photoresistors, similar to how the pitch of the speaker is controlled. Part two of the lab is contained within the enclosure. The pitch of the speaker is controlled by a voltage dividing circuit that uses two variable photoresistors rather than static resistors. These resistors are located on either side of the frog’s eyes, outside the enclosure. The button on the side sends a digital signal to the arduino that turns on the speaker, and the red channel of the RGB LEDs. This makes the HYPNOTOAD “hypnotize” the user with sound and it’s beautiful red eyes. </p>
+
+    <h2>Images & Videos:</h2>
+
+    <h4>Video documentation</h4>
+    <section class="flex">
+      <iframe width="50%" height="auto" src="https://www.youtube.com/embed/8OzppKzQQdA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="50%" height="auto" src="https://www.youtube.com/embed/1xNhgSH5AWE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+
+    <h4>Hypnotoad V2's "guts"</h4>
+    <section class="flex">
+      <img src="assets/IMG_5859.JPG" alt="">
+      <img src="assets/IMG_5860.JPG" alt="">
+      <img src="assets/IMG_5861.JPG" alt="">
+      <img src="assets/IMG_5862.JPG" alt="">
+    </section>
+
+    <h2>Circut Diagram:</h2>
+    <img id="diagram" src="assets/hypnoV2Diagram.svg" alt="Circut diagram">
+
+    <h2>Script:</h2>
+    <script src="https://gist.github.com/MartinAllsbrook/01d0ac1acc174f758b7a54461916b849.js"></script>
+
+    <h4><a href="../index.html">BACK</a></h4>
+  </body>
+</html>

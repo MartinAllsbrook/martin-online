@@ -65,6 +65,9 @@ li{
     margin: 0vw;
     padding: 0vw;
 }
+img{
+    width: 100%;
+}
 
 .flex{
     display: flex;
