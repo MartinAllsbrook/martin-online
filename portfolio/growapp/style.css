@@ -57,7 +57,7 @@ a {
     width: 50%;
 }
 .centeralign {
-    flex-grow: 1;
+    flex: 1 1 0;
     display: flex;
     justify-content: center;
 }
