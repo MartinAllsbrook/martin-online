@@ -15,8 +15,8 @@ class Item {
 
 let items = [];
 
-let handles = ['snake', 'glee-2023', 'growapp', 'colorado-symphony', 'big-worms', 'type-specimen'];
-let titles = ['SNAKE', 'GLEE 2023', 'GROWAPP', 'COLORADO SYMPHONY', 'BIG WORMS', 'TYPE SPECIMEN POSTER'];
+let handles = ['snake', 'glee-2023', 'growapp', 'type-specimen', 'handboard-poc', 'colorado-symphony', 'big-worms'];
+let titles = ['SNAKE', 'GLEE 2023', 'GROWAPP', 'TYPE SPECIMEN POSTER', 'HANDBOARD GAME POC', 'COLORADO SYMPHONY', 'BIG WORMS'];
 
 for(let i = 0; i < titles.length; i++) {
     items.push(new Item(handles[i], titles[i]));
