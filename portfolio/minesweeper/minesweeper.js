@@ -130,7 +130,7 @@ const board = {
     }
 };
 
-board.createBoard(16,16,50);
+board.createBoard(16,16,16);
 board.populate();
-board.printBoard();
+// board.printBoard();
 console.log('JAVASCRIPT LOADED')
