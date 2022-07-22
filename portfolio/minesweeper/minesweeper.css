@@ -1,0 +1,19 @@
+:root{
+    --boardWidth: 600;
+    --boardHeight: 600;
+}
+.minesweeper-board{
+    border: 1px solid white;
+    position: relative;
+
+    width: fit-content;
+    height: fit-content;
+}
+.row{
+    display: flex;
+}
+.cell{
+    width: 32px;
+    height: 32px;
+    border: 1px solid white;
+}
