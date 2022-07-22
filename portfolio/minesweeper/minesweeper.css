@@ -15,5 +15,12 @@
 .cell{
     width: 32px;
     height: 32px;
-    border: 1px solid white;
+    background-color: white;
+    border: 1px solid #0C0C0C;
+}
+.cell .searched{
+    background-color: #0C0C0C;
+}
+.cell .explode{
+    background-color: #d90504;
 }
