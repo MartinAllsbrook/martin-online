@@ -3,10 +3,20 @@ function Cell(e, row, col){
     this.row = row;
     this.col = col;
     this.mine = false;
+    this.flag = false;
+    this.searched = false;
     this.nearbyMineCount = 0;
 
-    this.setMine = function() {
-        this.mine = true;
+    this.setFlag = function() {
+        this.e.innerHTML = 'F';
+        this.e.classList.add('flag');
+        this.flag = true;
+    }
+
+    this.unsetFlag = function() {
+        this.e.innerHTML = '';
+        this.e.classList.remove('flag');
+        this.flag = false;
     }
 }
 
@@ -48,7 +58,6 @@ const board = {
     },
 
     populate: function() {
-        console.log('pop');
         for(let i = 0; i < this.mineCount; i++){
             this.createMines();
         }
@@ -63,7 +72,41 @@ const board = {
                         }
                     }
                 }
+                this.cells[row][col].e.addEventListener('click', (event) => {
+                    if(event.shiftKey) {
+                        this.cells[row][col].setFlag();
+                        
+                    } else {
+                        this.search(this.cells[row][col]);
+                    }
+                });
             }
+        }
+    },
+
+    search: function(cell) {
+        if(cell.flag){
+            cell.unsetFlag();
+        }else if(cell.mine){
+            cell.e.classList.add('explode');
+        }else{
+            cell.searched = true;
+            cell.e.classList.add('searched');
+            if(cell.nearbyMineCount > 0 && !cell.e.innerHTML) {
+                cell.e.innerHTML += cell.nearbyMineCount.toString();
+            }else if(cell.nearbyMineCount == 0){
+                console.log('No nearby mines');
+                for(let i = -1; i <= 1; i++){
+                    for(let j = -1; j <= 1; j++){
+                        if(cell.row+i >= 0 && cell.row+i < this.height && cell.col+j >= 0 && cell.col+j < this.width){
+                            if(!this.cells[cell.row+i][cell.col+j].searched){
+                                this.search(this.cells[cell.row+i][cell.col+j]);
+                            }
+                        }
+                    }
+                }
+            }
+            return true;
         }
     },
 
@@ -84,21 +127,10 @@ const board = {
             ` + row;
         }
         console.log(out);
-    },
-
-    search: function(row, col) {
-        if(this.cells[row][col].mine){
-            this.e.classList.add('explode');
-            return false;
-        }else{
-            let nearbyMineCount = 0
-            this.e.classList.add('searched');
-            return true;
-        }
     }
 };
 
-board.createBoard(16,16,16);
+board.createBoard(16,16,50);
 board.populate();
 board.printBoard();
 console.log('JAVASCRIPT LOADED')

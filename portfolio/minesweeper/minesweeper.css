@@ -13,14 +13,23 @@
     display: flex;
 }
 .cell{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 32px;
     height: 32px;
-    background-color: white;
-    border: 1px solid #0C0C0C;
+    
+    background-color: #3c3c3c;
+    border: 1px solid white;
 }
-.cell .searched{
+.searched{
     background-color: #0C0C0C;
 }
-.cell .explode{
+.explode{
     background-color: #d90504;
+}
+.flag{
+    background-color: white;
+    color: #d90504;
 }
