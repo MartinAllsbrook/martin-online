@@ -8,9 +8,13 @@ function Cell(e, row, col){
     this.nearbyMineCount = 0;
 
     this.setFlag = function() {
-        this.e.innerHTML = 'F';
-        this.e.classList.add('flag');
-        this.flag = true;
+        if(this.flag){
+            this.unsetFlag()
+        }else if(!this.searched){
+            this.e.innerHTML = 'F';
+            this.e.classList.add('flag');
+            this.flag = true;
+        }
     }
 
     this.unsetFlag = function() {
@@ -75,7 +79,6 @@ const board = {
                 this.cells[row][col].e.addEventListener('click', (event) => {
                     if(event.shiftKey) {
                         this.cells[row][col].setFlag();
-                        
                     } else {
                         this.search(this.cells[row][col]);
                     }
@@ -88,7 +91,12 @@ const board = {
         if(cell.flag){
             cell.unsetFlag();
         }else if(cell.mine){
+            // Game Over
+            console.log('Game Over')
             cell.e.classList.add('explode');
+            document.querySelector('.end-screen h1').innerHTML = 'Game Over'
+            document.querySelector('.end-screen').style.color = '#d90504';
+            document.querySelector('.end-screen').style.display = 'flex';
         }else{
             cell.searched = true;
             cell.e.classList.add('searched');
@@ -106,7 +114,22 @@ const board = {
                     }
                 }
             }
-            return true;
+        }
+
+        // Test if game is wont
+        let numMinesLeft = 0
+        for(let row = 0; row < this.width; row++){
+            for(let col  = 0; col < this.height; col++){
+                if(!this.cells[row][col].flag && this.cells[row][col].mine){
+                    numMinesLeft++;
+                }
+            }
+        }
+        if(numMinesLeft == 0){
+            console.log('Game won')
+            document.querySelector('.end-screen h1').innerHTML = 'Game Won!'
+            document.querySelector('.end-screen').style.color = 'white';
+            document.querySelector('.end-screen').style.display = 'flex';
         }
     },
 
