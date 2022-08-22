@@ -12,39 +12,60 @@ body {
     margin: 1em;
     padding: 0;
 }
+
 h1 {
-    font-size: 5.5vw;
-    line-height: 4.7vw;
-    font-weight: 600;
+    font-family: Akkurat Std;
+    font-size: 136px;
+    font-weight: 700;
+    /* line-height: 165px; */
+    /* letter-spacing: 0em; */
+    text-align: left;
 
     margin: 0vw;
     padding: 1vw 0vw;
 }
 h2 {
-    font-size: 2.5em;
-    font-weight: 600;
+    font-family: Akkurat Std;
+    font-size: 84px;
+    font-weight: 400;
+    /* line-height: 102px; */
+    /* letter-spacing: 0em; */
+    text-align: left;
 
     margin: 0.5vw 0vw 0.5vw 0vw;
     padding: 0vw;
 }
 h3 {
-    font-size: 2.5em;
-    font-style: normal;
-    font-weight: 600;
+    font-family: Akkurat Std;
+    font-size: 52px;
+    font-weight: 400;
 
     margin: 0vw;
     padding: 0vw;
 }
 h4{
-    font-size: 2em;
-
+    font-family: Akkurat Std;
+    font-size: 32px;
+    font-weight: 400;
     margin: 0;
     padding: 0;
 }
-p {
-    margin: 0vw;
-    padding: 0vw;
+h5{
+    font-family: Akkurat Std;
+    font-size: 20px;
+    font-weight: 400;
 }
+h6 {
+    font-family: Akkurat Std;
+    font-size: 16px;
+    font-weight: 400;
+}
+p {
+    font-family: Akkurat Std;
+    font-size: 12px;
+    font-weight: 400;
+}
+
 ul{
     margin: 0;
 }
@@ -175,4 +196,35 @@ button:active {
 span{
     font-size: 0.5em;
     display: block;
+}
+
+@media screen and (max-width: 2400px) {
+
+}
+@media screen and (max-width: 2160px) {
+
+}
+@media screen and (max-width: 1920px) {
+
+}
+@media screen and (max-width: 1680px) {
+
+}
+@media screen and (max-width: 1440px) {
+
+}
+@media screen and (max-width: 1200px) {
+
+}
+@media screen and (max-width: 960px) {
+
+}
+@media screen and (max-width: 720px) {
+
+}
+@media screen and (max-width: 480px) {
+
+}
+@media screen and (max-width: 480px) {
+
 }
