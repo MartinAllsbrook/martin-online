@@ -3,7 +3,6 @@
     font-family: din-2014, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 20px;
 
     margin: 0;
     padding: 0;
@@ -12,72 +11,37 @@ body {
     color: white;
     background-color: #0C0C0C;
 
-    margin: 1em;
-    padding: 0;
+    margin: 16px;
 }
 
 h1 {
-    font-family: Akkurat Std;
     font-size: 136px;
-    font-weight: 700;
-    /* line-height: 165px; */
-    /* letter-spacing: 0em; */
-    text-align: left;
-
-    margin: 0vw;
-    padding: 1vw 0vw;
+    font-weight: 600;
 }
 h2 {
-    font-family: Akkurat Std;
     font-size: 84px;
-    font-weight: 400;
-    /* line-height: 102px; */
-    /* letter-spacing: 0em; */
-    text-align: left;
-
-    margin: 0.5vw 0vw 0.5vw 0vw;
-    padding: 0vw;
+    margin: 0.5vw 0vw;
 }
 h3 {
-    font-family: Akkurat Std;
     font-size: 52px;
-    font-weight: 400;
-
-    margin: 0vw;
-    padding: 0vw;
+    line-height: 52px;
 }
 h4{
-    font-family: Akkurat Std;
     font-size: 32px;
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
 }
 h5{
-    font-family: Akkurat Std;
     font-size: 20px;
-    font-weight: 400;
 }
 h6 {
-    font-family: Akkurat Std;
     font-size: 16px;
-    font-weight: 400;
 }
 p {
-    font-family: Akkurat Std;
-    font-size: 12px;
-    font-weight: 400;
+    font-size: 20px;
 }
 
-ul{
-    margin: 0;
-}
 li{
     font-weight: 500;
     font-size: 1.5em;
-
-    margin: 0vw;
-    padding: 0vw;
 }
 img{
     width: 100%;
@@ -93,7 +57,6 @@ img{
     flex: 1 1 0;
 }
 
-
 .basic-grid{
     margin: -1vw;
     padding: 0S;
@@ -108,26 +71,20 @@ img{
     margin: 0;
 }
 /* CUSTOM ELEMENTS */
-
+a {
+    text-decoration: none;
+}
 a:link {
     color: white;
-    font-weight: 500;
-    text-decoration: none;
 }
 a:visited {
     color: white;
-    font-weight: 500;
-    text-decoration: none;
 }
 a:hover {
     color: rgb(60, 60, 60);
-    font-weight: 500;
-    text-decoration: none;
 }
 a:active {
     color: #d90504;
-    font-weight: 500;
-    text-decoration: none;
 }
 
 a.biglink:link {
