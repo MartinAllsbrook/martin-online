@@ -11,7 +11,7 @@ body {
     color: white;
     background-color: #0C0C0C;
 
-    margin: 16px;
+    margin: 2rem;
 }
 
 h1 {
@@ -30,10 +30,11 @@ h4{
     font-size: 32px;
 }
 h5{
-    font-size: 20px;
+    font-size: 24px;
+    line-height: 31px;
 }
 h6 {
-    font-size: 16px;
+    font-size: 20px;
 }
 p {
     font-size: 20px;
@@ -153,10 +154,28 @@ button:active {
     stroke: #d90504;
 }
 
-span{
-    font-size: 0.5em;
+
+
+/* ========================================================================= */
+/*                      SOME SPECIFIC HOMEPAGE STYLES                        */
+/* ========================================================================= */
+
+#maincontent {
+    display: flex;
+    margin: 8em;
+}
+span {
+    font-size: 16px;
+    line-height: 20px;
     display: block;
 }
+h5 {
+    text-align: top;
+    height: 31px;
+}
+
+
+
 
 @media screen and (max-width: 2400px) {
 
