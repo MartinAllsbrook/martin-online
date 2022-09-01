@@ -1,14 +1,31 @@
-header{
-    margin-bottom: 10vw;
+
+.maincontent {
+    display: flex;
+    position: relative;
+    height: calc(100vh - 4rem);
 }
-#textbox{
-    margin-right: 3vw;
+/* Add 2rem spacer only to right side of left div */
+.maincontent div:nth-child(1){
+    margin-right: 2rem;
 }
-#prevbox{
-    text-align: right;
-    margin: -1em;
+.maincontent div:nth-child(2){
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.textContent{
-    margin: 0em;
-    padding: 1em 0 1em 0;
+.maincontent div {
+    flex: 1 1 0;
+}
+.maincontent div img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    /* object-fit: cover; */
+    margin: auto;
+}
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }

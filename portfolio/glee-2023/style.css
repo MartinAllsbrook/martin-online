@@ -15,52 +15,9 @@ body{
 
 
 /* IMAGE DISPLAY FORMATTING */
-#images {
-    text-align: center;
-}
-#basic {
-    width: 70em;
-    height: 25em;
-    object-fit: cover;
-    padding: 5em 0em;
-}
-#graphic {
-    width: 70em;
-    height: 35em;
-    object-fit: cover;
-    padding: 5em 0em;
-}
-#patch {
-    width: 50em;
-    height: 50em;
-    object-fit: cover;
-    padding: 5em 0em;
-}
-#circle {
-    width: 50em;
-    height: 50em;
-    object-fit: cover;
-    padding: 5em 0em;
-}
-#prevbox{
-    white-space: nowrap; /* This is required unless you put the helper span closely near the img */
-}
-.preview{
-    width: 45em;
-    height: 45em;
-    object-fit: cover;
-    vertical-align: middle;
-    padding: 0em;
-}
-.helper{
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-}
 
 
 /* Special link style for white background*/
-
 a.biglink:link {
     color: black;
     font-weight: 600;
