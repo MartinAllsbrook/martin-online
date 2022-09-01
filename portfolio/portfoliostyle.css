@@ -1,4 +1,7 @@
 
+html{
+    /* font-size: 12px; */
+}
 .maincontent {
     display: flex;
     position: relative;
@@ -23,6 +26,15 @@
     height: auto;
     /* object-fit: cover; */
     margin: auto;
+}
+.maincontent h4 {
+    margin-top: 1.5rem;
+}
+.maincontent p {
+    margin-bottom: 1rem;
+}
+.maincontent p span {
+    font-weight: 600;
 }
 footer {
     position: absolute;
