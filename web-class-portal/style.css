@@ -1,0 +1,12 @@
+.maincontent div:nth-child(2){
+    display: block;
+    align-items: top;
+    justify-content: left;
+}
+.maincontent {
+    height: auto;
+}
+footer{
+    bottom: 2rem;
+    left: 2rem;
+}

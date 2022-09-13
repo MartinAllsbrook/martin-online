@@ -1,0 +1,14 @@
+.row {
+    display: flex;
+}
+.cell {
+    border: 1px solid white;
+    width: 2rem;
+    height: 2rem;
+}
+.active {
+    background-color: white;
+}
+.ball {
+    background-color: red;
+}
