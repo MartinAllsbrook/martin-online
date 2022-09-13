@@ -8,8 +8,8 @@ class Cell {
 }
 
 // Player controlled paddle class
+// Constroctor sets which player
 class Paddle {
-    // Constroctor sets which player
     constructor(isPlayerTwo) {
         this.row = gameBoard.height/2;
         this.isPlayerTwo = isPlayerTwo;
@@ -68,15 +68,17 @@ class Paddle {
         }
     }
 
-    // Update the object's position based on user input
+    // Update the object, should be called by univeral gameBoard update
     update = function() {
+        // Set movement state to zero to remove old inputs
         this.movementState = 0;
         this.move();
         this.draw();
-        // console.log('paddle update');
     }
 }
 
+// Ball class is only instanced once to create ball object that bounces
+// Constroctor sets starting velocity and direction
 class Ball {
     constructor(startVelocity) {
         this.row = gameBoard.height/2;
@@ -90,10 +92,12 @@ class Ball {
         this.velocityCol = startVelocity;
     }
 
+    // Bounce method controlls how the ball reflects off the paddles
     bounce = function() {
         let velocityChange;
+        // Distiguises which paddle to query
         if(this.velocityCol > 0){
-            velocityChange = this.row - gameBoard.playerTwo.row;
+            velocityChange = this.row - gameBoard.playerTwo.row; // Reflects with a slope ==to the distance to the center of the paddle
         } else {
             velocityChange = this.row - gameBoard.playerOne.row;
         }
@@ -101,8 +105,8 @@ class Ball {
         this.velocityRow = velocityChange;
     }
 
+    // returns the next row position of the ball, accounting for reflections
     nextRow = function() {
-        // console.log(`Row: ${this.row} Col: ${this.col}`);
         let nextRow
         if((this.velocityRow > 0 && this.row + this.velocityRow <= gameBoard.height - 1) || (this.velocityRow < 0 && this.row + this.velocityRow >= 0)) {
             nextRow = this.row + this.velocityRow;
@@ -114,11 +118,13 @@ class Ball {
         return nextRow;
     }
 
+    // returns the next col position of the ball
     nextCol = function() {
         let nextCol = this.col + this.colMultiplier * this.velocityCol;
         return nextCol;
     }
 
+    // moves the ball accounting for reflections
     move = function() {
         this.lastRow = this.row;
         this.lastCol = this.col;
