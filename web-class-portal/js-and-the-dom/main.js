@@ -129,6 +129,7 @@ class Ball {
         this.lastRow = this.row;
         this.lastCol = this.col;
 
+        // If the next cell the ball will hit is a paddle cell, refect it
         if(gameBoard.cells[this.nextRow()][this.nextCol()].e.classList.contains('active')){
             if(this.velocityCol > 0){
                 this.bounce(gameBoard.playerTwo.movementState);
@@ -138,6 +139,7 @@ class Ball {
             }
         }
 
+        // Move the ball based on the col & row velocity
         this.col = this.nextCol();
         if((this.velocityRow > 0 && this.row + this.velocityRow <= gameBoard.height - 1) || (this.velocityRow < 0 && this.row + this.velocityRow >= 0)) {
             this.row += this.velocityRow;
@@ -147,11 +149,13 @@ class Ball {
         }
     }
 
+    // draws the ball using classes
     draw = function() {
         gameBoard.cells[this.row][this.col].e.classList.add('ball');
         gameBoard.cells[this.lastRow][this.lastCol].e.classList.remove('ball');
     }
 
+    // Updates the ball, should be called by central update function
     update = function() {
         // console.log('ballUpdate');
         this.move();
@@ -161,14 +165,14 @@ class Ball {
 
 // gameBoard object to track HTML gameBoard
 const gameBoard = {
-    e: document.getElementById('gameBoard'),
-    height: 1,
+    e: document.getElementById('gameBoard'), // Get board div from the page
+    tickSpeed: 100, // Set the update speed of the game
+    height: 1, // Initializations
     width: 1,
     cellCount: 1,
     cells: [],
-    tickSpeed: 100,
 
-    // createBoard method to create the gameboard in JS and HTML
+    // createBoard method to render the gameboard in HTML and create an array to refrence it in JS
     createBoard: function (height, width) {
         console.log('creating gameBoard'); // DEBUG
 
@@ -204,6 +208,7 @@ const gameBoard = {
 
     // What happens each gametick
     mainUpdate: function () {
+        // Recursive call with setTimeout() calls the method every tickSpeed milisecconds
         setTimeout(function() {
             // Call all updates
             gameBoard.playerOne.update();
@@ -219,15 +224,15 @@ const gameBoard = {
 
 // Create empty keys object
 const keys = {};
+// If a key is pressed add it to the list of currently pressed keys
 window.addEventListener("keydown", function(e){
     eval('keys.' + e.key + ' = true');
 }, false);
 
+// If a key is released remove it from the list of currently pressed keys
 window.addEventListener('keyup', function(e){
     eval('keys.' + e.key + ' = false');
 }, false);
 
-gameBoard.createBoard(16,16);
-
-// Code to start the game
-gameBoard.startGame();
+gameBoard.createBoard(16,16); // Render the board
+gameBoard.startGame(); // Code to start the game
