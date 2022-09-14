@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> -->
+        <link rel="stylesheet" href="https://use.typekit.net/qjh4ggc.css" />
+		
+		<title>Making forms</title>
+		<link rel="stylesheet" href="../../basic.css" />
+		<!-- <link rel="stylesheet" href="../portfolio/portfoliostyle.css" /> -->
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+    <body>
+        <!-- Making forms and inputs -->
+        <form action="">
+            <div>
+                <!-- the for="" tag in the label and id="" tag in the input it's connected to should match -->
+                <label for="first-text-input">Enter some text!</label>
+                <input type="text" id="first-text-input"/>
+            </div>
+            <div>
+                <label for="email-input">Enter email</label>
+                <input type="email" id="email-input">
+            </div>
+            <div>
+                <label for="color-input">Pick a color</label>
+                <input type="color" id="color-input">
+            </div>
+
+            <fieldset id="checkboxes">
+                <legend>Checkbox Group</legend>
+
+                <input type="checkbox" id="check-1" name="checkbox-group">
+                <label for="check-1">Option 1</label>
+
+                <input type="checkbox" id="check-2" name="checkbox-group">
+                <label for="check-2">Option 2</label>
+
+                <input type="checkbox" id="check-3" name="checkbox-group">
+                <label for="check-3">Option 3</label>
+
+                <input type="checkbox" id="check-4" name="checkbox-group">
+                <label for="check-4">Option 4</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Favorite Icecream Flavor!</legend>
+
+                <input type="radio" id="vanilla" name="icecream">
+                <label for="vanilla">Vanilla</label>
+                
+                <input type="radio" id="chocolate" name="icecream">
+                <label for="chocolate">Chocolate</label>
+                
+                <input type="radio" id="strawberry" name="icecream">
+                <label for="strawberry">Strawberry</label>
+
+                <input type="radio" id="cookies-and-cream" name="icecream">
+                <label for="cookies-and-cream">Cookies And Cream</label>
+            </fieldset>
+
+            <button id="my-button">Submit</button>
+        </form>
+
+        <script src="main.js"></script>
+    </body>
+</html>
