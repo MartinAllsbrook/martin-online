@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> -->
+        <link rel="stylesheet" href="https://use.typekit.net/qjh4ggc.css">
+        
+        <title>Snake</title>
+        <link rel="stylesheet" href="../../basic.css">
+        <link rel="stylesheet" href="../portfoliostyle.css">
+        <link rel="stylesheet" href="snake.css">
+    </head>
+    <body>
+        <section id="settings">
+            <h1>SETTINGS - SNAKE</h1>
+            <form action="" id="settings-form">
+                <fieldset id="difficulty">
+                    <legend>DIFFICULTY</legend>
+
+                    <input type="radio" id="veryhard" name="difficulty">
+                    <label for="veryhard">Very Hard</label>
+                    
+                    <input type="radio" id="hard" name="difficulty">
+                    <label for="hard">Hard</label>
+                    
+                    <input type="radio" id="medium" name="difficulty">
+                    <label for="medium">Medium</label>
+
+                    <input type="radio" id="easy" name="difficulty">
+                    <label for="easy">Easy</label>
+
+                    <input type="radio" id="veryeasy" name="difficulty">
+                    <label for="veryeasy">Very Easy</label>
+                </fieldset>
+
+                <fieldset id="extras">
+                    <legend>EXTRAS</legend>
+    
+                    <input type="checkbox" id="allow-wrapping" name="checkbox-group">
+                    <label for="allow-wrapping">Allow Wrapping</label>
+                </fieldset>
+
+                <div class="input-wrap">
+                    <label for="width-input">WIDTH</label>
+                    <input type="number" id="width-input">
+                </div>
+
+                <div class="input-wrap">
+                    <label for="height-input">HEIGHT</label>
+                    <input type="number" id="height-input">
+                </div>
+
+                <div class="input-wrap">
+                    <label for="food-color">HEIGHT</label>
+                    <input type="color" id="food-color">
+                </div>
+            </form>
+            <!-- Apply settigs, leave page maybe -->
+            <button id="applyButton">APPLY</button>
+            <h5><a class="biglink" id="back-to-game">BACK TO GAME</a></h5>
+        </section>
+
+        <section class="flex">
+            <section id="ui" class="flexbox">
+                <h1 id="header">PLAY SNAKE</h1>
+
+                <div class="textContent">
+                    <h4 id="directions">DIRECTIONS:</h4>
+                    <ul>
+                        <li>WASD or arrow keys to move</li>
+                        <li>Red squares are food</li>
+                        <li>Score points and grow your snake by eating food</li>
+                        <li id="death-info">The game ends if the snake hits its self or the walls</li>
+                    </ul>
+                </div>
+                
+                <section id="scores" class="flex">
+                    <h4 id="score" class="score">SCORE: 0</h4>
+                    <h4 id="highscore" class="score">HIGH SCORE: 0</h4>
+                </section>
+
+                <section class="flex">
+                    <button id="restart">RESTART</button>
+                </section>
+
+                <div class="textContent">
+                    <h5><a class="biglink" href="https://youtu.be/YPQV93vfk50" target="_blank">PROJECT PRESENTATION</a> </h5>
+                    <h5 id="backlink"><a class="biglink"  href="../index.html">BACK</a></h5>
+                </div>
+
+                <h5><a class="biglink" id="settings-button">SETTINGS</a></h5>
+            </section>
+
+            <!-- Snakeboard section will gets rendred into snake board with JS-->
+            <section id="snakeBoard" class="flexbox"></section>
+        </section>
+
+        <script src="index.js"></script>
+    </body>
+</html>

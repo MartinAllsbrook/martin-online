@@ -1,0 +1,116 @@
+/* -=-=-=-=-=- Styling for game tiles -=-=-=-=-=- */
+.row {
+    display: flex;
+}
+.cell {
+    border: 1px solid white;
+    padding: 2.5vh;
+    margin: 0px;
+}
+.cellOn {
+    background-color: white;
+}
+.cellFood {
+    background-color: #d90504;
+}
+/* -=-=-=-=-=- Styling for game tiles -=-=-=-=-=- */
+
+/*General Styling*/
+#snakeBoard{
+    margin: 0vw;
+    padding: 0vw;
+    flex-grow: 0;
+}
+#ui{
+    margin: 0vw 1vw 0vw 0vw;
+    padding: 0vw;
+    flex-grow: 1;
+}
+
+.score{
+    flex-grow: 1;
+    margin: 1vw 0vw;
+    padding: 1.2vw 2vw 0.8vw 2vw;
+    border: 2px solid white;
+    border-radius: 0px;
+    text-align: center;
+}
+#restart {
+    margin: 1vw 0vw;
+    padding: 1vw 2vw;
+    flex-grow: 1;
+    font-size: 2vw;
+}
+.last {
+    margin: 0vw 0vw 0vw 0vw;
+}
+
+/* -=+=======================+=- */
+/* -=+ SETTINGS PAGE STYLING +=- */
+/* -=+=======================+=- */
+#settings {
+    display: block;
+
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    margin: -2rem;
+    padding: 2rem;
+    box-sizing: border-box;
+
+    background-color: #0C0C0C;
+}
+
+/* FIELDSET */
+fieldset {
+    margin: 1rem 0rem 2rem;
+    padding: 1rem 2rem 2rem;
+}
+fieldset legend {
+    font-size: 2rem;
+
+    margin: 0 0.5rem;
+    padding: 0 0.5rem;
+}
+fieldset label {
+    font-size: 1.25rem;
+
+    margin-right: 1.5rem;
+    margin-left: 0.25rem;
+}
+
+/* Standalone Inputs */
+.input-wrap{
+    margin: 1rem 0rem 2rem;
+    align-items: center;
+    position: relative;
+    display: flex;
+    /* padding: 1rem 2rem 2rem; */
+}
+.input-wrap label {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+.input-wrap input {
+    font-size: 1.25rem;
+    padding: 0 0.5rem;
+    height: 2.5rem;
+    box-sizing: border-box;
+    background-color: #0C0C0C;
+    border: 2px solid white;
+    color: white;
+}
+
+/* Button */
+#settings button {
+    padding: 1rem 3rem;
+    min-width: 30rem;
+    position: absolute;
+    bottom: 2rem;
+}
+
+#setings-button {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+}

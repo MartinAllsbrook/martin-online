@@ -1,0 +1,19 @@
+.box {
+    background-color: aqua;
+    border: 10px solid yellow;
+    box-sizing: border-box;
+    /* BOX SIZING BORDER BOX!!!!!!!!!!!!!!!!!!!!!! */
+    margin: auto;
+    padding: 10px;
+    min-width: 200px;
+    width: 50%;
+    max-width: 500px;
+    /* 
+    REM: Global font size
+    EM: Local font size
+    Set min and max wid with something hard like PX or EM
+    Set WIDTH with something soft like %
+    THis will make it so media querrys are a lot less essential and allow responsive layouts with plain CSS :) 
+    Also don't forget about flexbox holy shit flexboxes are soooo sexy I fucking love flexboxes omfg I wanna nut on them
+    */
+}
