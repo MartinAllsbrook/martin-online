@@ -1,11 +1,14 @@
-
-
 window.addEventListener('DOMContentLoaded', () => {
-    let linkedfrom = 'homepage';
-    sessionStorage.setItem('linkedfrom', linkedfrom);
+    sessionStorage.setItem('linkedfrom', 'homepage'); // set linked from
 
-    document.getElementById('enter').addEventListener('click', () => {
-        // document.getElementById('welcome').style.opacity = '0';
-        document.getElementById('welcome').style.display  = 'none';
-    }, false)
+    let entered = sessionStorage.getItem('entered');
+    if(entered){
+        document.getElementById('welcome').style.display = 'none';
+    }else{
+        document.getElementById('enter').addEventListener('click', () => {
+            // document.getElementById('welcome').style.opacity = '0';
+            document.getElementById('welcome').style.display = 'none';
+            sessionStorage.setItem('entered', true);
+        }, false)
+    }
 }, false)
