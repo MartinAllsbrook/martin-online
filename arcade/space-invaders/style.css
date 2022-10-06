@@ -1,0 +1,11 @@
+div.cell {
+    border: 1px solid #7f7f7f;
+    width: 1rem;
+    height: 1rem;    
+}
+div.enemy {
+    background-color: blueviolet;
+}
+div.row {
+    display: flex;
+}
