@@ -202,7 +202,6 @@ const gameBoard = {
     },
 
     startGame: function() {
-
         this.mainUpdate();
     },
 

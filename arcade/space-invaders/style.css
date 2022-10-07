@@ -4,7 +4,7 @@ div.cell {
     height: 1rem;    
 }
 div.enemy {
-    background-color: blueviolet;
+    background-color: white;
 }
 div.row {
     display: flex;
