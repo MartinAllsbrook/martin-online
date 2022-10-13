@@ -4,7 +4,19 @@ div.cell {
     height: 1rem;    
 }
 div.enemy {
+    background-color: purple;
+}
+div.enemy-laser {
+    background-color: greenyellow;
+}
+div.player{
     background-color: white;
+}
+div.player-engine{
+    background-color: orange;
+}
+div.player-laser {
+    background-color: red;
 }
 div.row {
     display: flex;
