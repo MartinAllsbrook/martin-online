@@ -11,14 +11,13 @@ const gameBoard = {
 
     e: document.getElementById('gameboard'),
     cells: [],
-    lasers: [],
-    enemies: [],
+    gameObjects: {},
 
     createBoard(width, height, tickSpeed) {
         this.width = width;
         this.height = height;
         this.tickSpeed = tickSpeed;
-        gameBoard.player = new Player(24,32);
+        // gameBoard.player = new Player(24,32);
 
         // For each row
         for(let i = 0; i < this.height; i++){
@@ -38,24 +37,29 @@ const gameBoard = {
 
     populateEnemies()   {
         for(let i = 0; i < 5; i++) {
-            this.enemies.push(new Enemy(2, i * 8 + 1))
+            new Enemy(2, i * 8 + 1);
         }
     },
 
     startGame() {
-        this.populateEnemies();
-        this.mainUpdate();
+        setTimeout(() => { // Recursive call with setTimeout() calls the method every tickSpeed milisecconds
+            console.log('creating enemies');
+            gameBoard.populateEnemies();
+            new Player(24,32);
+            this.mainUpdate();
+        }, 500); 
     },
 
     mainUpdate() {  // What happens each gametick
         setTimeout(() => { // Recursive call with setTimeout() calls the method every tickSpeed milisecconds
-            gameBoard.player.update();
-            this.lasers.forEach(laser => {
-                laser.update();
-            });
-            this.enemies.forEach(enemy => {
-                enemy.update();
-            });
+            // console.log(this.gameObjects);
+            for (const renderClass in this.gameObjects) {
+                // if (this.gameObjects[renderClass].length > 0){
+                    for (let i = 0; i < this.gameObjects[renderClass].length; i++) {
+                        this.gameObjects[renderClass][i].update();
+                    }
+                // }
+            }
 
             gameBoard.mainUpdate(); // Call next game tick
         }, this.tickSpeed);
@@ -63,7 +67,8 @@ const gameBoard = {
 }
 
 gameBoard.createBoard(48,48,100);
-gameBoard.populateEnemies();
 gameBoard.startGame();
+
+
 
 export default gameBoard;

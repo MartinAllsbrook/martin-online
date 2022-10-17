@@ -1,5 +1,5 @@
 import GameObject from './GameObject.js';
-import Laser from './Laser.js';
+import EnemyLaser from './EnemyLaser.js';
 import gameBoard from './main.js';
 
 export default class Enemy extends GameObject {
@@ -22,6 +22,18 @@ export default class Enemy extends GameObject {
         super(row, col, 'enemy');
     }
 
+    checkDeath() {
+        for(let i = 0; i < this.height; i++) {
+            for(let j = 0; j < this.width; j++) {
+                if(this.map[i][j]){
+                    if(gameBoard.cells[this.row + i][this.col + j].e.classList.contains('playerLaser')){
+                        this.remove();
+                    }                    
+                }
+            }
+        }
+    }
+
     movementManager(){
         if(this.path[this.pathPosition] == 0){
             this.move(1, 0);
@@ -37,11 +49,13 @@ export default class Enemy extends GameObject {
     }
 
     fire(){
+        length;
         if(this.fireTimer > 0){
             this.fireTimer--;
         }else{
             this.fireTimer = Math.random() * 100;
-            gameBoard.lasers.push(new Laser(this.row, this.col, true));
+            new EnemyLaser(this.row + this.height - 1, this.col + Math.trunc(this.width/2), true);
+            // gameBoard.lasers.push(new EnemyLaser(this.row + this.height - 1, this.col + Math.trunc(this.width/2), true));
         }
     }
 
@@ -52,7 +66,7 @@ export default class Enemy extends GameObject {
             this.moveTimer = this.moveTimerMax;
             this.movementManager();
         }
-
+        this.checkDeath();
         this.fire();
     }
 }

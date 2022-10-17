@@ -1,21 +1,21 @@
 div.cell {
-    border: 1px solid #7f7f7f;
+    border: 1px solid #2e2e2e;
     width: 1rem;
     height: 1rem;    
 }
 div.enemy {
     background-color: purple;
 }
-div.enemy-laser {
+div.enemyLaser {
     background-color: greenyellow;
 }
 div.player{
     background-color: white;
 }
-div.player-engine{
+div.playerEngine{
     background-color: orange;
 }
-div.player-laser {
+div.playerLaser {
     background-color: red;
 }
 div.row {
