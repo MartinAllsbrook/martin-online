@@ -1,5 +1,6 @@
 import GameObject from './GameObject.js';
 import EnemyLaser from './EnemyLaser.js';
+import guiController from './GUIController.js';
 import gameBoard from './main.js';
 
 export default class Enemy extends GameObject {
@@ -28,6 +29,7 @@ export default class Enemy extends GameObject {
                 if(this.map[i][j]){
                     if(gameBoard.cells[this.row + i][this.col + j].e.classList.contains('playerLaser')){
                         this.remove();
+                        guiController.addScore(10);
                     }                    
                 }
             }

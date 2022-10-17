@@ -3,15 +3,18 @@ console.log("JS RUNNING");  // Check that the JS is working
 import Cell from './Cell.js';
 import Enemy from './Enemy.js';
 import Player from './Player.js';
+import guiController from './GUIController.js';
 
 const gameBoard = {
     width: 16,
     height: 16,
     tickSpeed: 100,
 
-    e: document.getElementById('gameboard'),
+    e: document.getElementById('gameBoard'),
     cells: [],
     gameObjects: {},
+
+    gameOver: false,
 
     createBoard(width, height, tickSpeed) {
         this.width = width;
@@ -50,25 +53,33 @@ const gameBoard = {
         }, 500); 
     },
 
+    endGame() {
+        this.gameOver = true;
+        guiController.setGameOverText('Game Over');
+    },
+
     mainUpdate() {  // What happens each gametick
         setTimeout(() => { // Recursive call with setTimeout() calls the method every tickSpeed milisecconds
-            // console.log(this.gameObjects);
+            if (this.gameObjects['enemy'].length == 0) {
+                gameBoard.populateEnemies();
+            }
+            if (this.gameObjects['player'].length == 0){
+                this.endGame();
+            }
             for (const renderClass in this.gameObjects) {
-                // if (this.gameObjects[renderClass].length > 0){
-                    for (let i = 0; i < this.gameObjects[renderClass].length; i++) {
-                        this.gameObjects[renderClass][i].update();
-                    }
-                // }
+                for (let i = 0; i < this.gameObjects[renderClass].length; i++) {
+                    this.gameObjects[renderClass][i].update();
+                }
             }
 
-            gameBoard.mainUpdate(); // Call next game tick
+            if (!this.gameOver) {
+                gameBoard.mainUpdate(); // Call next game tick
+            }
         }, this.tickSpeed);
     }
 }
 
-gameBoard.createBoard(48,48,100);
+gameBoard.createBoard(96,96,100);
 gameBoard.startGame();
-
-
 
 export default gameBoard;
