@@ -6,7 +6,7 @@ export default class GameObject {
         this.col = col;
         this.renderClass = renderClass;
         if (gameBoard.gameObjects[renderClass] == null) {
-            console.log('created property: ' + renderClass);
+            // console.log('created property: ' + renderClass);
             gameBoard.gameObjects[renderClass] = new Array(this);
         } else {
             gameBoard.gameObjects[renderClass].push(this);

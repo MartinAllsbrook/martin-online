@@ -38,7 +38,7 @@ const gameBoard = {
         }
     },
 
-    populateEnemies()   {
+    populateEnemies () {
         for(let i = 0; i < 5; i++) {
             new Enemy(2, i * 8 + 1);
         }
@@ -49,6 +49,7 @@ const gameBoard = {
             console.log('creating enemies');
             gameBoard.populateEnemies();
             new Player(24,32);
+            this.gameOver = false;
             this.mainUpdate();
         }, 500); 
     },
@@ -58,24 +59,54 @@ const gameBoard = {
         guiController.setGameOverText('Game Over');
     },
 
-    mainUpdate() {  // What happens each gametick
-        setTimeout(() => { // Recursive call with setTimeout() calls the method every tickSpeed milisecconds
-            if (this.gameObjects['enemy'].length == 0) {
-                gameBoard.populateEnemies();
-            }
-            if (this.gameObjects['player'].length == 0){
-                this.endGame();
-            }
-            for (const renderClass in this.gameObjects) {
-                for (let i = 0; i < this.gameObjects[renderClass].length; i++) {
-                    this.gameObjects[renderClass][i].update();
-                }
-            }
+    restartGame() {
+        this.gameOver = true;
+        this.eraseGameObjects(); // erase all game objects
+        this.gameObjects = {}; // erase refrences to all game objects
+        this.startGame();
+    },
 
+    mainUpdate() {  // What happens each gametick
+        setTimeout (() => { // Recursive call with setTimeout() calls the method every tickSpeed milisecconds
             if (!this.gameOver) {
+                if (this.gameObjects['enemy'].length == 0) {
+                    gameBoard.populateEnemies();
+                }
+                if (this.gameObjects['player'].length == 0){
+                    this.endGame();
+                }
+                
+                this.updateGameObjects(); // Update all game objects
                 gameBoard.mainUpdate(); // Call next game tick
             }
         }, this.tickSpeed);
+    },
+
+    updateGameObjects () {
+        // console.log(this.gameObjects['enemy']);
+        // console.log(this.gameObjects['enemy'].length);
+        for (const renderClass in this.gameObjects) {
+            // console.log(`${renderClass} length: ${this.gameObjects[renderClass].length}`);
+            // var testingLength = this.gameObjects[renderClass].length;
+            var toRemove = [];
+            for (let i = 0; i < this.gameObjects[renderClass].length; i++) {
+                // console.log(`updating : ${renderClass} #${i}`)
+                if(this.gameObjects[renderClass][i].update()){
+                    toRemove.push(i);
+                }
+            }
+            for (let i = 0; i < toRemove.length; i++){
+                this.gameObjects[renderClass][toRemove[i]].remove();
+            }
+        }
+    },
+
+    eraseGameObjects () {
+        for (const renderClass in this.gameObjects) {
+            for (let i = 0; i < this.gameObjects[renderClass].length; i++) {
+                this.gameObjects[renderClass][i].erase();
+            }
+        }
     }
 }
 

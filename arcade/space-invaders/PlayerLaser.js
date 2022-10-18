@@ -17,8 +17,9 @@ export default class PlayerLaser extends GameObject {
     update() {
         if(this.row + this.height > 0){
             this.move(-1, 0); // Move laser forward 1 unit
+            return false;
         }else{
-            this.remove();
+            return true;
         }
     }
 }

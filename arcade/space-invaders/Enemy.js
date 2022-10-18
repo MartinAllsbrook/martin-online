@@ -28,12 +28,13 @@ export default class Enemy extends GameObject {
             for(let j = 0; j < this.width; j++) {
                 if(this.map[i][j]){
                     if(gameBoard.cells[this.row + i][this.col + j].e.classList.contains('playerLaser')){
-                        this.remove();
                         guiController.addScore(10);
-                    }                    
+                        return true;
+                    }
                 }
             }
         }
+        return false;
     }
 
     movementManager(){
@@ -62,13 +63,19 @@ export default class Enemy extends GameObject {
     }
 
     update(){
+        // console.log(gameBoard.gameObjects[this.renderClass].indexOf(this));
         if(this.moveTimer > 0){
             this.moveTimer--;
         }else{
             this.moveTimer = this.moveTimerMax;
             this.movementManager();
         }
-        this.checkDeath();
         this.fire();
+        if(this.checkDeath()){
+            return true;
+        } else {
+            return false;
+        }
+        
     }
 }

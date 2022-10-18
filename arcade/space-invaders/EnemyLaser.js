@@ -17,8 +17,9 @@ export default class EnemyLaser extends GameObject {
     update() {
         if(this.row < gameBoard.height){
             this.move(1, 0);
+            return false;
         }else{
-            this.remove();
+            return true;
         }
     }
 }
