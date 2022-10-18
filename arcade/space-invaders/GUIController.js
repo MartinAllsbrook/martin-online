@@ -14,7 +14,7 @@ class GUIController {
 
     addScore(scoreIncrement) {
         this.score += scoreIncrement;
-        this.scoreDisplay.textContent = this.score.toString();
+        this.scoreDisplay.textContent = 'Score: ' + this.score.toString();
     }
 
     restart() {

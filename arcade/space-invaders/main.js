@@ -39,8 +39,11 @@ const gameBoard = {
     },
 
     populateEnemies () {
-        for(let i = 0; i < 5; i++) {
+        for(let i = 0; i < 11; i++) {
             new Enemy(2, i * 8 + 1);
+        }
+        for(let i = 0; i < 11; i++) {
+            new Enemy(8, i * 8 + 1);
         }
     },
 
