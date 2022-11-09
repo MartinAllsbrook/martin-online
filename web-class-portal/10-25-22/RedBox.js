@@ -1,7 +1,7 @@
 import Box from "./Box.js";
 
 export default class RedBox extends Box{
-    constructor(width, height, x, y) {
+    constructor(width, height, x, y) { 
         super('#A40E4C', width, height, x, y);
     }
 
