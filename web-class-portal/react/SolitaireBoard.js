@@ -21,7 +21,7 @@ class PlayingCard extends React.Component {
             )
         }
 
-        if(this.state.suit == "empty"){
+        if(this.state.rank == "empty"){
             return (
                 <div class="playing-card empty">
                     <p> {this.state.suit} </p>
@@ -50,7 +50,7 @@ class CardStack extends React.Component {
     render() {
         if(this.state.topCard == 0){
             return (
-                <PlayingCard suit="empty" rank="empty"/>
+                <PlayingCard suit="show" rank="empty"/>
             )
         }
     
