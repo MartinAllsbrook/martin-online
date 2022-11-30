@@ -1,0 +1,237 @@
+/* BASIC ELEMENTS */
+* {
+    font-family: din-2014, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: white;
+    background-color: #0C0C0C;
+
+    margin: 2rem;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+h4{
+    font-size: 2rem;
+}
+h5{
+    font-size: 1.5rem;
+    line-height: 31px;
+}
+p {
+    font-size: 1.25rem;
+}
+
+li{
+    font-weight: 500;
+    font-size: 1.5em;
+}
+img{
+    width: 100%;
+}
+
+.flex{
+    display: flex;
+}
+.flex-center-row{
+    display: flex;
+    justify-content: center;
+}
+.flexbox{
+    flex-grow: 1;
+}
+.flexeven{
+    flex: 1 1 0;
+}
+
+.basic-grid{
+    margin: -1vw;
+    padding: 0S;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.basic-container{
+    margin: 1vw;
+    padding: 0;
+}
+.basic-container p{
+    margin: 0;
+}
+/* CUSTOM ELEMENTS */
+a {
+    text-decoration: none;
+}
+a:link {
+    color: white;
+}
+a:visited {
+    color: white;
+}
+a:hover {
+    color: rgb(60, 60, 60);
+    cursor: pointer;
+}
+a:active {
+    color: #d90504;
+}
+
+a.biglink:link {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+a.biglink:visited {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+a.biglink:hover {
+    color: #3c3c3c;
+    font-weight: 600;
+    text-decoration: none;
+}
+a.biglink:active {
+    color: #d90504;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+button{
+    font-weight: 600;
+    font-size: 2em;
+
+    color: white;
+    background-color: #0C0C0C;
+    border: 2px solid white;
+    border-radius: 0;
+}
+button:visited{
+    font-weight: 600;
+    color: white;
+    border: 2px solid white;
+}
+button:hover {
+    font-weight: 600;
+    color: #d90504;
+    border: 2px solid white;
+}
+button:active {
+    font-weight: 600;
+    color: #d90504;
+    border: 2px solid #d90504;
+}
+
+
+#cellback svg:hover path {
+    fill: #3c3c3c;
+}
+#cellback svg:hover polygon {
+    stroke: #3c3c3c;
+}
+#cellback svg:hover line {
+    stroke: #3c3c3c;
+}
+#cellback svg:active path {
+    fill: #d90504;
+}
+#cellback svg:active polygon {
+    stroke: #d90504;
+}
+#cellback svg:active line {
+    stroke: #d90504;
+}
+
+
+
+/* ========================================================================= */
+/*                      SOME SPECIFIC HOMEPAGE STYLES                        */
+/* ========================================================================= */
+
+#maincontent {
+    display: flex;
+    margin: 6rem;
+}
+#maincontent span {
+    font-size: 16px;
+    line-height: 20px;
+    display: block;
+}
+h5 {
+    text-align: top;
+    height: 31px;
+}
+
+#welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: #0C0C0C;
+    z-index: 1;
+}
+#welcome h1{
+    font-size: 48px;
+}
+#welcome a {
+    font-size: 24px;
+}
+
+@media screen and (max-width: 2400px) {
+
+}
+@media screen and (max-width: 2160px) {
+
+}
+@media screen and (max-width: 1920px) {
+    html{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 1680px) {
+    html{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 1440px) {
+    html{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    html{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 960px) {
+    html{
+        font-size: 11px;
+    }
+}
+@media screen and (max-width: 720px) {
+    html{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 480px) {
+    html{
+        font-size: 9px;
+    }
+}
+@media screen and (max-width: 480px) {
+    html{
+        font-size: 8px;
+    }
+}
