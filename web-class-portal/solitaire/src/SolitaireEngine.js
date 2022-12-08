@@ -8,7 +8,8 @@ export default class SolitaireEngine {
         this.gameState = {
             columns: [],
             deck: [],
-            piles: []
+            piles: [],
+            cardSelected: false
         }
         this.createDeck();
         this.shuffleDeck();
@@ -74,11 +75,16 @@ export default class SolitaireEngine {
         const row = cardPosition["row"];
         const column = cardPosition["column"];
         if(area == "columns"){
+            
             const selectedCard = this.gameState[area][column][row]
             if(selectedCard.selected){
+                this.gameState.cardSelected = false;
                 selectedCard.selected = false;
             }else{
-                selectedCard.selected = true;
+                if(!this.gameState.cardSelected){
+                    this.gameState.cardSelected = true;
+                    selectedCard.selected = true;
+                }
             }
             console.log(this.gameState[area][column][row]);
         }
