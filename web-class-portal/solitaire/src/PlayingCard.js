@@ -20,6 +20,8 @@ export default class PlayingCard extends React.Component {
 
     componentWillReceiveProps(nextProps) {
         this.setState({ 
+            rank: nextProps.rank,
+            suit: nextProps.suit,
             selected: nextProps.selected,
             hidden: nextProps.hidden 
         });  

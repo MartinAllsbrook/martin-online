@@ -5,7 +5,7 @@ export default class SolitaireEngine {
         this.selectedCardPosition = null;
         this.gameState = {
             columns: [],
-            deck: [],
+            faceUpDeck: [],
             piles: [],
         }
         this.createDeck();
@@ -83,6 +83,7 @@ export default class SolitaireEngine {
         const row = cardPosition["row"];
         const column = cardPosition["column"];
 
+
         if(area == "columns"){
             const clickedCard = this.gameState[area][column][row];
 
@@ -125,13 +126,13 @@ export default class SolitaireEngine {
                         // this.gameState.columns[column].push(cardToMove);
                         this.cardSelected = false;
                     }
-
-
                 }
             }
-            // console.log(this.gameState[area][column][row]);
         }
-        // this.updateApp();
+    }
+
+    clickDeck() {
+        this.gameState.faceUpDeck.push(this.deck.pop());
     }
 
     getGameState(){

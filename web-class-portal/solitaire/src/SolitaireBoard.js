@@ -2,6 +2,7 @@ import React from 'react';
 import PlayingCard from './PlayingCard';
 import CardStack from './CardStack';
 import CardColumn from './CardColumn';
+import Deck from './Deck';
 // import HiddenCard from './HiddenCard';
 
 
@@ -53,11 +54,35 @@ export default class SolitaireBoard extends React.Component {
             />);   
         }
 
+        let topDeckCard;
+        if(gameState.faceUpDeck.length-1 >= 0){
+            const topDeckCardPosition = {
+                area: "faceUpDeck",
+            }
+            topDeckCard = <PlayingCard 
+                updateHandler={this.updateHandler}
+                engine={this.state.engine} 
+                suit={gameState.faceUpDeck[gameState.faceUpDeck.length-1].suit} 
+                rank={gameState.faceUpDeck[gameState.faceUpDeck.length-1].rank} 
+                selected={gameState.faceUpDeck[gameState.faceUpDeck.length-1].selected}
+                position={topDeckCardPosition}
+                hidden={false}
+            />;
+        }else{
+            topDeckCard = <PlayingCard
+                updateHandler={this.updateHandler}
+                engine={this.state.engine} 
+                suit={0} 
+                rank={0} 
+            />
+        }
+
+
         return (
             <div id="solitaire-board">
                 <div id="draw-pile">
-                    <PlayingCard suit="hide" rank="hide"/>
-                    <PlayingCard suit="show" rank="show"/>
+                    <Deck updateHandler={this.updateHandler} engine={this.state.engine}/>
+                    {topDeckCard}
                 </div>
                 
                 <div id="stacks">
