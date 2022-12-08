@@ -46,7 +46,11 @@ export default class SolitaireBoard extends React.Component {
                 />;
                 cards.push(card);
             }
-            columns.push(<CardColumn cards={cards}/>);   
+            columns.push(<CardColumn 
+                updateHandler={this.updateHandler} 
+                cards={cards} 
+                engine={this.state.engine}
+            />);   
         }
 
         return (

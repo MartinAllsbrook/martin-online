@@ -32,7 +32,7 @@ export default class PlayingCard extends React.Component {
     }
 
     render() {
-        console.log("card update: " + this.state.hidden);
+        // console.log("card update: " + this.state.hidden);
         if (this.state.hidden){
             return (
                 <div class="playing-card hidden">

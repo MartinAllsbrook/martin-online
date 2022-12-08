@@ -1,15 +1,12 @@
-import PlayingCard from "./PlayingCard";
-import HiddenCard from "./HiddenCard";
-import App from "./App";
-
 export default class SolitaireEngine {
     constructor(){
         this.deck = [];
+        this.cardSelected = false;
+        this.selectedCardPosition = null;
         this.gameState = {
             columns: [],
             deck: [],
             piles: [],
-            cardSelected: false
         }
         this.createDeck();
         this.shuffleDeck();
@@ -70,29 +67,60 @@ export default class SolitaireEngine {
         }
     }
 
+    revealCard(cardPosition) {
+        const area = cardPosition["area"];
+        const row = cardPosition["row"];
+        const column = cardPosition["column"];
+
+        if(area == "columns"){
+            const card = this.gameState[area][column][row];
+            card.hidden = false;
+        }
+    }
+
     selectCard(cardPosition) {
         const area = cardPosition["area"];
         const row = cardPosition["row"];
         const column = cardPosition["column"];
+
         if(area == "columns"){
-            
-            const selectedCard = this.gameState[area][column][row]
-            if(selectedCard.selected){
-                this.gameState.cardSelected = false;
-                selectedCard.selected = false;
+            const clickedCard = this.gameState[area][column][row];
+
+            // if the clicked card is already selected
+            if(clickedCard.selected){
+                this.cardSelected = false;
+                clickedCard.selected = false;
+                this.selectedCardPosition = null;
+
             }else{
-                if(!this.gameState.cardSelected){
-                    this.gameState.cardSelected = true;
-                    selectedCard.selected = true;
+                // if there is no card selected
+                if(!this.cardSelected){
+                    this.cardSelected = true;
+                    clickedCard.selected = true;
+                    this.selectedCardPosition = cardPosition;
+
+                // if there is already card selected
+                }else{
+                    const selectedColumn = this.selectedCardPosition.column
+                    const movingCard = this.gameState.columns[selectedColumn][this.gameState.columns[selectedColumn].length-1];
+                    const targetCard = this.gameState.columns[column][this.gameState.columns[column].length-1];
+
+                    //if the card can be moved to the clicked on pile
+                    const oddMoving = movingCard.suit % 2;
+                    const oddTarget = targetCard.suit % 2;
+                    if(oddMoving != oddTarget && movingCard.rank === (targetCard.rank - 1)){
+                        const cardToMove = this.gameState.columns[this.selectedCardPosition.column].pop();
+                        cardToMove.selected = false;
+                        this.gameState.columns[column].push(cardToMove);
+                        this.cardSelected = false;
+                    }
+
+
                 }
             }
-            console.log(this.gameState[area][column][row]);
+            // console.log(this.gameState[area][column][row]);
         }
         // this.updateApp();
-    }
-
-    updateApp(){
-        App();
     }
 
     getGameState(){
