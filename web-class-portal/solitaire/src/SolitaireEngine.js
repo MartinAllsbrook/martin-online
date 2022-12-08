@@ -91,90 +91,121 @@ export default class SolitaireEngine {
         const row = cardPosition["row"];
         const column = cardPosition["column"];
 
-        let clickedCard
-        if(area == "columns"){
-            clickedCard = this.gameState[area][column][row];
-        }else if(area == "faceUpDeck"){
-            clickedCard = this.gameState[area][this.gameState[area].length - 1];
-        }
+        if(row === -1){
 
-        if(area == "columns" || area == "faceUpDeck"){
 
-            // if the clicked card is already selected
-            if(clickedCard.selected){
-                this.cardSelected = false;
-                clickedCard.selected = false;
-                this.selectedCardPosition = null;
-
-            }else{
-                // if there is no card selected
-                if(!this.cardSelected){
-                    this.cardSelected = true;
-                    clickedCard.selected = true;
-                    this.selectedCardPosition = cardPosition;
-
-                // if there is already card selected, and the player click on the columns
-                }else if(area == "columns"){
-                    // const selectedColumn = this.selectedCardPosition.column;
-                    const targetCard = this.gameState.columns[column][this.gameState.columns[column].length-1];
-                    let movingCard;
-                    if(this.selectedCardPosition.area == "columns"){
-                        movingCard = this.gameState.columns[this.selectedCardPosition.column][this.selectedCardPosition.row];
-                    }else if(this.selectedCardPosition.area == "faceUpDeck"){
-                        movingCard = this.gameState.faceUpDeck[this.gameState.faceUpDeck.length-1];
-                    }
-
-                    //if the card can be moved to the clicked on pile
-                    const oddMoving = movingCard.suit % 2;
-                    const oddTarget = targetCard.suit % 2;
-
-                    // 
-                    if(oddMoving != oddTarget && movingCard.rank === (targetCard.rank - 1)){
-                        movingCard.selected = false;
-                        this.cardSelected = false;
-
-                        if(this.selectedCardPosition.area == "columns"){
-                            let lastCardPulled
-                            const cardsToMove = [];
-                            while(lastCardPulled != movingCard){
-                                lastCardPulled = this.gameState.columns[this.selectedCardPosition.column].pop();
-                                cardsToMove.push(lastCardPulled);
-                            }
-                            for(let i = cardsToMove.length - 1; i >= 0; i--){
-                                this.gameState.columns[column].push(cardsToMove[i]);
-                            }
-                        }else if(this.selectedCardPosition.area == "faceUpDeck"){
-                            const cardToMove = this.gameState.faceUpDeck.pop();
-                            this.gameState.columns[column].push(cardToMove);
-                        }
-                        // this.gameState.columns[column].push(cardToMove);
-                    }
-                }
-            }
-        }else if(area == "piles"){
-            let movingCard;
             if(this.selectedCardPosition.area == "columns"){
-                if(this.gameState.columns[this.selectedCardPosition.column].length-1 == this.selectedCardPosition.row){
-                    movingCard = this.gameState.columns[this.selectedCardPosition.column][this.selectedCardPosition.row];
+                const movingCard = this.gameState.columns[this.selectedCardPosition.column][this.selectedCardPosition.row];
+                if(movingCard.rank == 13){
+                    movingCard.selected = false;
+                    this.cardSelected = false;
+
+                    let lastCardPulled
+                    const cardsToMove = [];
+                    while(lastCardPulled != movingCard){
+                        lastCardPulled = this.gameState.columns[this.selectedCardPosition.column].pop();
+                        cardsToMove.push(lastCardPulled);
+                    }
+                    for(let i = cardsToMove.length - 1; i >= 0; i--){
+                        this.gameState.columns[column].push(cardsToMove[i]);
+                    }
                 }
             }else if(this.selectedCardPosition.area == "faceUpDeck"){
-                movingCard = this.gameState.faceUpDeck[this.gameState.faceUpDeck.length-1];
-            }
-            const targetCard = this.gameState.piles[row];
+                const movingCard = this.gameState.faceUpDeck[this.gameState.faceUpDeck.length-1];
+                if(movingCard.rank == 13){
+                    movingCard.selected = false;
+                    this.cardSelected = false;
 
-            console.log("suit: " + movingCard.suit + " row: " + row+1);
-
-            if(movingCard.suit == row+1 && movingCard.rank == targetCard.rank+1){
-                movingCard.selected = false;
-                this.cardSelected = false;
-
-                let cardToMove;
-                if(this.selectedCardPosition.area == "columns"){
-                    cardToMove = this.gameState.columns[this.selectedCardPosition.column].pop();
-                }else if(this.selectedCardPosition.area == "faceUpDeck"){
-                    cardToMove = this.gameState.faceUpDeck.pop();
+                    const cardToMove = this.gameState.faceUpDeck.pop();
+                    this.gameState.columns[column].push(cardToMove);
                 }
-                this.gameState.piles[row] = cardToMove;
+            }
+        }else{
+            let clickedCard
+            if(area == "columns"){
+                clickedCard = this.gameState[area][column][row];
+            }else if(area == "faceUpDeck"){
+                clickedCard = this.gameState[area][this.gameState[area].length - 1];
+            }
+    
+            if(area == "columns" || area == "faceUpDeck"){
+    
+                // if the clicked card is already selected
+                if(clickedCard.selected){
+                    this.cardSelected = false;
+                    clickedCard.selected = false;
+                    this.selectedCardPosition = null;
+    
+                }else{
+                    // if there is no card selected
+                    if(!this.cardSelected){
+                        this.cardSelected = true;
+                        clickedCard.selected = true;
+                        this.selectedCardPosition = cardPosition;
+    
+                    // if there is already card selected, and the player click on the columns
+                    }else if(area == "columns"){
+                        // const selectedColumn = this.selectedCardPosition.column;
+                        const targetCard = this.gameState.columns[column][this.gameState.columns[column].length-1];
+                        let movingCard;
+                        if(this.selectedCardPosition.area == "columns"){
+                            movingCard = this.gameState.columns[this.selectedCardPosition.column][this.selectedCardPosition.row];
+                        }else if(this.selectedCardPosition.area == "faceUpDeck"){
+                            movingCard = this.gameState.faceUpDeck[this.gameState.faceUpDeck.length-1];
+                        }
+    
+                        //if the card can be moved to the clicked on pile
+                        const oddMoving = movingCard.suit % 2;
+                        const oddTarget = targetCard.suit % 2;
+    
+                        // 
+                        if(oddMoving != oddTarget && movingCard.rank === (targetCard.rank - 1)){
+                            movingCard.selected = false;
+                            this.cardSelected = false;
+    
+                            if(this.selectedCardPosition.area == "columns"){
+                                let lastCardPulled
+                                const cardsToMove = [];
+                                while(lastCardPulled != movingCard){
+                                    lastCardPulled = this.gameState.columns[this.selectedCardPosition.column].pop();
+                                    cardsToMove.push(lastCardPulled);
+                                }
+                                for(let i = cardsToMove.length - 1; i >= 0; i--){
+                                    this.gameState.columns[column].push(cardsToMove[i]);
+                                }
+                            }else if(this.selectedCardPosition.area == "faceUpDeck"){
+                                const cardToMove = this.gameState.faceUpDeck.pop();
+                                this.gameState.columns[column].push(cardToMove);
+                            }
+                            // this.gameState.columns[column].push(cardToMove);
+                        }
+                    }
+                }
+            }else if(area == "piles"){
+                let movingCard;
+                if(this.selectedCardPosition.area == "columns"){
+                    if(this.gameState.columns[this.selectedCardPosition.column].length-1 == this.selectedCardPosition.row){
+                        movingCard = this.gameState.columns[this.selectedCardPosition.column][this.selectedCardPosition.row];
+                    }
+                }else if(this.selectedCardPosition.area == "faceUpDeck"){
+                    movingCard = this.gameState.faceUpDeck[this.gameState.faceUpDeck.length-1];
+                }
+                const targetCard = this.gameState.piles[row];
+    
+                console.log("suit: " + movingCard.suit + " row: " + row+1);
+    
+                if(movingCard.suit == row+1 && movingCard.rank == targetCard.rank+1){
+                    movingCard.selected = false;
+                    this.cardSelected = false;
+    
+                    let cardToMove;
+                    if(this.selectedCardPosition.area == "columns"){
+                        cardToMove = this.gameState.columns[this.selectedCardPosition.column].pop();
+                    }else if(this.selectedCardPosition.area == "faceUpDeck"){
+                        cardToMove = this.gameState.faceUpDeck.pop();
+                    }
+                    this.gameState.piles[row] = cardToMove;
+                }
             }
         }
     }

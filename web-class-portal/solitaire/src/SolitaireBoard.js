@@ -1,9 +1,7 @@
 import React from 'react';
 import PlayingCard from './PlayingCard';
-import CardStack from './CardStack';
 import CardColumn from './CardColumn';
 import Deck from './Deck';
-import SolitaireEngine from './SolitaireEngine';
 // import HiddenCard from './HiddenCard';
 
 
@@ -47,6 +45,23 @@ export default class SolitaireBoard extends React.Component {
                     hidden={gameState.columns[i][j].hidden}
                 />;
                 cards.push(card);
+            }
+            if(gameState.columns[i].length === 0){
+                const cardPosition = {
+                    area: "columns",
+                    column: i,
+                    row: -1
+                }
+                const card = <PlayingCard 
+                    updateHandler={this.updateHandler}
+                    engine={this.state.engine} 
+                    suit={0} 
+                    rank={0} 
+                    selected={false}
+                    position={cardPosition}
+                    hidden={false}
+                />;
+                cards.push(card)
             }
             columns.push(<CardColumn 
                 updateHandler={this.updateHandler} 
