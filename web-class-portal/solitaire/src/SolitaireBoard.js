@@ -3,6 +3,7 @@ import PlayingCard from './PlayingCard';
 import CardStack from './CardStack';
 import CardColumn from './CardColumn';
 import Deck from './Deck';
+import SolitaireEngine from './SolitaireEngine';
 // import HiddenCard from './HiddenCard';
 
 
@@ -79,6 +80,23 @@ export default class SolitaireBoard extends React.Component {
         }
 
 
+        let cardPiles = [];
+        for(let i = 0; i < 4; i++){
+            const cardPilePosition = {
+                area: "piles",
+                row: i
+            }
+            cardPiles.push(<PlayingCard 
+                updateHandler={this.updateHandler}
+                engine={this.state.engine} 
+                suit={gameState.piles[i].suit} 
+                rank={gameState.piles[i].rank} 
+                selected={false}
+                position={cardPilePosition}
+                hidden={false}
+            />)
+        }
+
         return (
             <div id="solitaire-board">
                 <div id="draw-pile">
@@ -87,10 +105,7 @@ export default class SolitaireBoard extends React.Component {
                 </div>
                 
                 <div id="stacks">
-                    <CardStack/>
-                    <CardStack/>
-                    <CardStack/>
-                    <CardStack/>
+                    {cardPiles}
                 </div>
 
                 <div id="columns">

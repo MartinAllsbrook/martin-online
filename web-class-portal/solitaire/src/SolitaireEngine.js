@@ -6,7 +6,7 @@ export default class SolitaireEngine {
         this.gameState = {
             columns: [],
             faceUpDeck: [],
-            piles: [],
+            piles: []
         }
         this.createDeck();
         this.shuffleDeck();
@@ -64,6 +64,14 @@ export default class SolitaireEngine {
                 cards.push(card);
             }
             this.gameState.columns.push(cards);   
+        }
+        for(let i = 1; i <= 4; i++){
+            const card = {
+                rank: 0,
+                suit: i,
+                selected: false
+            }
+            this.gameState.piles.push(card);
         }
     }
 
@@ -123,6 +131,7 @@ export default class SolitaireEngine {
                     // 
                     if(oddMoving != oddTarget && movingCard.rank === (targetCard.rank - 1)){
                         movingCard.selected = false;
+                        this.cardSelected = false;
 
                         if(this.selectedCardPosition.area == "columns"){
                             let lastCardPulled
@@ -138,16 +147,50 @@ export default class SolitaireEngine {
                             const cardToMove = this.gameState.faceUpDeck.pop();
                             this.gameState.columns[column].push(cardToMove);
                         }
-                        this.cardSelected = false;
                         // this.gameState.columns[column].push(cardToMove);
                     }
                 }
+            }
+        }else if(area == "piles"){
+            let movingCard;
+            if(this.selectedCardPosition.area == "columns"){
+                if(this.gameState.columns[this.selectedCardPosition.column].length-1 == this.selectedCardPosition.row){
+                    movingCard = this.gameState.columns[this.selectedCardPosition.column][this.selectedCardPosition.row];
+                }
+            }else if(this.selectedCardPosition.area == "faceUpDeck"){
+                movingCard = this.gameState.faceUpDeck[this.gameState.faceUpDeck.length-1];
+            }
+            const targetCard = this.gameState.piles[row];
+
+            console.log("suit: " + movingCard.suit + " row: " + row+1);
+
+            if(movingCard.suit == row+1 && movingCard.rank == targetCard.rank+1){
+                movingCard.selected = false;
+                this.cardSelected = false;
+
+                let cardToMove;
+                if(this.selectedCardPosition.area == "columns"){
+                    cardToMove = this.gameState.columns[this.selectedCardPosition.column].pop();
+                }else if(this.selectedCardPosition.area == "faceUpDeck"){
+                    cardToMove = this.gameState.faceUpDeck.pop();
+                }
+                this.gameState.piles[row] = cardToMove;
             }
         }
     }
 
     clickDeck() {
-        this.gameState.faceUpDeck.push(this.deck.pop());
+        if(this.deck.length > 0){
+            this.gameState.faceUpDeck.push(this.deck.pop());
+        }else{
+            this.resetDeck();
+        }
+    }
+
+    resetDeck() {
+        for(let i = 0; i < this.gameState.faceUpDeck.length; i++){
+            this.deck.push(this.gameState.faceUpDeck.pop());
+        }
     }
 
     getGameState(){
