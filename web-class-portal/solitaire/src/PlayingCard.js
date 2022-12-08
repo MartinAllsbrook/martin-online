@@ -6,10 +6,10 @@ export default class PlayingCard extends React.Component {
         super(props);
         this.state = {
             updateHandler: props.updateHandler,
+            engine: props.engine,
             suit: props.suit,
             rank: props.rank,
             position: props.position,
-            engine: props.engine,
             selected: props.selected,
             hidden: props.hidden
         }
@@ -20,10 +20,11 @@ export default class PlayingCard extends React.Component {
 
     componentWillReceiveProps(nextProps) {
         this.setState({ 
-            rank: nextProps.rank,
             suit: nextProps.suit,
+            rank: nextProps.rank,
+            position: nextProps.position,
             selected: nextProps.selected,
-            hidden: nextProps.hidden 
+            hidden: nextProps.hidden
         });  
     }
 

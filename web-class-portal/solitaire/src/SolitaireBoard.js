@@ -59,6 +59,7 @@ export default class SolitaireBoard extends React.Component {
             const topDeckCardPosition = {
                 area: "faceUpDeck",
             }
+            // console.log(topDeckCardPosition);
             topDeckCard = <PlayingCard 
                 updateHandler={this.updateHandler}
                 engine={this.state.engine} 
