@@ -9,6 +9,11 @@ export default class CardColumn extends React.Component {
         }
     }
 
+    componentWillReceiveProps(nextProps) {
+        this.setState({ cards: nextProps.cards });  
+    }
+
+
     render() {
         // const cards=[];
         // for (let i = this.state.cards.length; i > 0; i--) {
