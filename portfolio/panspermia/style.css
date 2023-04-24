@@ -1,0 +1,15 @@
+h2{
+    font-size: 3rem;
+}
+
+/* .textBlockWrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+} */
+
+.textBlockText {
+    max-width: 61.8%;
+    margin-bottom: 1rem;
+}
