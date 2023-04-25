@@ -32,9 +32,24 @@ export default class GameBoard {
             };
             this.e.appendChild(row); // Add row HTML element to gameBoard HTML element
         }
+
+        this.MainUpdate();
     }
 
     AddObject(gameObject) {
         this.gameObjects.push(gameObject);
+    }
+
+    MainUpdate() {  // What happens each gametick
+        setTimeout (() => { // Recursive call with setTimeout() calls the method every tickSpeed milisecconds
+            this.updateGameObjects(); // Update all game objects
+            gameBoard.MainUpdate(); // Call next game tick
+        }, this.tickSpeed);
+    }
+
+    updateGameObjects () {
+        for (let i = 0; i < this.gameObjects.length; i++) {
+            this.gameObjects[i].BaseUpdate();
+        }
     }
 }

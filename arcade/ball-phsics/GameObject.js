@@ -1,5 +1,4 @@
 export default class GameObject {
-
     map = [
         [1]
     ];
@@ -15,7 +14,7 @@ export default class GameObject {
     }
 
     draw() {
-        console.log("draw gameobject")
+        // console.log("draw gameobject")
         for(let i = 0; i < this.height; i++) {
             for(let j = 0; j < this.width; j++) {
                 if(this.map[i][j]){
@@ -28,7 +27,7 @@ export default class GameObject {
     }
 
     drawCell(row, col) {
-        console.log(this.gameBoard.cells[row][col].e.classList);
+        // console.log(this.gameBoard.cells[row][col].e.classList);
         this.gameBoard.cells[row][col].e.classList.add(this.renderClass); // Draw that pixel
         this.gameBoard.cells[row][col].state = this.renderClass;
     }
@@ -63,13 +62,13 @@ export default class GameObject {
         gameBoard.gameObjects[this.renderClass].splice(index, 1);
     }
 
-    baseUpdate(){
+    BaseUpdate(){
         this.erase();
-        this.update();
+        this.Update();
         this.draw();
     }
 
-    update(){
-        this.move(0,1);
+    Update(){
+        console.log("no move");
     }
 }
