@@ -1,5 +1,14 @@
 h2{
     font-size: 3rem;
+    padding-top: 1rem;
+}
+
+span{
+    font-weight: bold;
+}
+
+a{
+    text-decoration: underline;
 }
 
 /* .textBlockWrap {
