@@ -56,6 +56,13 @@ export default class GameObject {
         this.draw(); // Redraw image
     }
 
+    moveTo(rowMove, colMove) {
+        this.erase(); // Erase image
+        this.row = rowMove; // Move character
+        this.col = colMove;
+        this.draw(); // Redraw image
+    }
+
     remove(){
         this.erase();
         const index = gameBoard.gameObjects[this.renderClass].indexOf(this);
