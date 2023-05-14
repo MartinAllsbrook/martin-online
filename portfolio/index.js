@@ -2,33 +2,45 @@ document.addEventListener('DOMContentLoaded', () => {
     sessionStorage.setItem('linkedfrom', 'portfolio');
 
     class Item {
-        constructor(handle, title) {
-            this.handle = handle;
+        constructor(link, title, image) {
+            this.link = link;
             this.title = title;
-        }
-
-        getHandle() {
-            return(this.handle);
+            this.image = image;
         }
 
         getTitle() {
             return(this.title);
         }
+
+        getTitle() {
+            return(this.title);
+        }
+
+        getImage() {
+            return(this.image);
+        }
     }
 
     let items = [];
 
-    let handles = ['snake', 'glee-2023', 'growapp', 'type-specimen', 'handboard-poc', 'colorado-symphony', 'big-worms'];
+    let links = ['snake', 'glee-2023', 'growapp', 'type-specimen', 'handboard-poc', 'colorado-symphony', 'big-worms'];
     let titles = ['SNAKE', 'GLEE 2023', 'GROWAPP', 'TYPE SPECIMEN POSTER', 'HANDBOARD GAME POC', 'COLORADO SYMPHONY', 'BIG WORMS'];
+    let images = ['snake.svg', 'glee-2023.svg', 'growapp.svg', 'type-specimen.svg', 'handboard-poc.svg', 'colorado-symphony.svg', 'big-worms.svg']
 
-    for(let i = 0; i < titles.length; i++) {
-        items.push(new Item(handles[i], titles[i]));
-    }
+    items.push(new Item('snake', 'SNAKE', 'snake.svg'));
+    items.push(new Item('https://youtu.be/opKY8cLKrIY', 'THE GUILLOTINE', 'the-guillotine.png'));
+    items.push(new Item('glee-2023', 'GLEE 2023', 'glee-2023.svg'));
+    items.push(new Item('growapp', 'GROWAPP', 'growapp.svg'));
+    items.push(new Item('type-specimen', 'TYPE SPECIMEN POSTER', 'type-specimen.svg'));
+    items.push(new Item('handboard-poc', 'HANDBOARD GAME POC', 'handboard-poc.svg'));
+    items.push(new Item('colorado-symphony', 'COLORADO SYMPHONY', 'colorado-symphony.svg'));
+    items.push(new Item('big-worms', 'BIG WORMS', 'big-worms.svg'));
 
-    for(let i = 0; i < titles.length; i++) {
+
+    for(let i = 0; i < items.length; i++) {
         document.getElementById('main-grid').innerHTML += '<div class="basic-container" id="cell' +[i]+ '"> </div>';
-        document.getElementById('cell' + i).innerHTML += '<a href="' + items[i].getHandle() + '"><img src="assets/' + items[i].getHandle() + '.svg" alt=""></a>';
-        document.getElementById('cell' + i).innerHTML += '<a href="' + items[i].getHandle() + '">' + items[i].getTitle() + '</a>';
+        document.getElementById('cell' + i).innerHTML += '<a href="' + items[i].link + '"><img src="assets/' + items[i].image + '" alt=""></a>';
+        document.getElementById('cell' + i).innerHTML += '<a href="' + items[i].link + '">' + items[i].title + '</a>';
     }
 
     document.getElementById('main-grid').innerHTML += '<div class="basic-container" id="cellback"> </div>';
