@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/web-class-portal/solitaire/static/css/main.ced4adbf.css",
+    "main.js": "/web-class-portal/solitaire/static/js/main.d1e5ac53.js",
+    "static/js/787.4a17cf5c.chunk.js": "/web-class-portal/solitaire/static/js/787.4a17cf5c.chunk.js",
+    "index.html": "/web-class-portal/solitaire/index.html",
+    "main.ced4adbf.css.map": "/web-class-portal/solitaire/static/css/main.ced4adbf.css.map",
+    "main.d1e5ac53.js.map": "/web-class-portal/solitaire/static/js/main.d1e5ac53.js.map",
+    "787.4a17cf5c.chunk.js.map": "/web-class-portal/solitaire/static/js/787.4a17cf5c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ced4adbf.css",
+    "static/js/main.d1e5ac53.js"
+  ]
+}

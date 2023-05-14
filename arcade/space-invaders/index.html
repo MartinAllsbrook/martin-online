@@ -10,9 +10,29 @@
         <link rel="stylesheet" href="../../basic.css">
         <link rel="stylesheet" href="../acadeStyle.css">
         <link rel="stylesheet" href="style.css">
+
+        <script type="module" src="main.js"></script>
     </head>
     <body>
-        <section id="gameboard"></section>
-        <script src="main.js"></script>
+        <section class="flex">
+            <section id="GUI">
+                <h1>SPACE INVADERS</h1>
+                <h4 id="scoreDisplay">Score: 0</h4>
+                <h4>Directions: </h4>
+                <ul>
+                    <li>WASD or Arrow Keys to move</li>
+                    <li>Spacebar to fire</li>
+                    <li>Survive the waves of enemies as long as possible!</li>
+                </ul>
+                <button id="restartButton">RESTART</button>
+            </section>
+            
+            <section id="gameBoard">
+                <div id="gameOver">
+                    <h4 id="gameOverText">You shouldn't see this...</h4>
+                </div>
+            </section>
+        </section>
+
     </body>
 </html>

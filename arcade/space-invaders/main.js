@@ -1,127 +1,26 @@
 console.log("JS RUNNING");  // Check that the JS is working
 
-class Cell {
-    constructor(e, row, col) {
-        this.e = e;
-        this.row = row;
-        this.col = col;
-        this.state = 'empty'; // TODO: We'll see if this is useful
-    }
-}
-
-class GameObject {
-    constructor(row, col){
-        this.row = row;
-        this.col = col;
-    }
-
-    draw() {
-        // console.log('draw called');
-        for(let i = 0; i < this.height; i++) {
-            for(let j = 0; j < this.width; j++) {
-                // console.log(this.map[i][j]);
-                if(this.map[i][j]){
-                    // console.log('' + this.row + i + ' : ' + this.col + j);
-                    gameBoard.cells[this.row + i][this.col + j].e.classList.add('enemy'); // Draw that pixel
-                }
-            }
-        }
-    }
-
-    erase() {
-        for(let i = 0; i < this.height; i++) {
-            for(let j = 0; j < this.width; j++) {
-                if(this.map[i][j]){
-                    gameBoard.cells[this.row + i][this.col + j].e.classList.remove('enemy'); // erase that pixel
-                }
-            }
-        }
-    }
-
-    move(rowMove, colMove) {
-        this.erase(); // Erase image
-        this.row += rowMove; // Move character
-        this.col += colMove;
-        this.draw(); // Redraw image
-    }
-}
-
-class Enemy extends GameObject {
-    map = [
-        [0,1,1,1,1,1,0],
-        [1,1,0,1,0,1,1],
-        [1,1,1,1,1,1,1],
-        [1,0,1,0,1,0,1]
-    ];
-    height = this.map.length;
-    width = this.map[0].length;
-}
-
-class Player extends GameObject {
-    map = [
-        [0,0,1,0,0],
-        [0,0,1,0,0],
-        [0,1,1,1,0],
-        [0,1,0,1,0],
-        [0,1,1,1,0],
-        [0,1,1,1,0],
-        [1,1,1,1,1],
-        [1,1,1,1,1],
-        [0,1,1,1,0],
-        [0,0,1,0,0]
-    ];
-    height = this.map.length;
-    width = this.map[0].length;
-
-    update() {
-        var moveRow = 0;
-        if(keys.ArrowDown || keys.s){
-            // console.log('down');
-            moveRow++;
-        }
-        if(keys.ArrowUp || keys.w){
-            // console.log('up');
-            moveRow--;
-        }
-
-        var moveCol = 0;
-        if(keys.ArrowLeft || keys.a){
-            moveCol--;
-        }
-        if(keys.ArrowRight || keys.d){
-            moveCol++;
-        }
-        
-        // console.log('row: ' + moveRow + 'col: ' + moveCol);
-        this.move(moveRow, moveCol);
-    }
-}
-
-class Laser extends GameObject {
-    map = [
-        [1],
-        [1],
-        [1]
-    ];
-    height = this.map.length;
-    width = this.map[0].length;
-
-    
-}
+import Cell from './Cell.js';
+import Enemy from './Enemy.js';
+import Player from './Player.js';
+import guiController from './GUIController.js';
 
 const gameBoard = {
     width: 16,
     height: 16,
     tickSpeed: 100,
 
-    e: document.getElementById('gameboard'),
+    e: document.getElementById('gameBoard'),
     cells: [],
+    gameObjects: {},
+
+    gameOver: false,
 
     createBoard(width, height, tickSpeed) {
         this.width = width;
         this.height = height;
         this.tickSpeed = tickSpeed;
-        gameBoard.player = new Player(24,32);
+        // gameBoard.player = new Player(24,32);
 
         // For each row
         for(let i = 0; i < this.height; i++){
@@ -139,42 +38,82 @@ const gameBoard = {
         }
     },
 
+    populateEnemies () {
+        for(let i = 0; i < 11; i++) {
+            new Enemy(2, i * 8 + 1);
+        }
+        for(let i = 0; i < 11; i++) {
+            new Enemy(8, i * 8 + 1);
+        }
+    },
+
     startGame() {
-        this.mainUpdate();
+        setTimeout(() => { // Recursive call with setTimeout() calls the method every tickSpeed milisecconds
+            console.log('creating enemies');
+            gameBoard.populateEnemies();
+            new Player(24,32);
+            this.gameOver = false;
+            this.mainUpdate();
+        }, 500); 
+    },
+
+    endGame() {
+        this.gameOver = true;
+        guiController.setGameOverText('Game Over');
+    },
+
+    restartGame() {
+        this.gameOver = true;
+        this.eraseGameObjects(); // erase all game objects
+        this.gameObjects = {}; // erase refrences to all game objects
+        this.startGame();
     },
 
     mainUpdate() {  // What happens each gametick
-        setTimeout(function() { // Recursive call with setTimeout() calls the method every tickSpeed milisecconds
-            gameBoard.player.update();
-
-            gameBoard.mainUpdate(); // Call next game tick
-            // console.log('TICK: mainUpdate() Called. Tickspeed: ' + gameBoard.tickSpeed);
+        setTimeout (() => { // Recursive call with setTimeout() calls the method every tickSpeed milisecconds
+            if (!this.gameOver) {
+                if (this.gameObjects['enemy'].length == 0) {
+                    gameBoard.populateEnemies();
+                }
+                if (this.gameObjects['player'].length == 0){
+                    this.endGame();
+                }
+                
+                this.updateGameObjects(); // Update all game objects
+                gameBoard.mainUpdate(); // Call next game tick
+            }
         }, this.tickSpeed);
+    },
+
+    updateGameObjects () {
+        // console.log(this.gameObjects['enemy']);
+        // console.log(this.gameObjects['enemy'].length);
+        for (const renderClass in this.gameObjects) {
+            // console.log(`${renderClass} length: ${this.gameObjects[renderClass].length}`);
+            // var testingLength = this.gameObjects[renderClass].length;
+            var toRemove = [];
+            for (let i = 0; i < this.gameObjects[renderClass].length; i++) {
+                // console.log(`updating : ${renderClass} #${i}`)
+                if(this.gameObjects[renderClass][i].update()){
+                    toRemove.push(i);
+                }
+            }
+            for (let i = 0; i < toRemove.length; i++){
+                this.gameObjects[renderClass][toRemove[i]].remove();
+            }
+        }
+    },
+
+    eraseGameObjects () {
+        for (const renderClass in this.gameObjects) {
+            for (let i = 0; i < this.gameObjects[renderClass].length; i++) {
+                this.gameObjects[renderClass][i].erase();
+            }
+        }
     }
 }
 
-gameBoard.createBoard(48,48,100);
+gameBoard.createBoard(96,96,100);
 gameBoard.startGame();
 
-const keys = {}; // Create empty keys object
-
-// If a key is pressed add it to the list of currently pressed keys
-window.addEventListener("keydown", function(e){
-    eval('keys.' + e.key + ' = true');
-}, false);
-
-// If a key is released remove it from the list of currently pressed keys
-window.addEventListener('keyup', function(e){
-    eval('keys.' + e.key + ' = false');
-}, false);
-
-
-
-let testEnemy = new Enemy(1,1);
-testEnemy.draw();
-
-let testlaser = new Laser(10, 10);
-testlaser.draw();
-
-
-
+export default gameBoard;
