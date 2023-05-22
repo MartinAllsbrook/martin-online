@@ -25,8 +25,53 @@
         </section>
         <section>
             <h2>Introduction</h2>
-            <p class="textBlockText">Xenoplanet is a beautiful open-world adventure game. Players can choose to explore an infinite procedural world, or rifle with danger from hostile robots. Whether they choose to take back their world or simply enjoy the freedom to explore, Xenoplanet offers players endless possibilities.</p>
-            <p class="textBlockText">My work on panspermia consisted of developing the script to procedurally generate Xenoplanet’s world at runtime. Designing and implementing enemy AI and combat to produce mechanics and interactions that aligned with our desired aesthetics. As well as working as the general scripter creating the inventory system, world interactions, item drops and more.</p>
+            <p class="textBlockText">
+                Xenoplanet is a beautiful open-world adventure game. Players can choose to explore an infinite procedural world, or rifle with danger from hostile robots. Whether they choose to take back their world or simply enjoy the freedom to explore, Xenoplanet offers players endless possibilities.
+            </p>
+            <p class="textBlockText">
+                My work on panspermia consisted of developing the script to procedurally generate Xenoplanet’s world at runtime. Designing and implementing enemy AI and combat to produce mechanics and interactions that aligned with our desired aesthetics. As well as working as the general scripter creating the inventory system, world interactions, item drops and more.
+            </p>
+        </section>
+        <section>
+            <h2>Procedural World Generation</h2>
+            <p class="textBlockText">
+                Xenoplanet’s world is procedurally generated at runtime, producing a unique and seemingly infinite world each playthrough.
+            </p>
+
+            <h3>Noise Maps</h3>
+            <p class="textBlockText">
+                Each chunk has 3 perlin noise maps that affect how the chunk looks. A height map, which determines the height of the terrain, a moisture map which determines what kinds of plants grow, and a density map which determines how dense the plants are. Combining these three maps creates very unique outcomes that wouldn’t be possible with just one noise map.
+            </p>
+            <iframe src="https://www.youtube.com/embed/5VinVcqaYLc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+            <h3>Chunk Storage</h3>
+            <p class="textBlockText">
+                Only a certain amount of chunks are loaded around the player at any given time, with new chunks being generated ahead of the player and old ones being unloaded behind the player. These old chunks are not deleted, but rather set as inactive and stored in a C# dictionary, allowing for two important things. Firstly reloading these chunks takes a lot less time as the maps and foliage have already been generated. Secondly Any changes made to these chunks will persist when the chunks are re loaded.
+            </p>
+            <iframe src="https://www.youtube.com/embed/L9BtTMq2-nM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+        <section>
+            <h2>Enemies and Creating Intense Combat Encounters</h2>
+            <p class="textBlockText">
+                One of my main aesthetic goals when creating Xenoplanet was to create intense encounters that put the player on the edge of their seat. Many survival games accomplish this by putting the players hours of hard work on the line but that conflicted with our goal of creating a shorter term less grindy experience. In order to accomplish both these aesthetics I had to look towards the enemies and the dynamics of how the player interacts with them.
+            </p>
+            <iframe src="https://www.youtube.com/embed/_ix1BM9zldk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <h3>Permadeath</h3>
+            <p class="textBlockText">
+                Our first decision was to make the game permadeath. This immediately increased the stakes of every enemy encounter as all the players progress was put on the line. Even though the game only lasts 10 minutes dying to an enemy would put the player right back where they started
+            </p>
+            <h3>Awareness and Spawning</h3>
+            <p class="textBlockText">
+                The second mechanic I implemented was enemy awareness. All enemies have a limited field of view and max view distance. However once the player is seen other enemies in the surrounding area are also alerted to the player's position and more difficult enemies are spawned. Together these two mechanics forced the player into a more methodical and sneaky playstyle where one wrong move meant serious consequences.
+            </p>
+            <h3>Limited Ammo and Critical Hits</h3>
+            <p class="textBlockText">
+                Finally we gave the player very limited ammo and added critical hit spots to the enemies. The player typically finds themselves with around 5 to 10 arrows in their inventory with a maximum of 20 (10 normal, 10 explosive). Without critical hits it takes around 3 to 6 arrows to kill an enemy depending on the type of arrow and enemy, around 60% of the arrows the player is typically holding. However by using critical hits the player can kill enemies in only 1 or 2 arrows greatly reducing the time to kill and the resources expended.
+            </p>
+            <p class="textBlockText">
+                These two mechanics combine in a way that allows precision to make or break a combat encounter. This inturn increases the pressure on the player to perform and increases the intensity of these encounters.
+            </p>
         </section>
     </body>
 </html>
