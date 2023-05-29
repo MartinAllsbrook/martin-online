@@ -26,7 +26,8 @@ h2{
 }
 h3 {
     font-size: 2rem;
-    line-height: 2.4rem;
+    line-height: 120%;
+    font-weight: 600;
 }
 h4{
     font-size: 2rem;
@@ -42,14 +43,19 @@ p {
     line-height: 130%;
     font-weight: 300;
 }
-
+ul {
+    margin-left: 2rem;
+}
 li{
-    font-weight: 500;
-    font-size: 1.5em;
-    line-height: 1.8em;
+    font-size: 1.5rem;
+    line-height: 130%;
+    font-weight: 300;
 }
 img{
     width: 100%;
+}
+video{
+    max-width: 100%;
 }
 
 .flex{

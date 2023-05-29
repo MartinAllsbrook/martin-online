@@ -2,16 +2,17 @@ span{
     font-weight: bold;
 }
 
-a{
-    text-decoration: underline;
-}
-
 /* .textBlockWrap {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
 } */
+.flex-row{
+    display: flex;
+    column-gap: 2rem;
+    margin: 2rem 0 2rem 0;
+}
 
 .textBlockText {
     max-width: 61.8%;
