@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     items.push(new Item('glee-2023', 'GLEE 2023', 'glee-2023.svg'));
     items.push(new Item('growapp', 'GROWAPP', 'growapp.svg'));
     items.push(new Item('type-specimen', 'TYPE SPECIMEN POSTER', 'type-specimen.svg'));
-    items.push(new Item('handboard-poc', 'HANDBOARD GAME POC', 'handboard-poc.svg'));
+    items.push(new Item('handboard-poc', 'HANDBOARD GAME', 'handboard-poc.svg'));
     items.push(new Item('colorado-symphony', 'COLORADO SYMPHONY', 'colorado-symphony.svg'));
     items.push(new Item('big-worms', 'BIG WORMS', 'big-worms.svg'));
 
