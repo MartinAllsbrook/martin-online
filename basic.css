@@ -1,18 +1,21 @@
-/* BASIC ELEMENTS */
+/* Large Styling */
 * {
     font-family: din-2014, sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
 
     margin: 0;
     padding: 0;
 }
+
 body {
     color: white;
     background-color: #0C0C0C;
 
     margin: 2rem;
 }
+
+/* Font Styles */
 
 h1 {
     font-size: 4rem;
@@ -42,6 +45,7 @@ p {
     font-size: 1.5rem;
     line-height: 130%;
     font-weight: 300;
+    margin-bottom: 1rem;
 }
 ul {
     margin-left: 2rem;
@@ -51,13 +55,37 @@ li{
     line-height: 130%;
     font-weight: 300;
 }
+
+/* Header */
+header {
+    position: sticky;
+    top: 0rem;
+    margin: -2rem -2rem 2rem -2rem;
+    padding: 2rem 2rem 0 2rem;
+    background-color: #0C0C0C;
+}
+header a {
+    text-decoration: none;
+    font-size: 2rem;
+    line-height: 120%;
+    font-weight: 500;
+    margin-left: 1rem;
+}
+
+/* Basic Elements */
 img{
     width: 100%;
 }
 video{
     max-width: 100%;
 }
-
+span{
+    font-weight: bold;
+}
+section {
+    margin: 0 0 3rem 0;
+}
+/* Custom Flexbox Stuff */
 .flex{
     display: flex;
 }
@@ -71,7 +99,6 @@ video{
 .flexeven{
     flex: 1 1 0;
 }
-
 .flexBottomRight {
     display: flex;
     justify-content: right;
@@ -79,6 +106,22 @@ video{
     flex-grow: 1;
 }
 
+.bigBox {
+    max-width: 61.8%;
+    flex-grow: 1;
+}
+
+.smallBox {
+    max-width: 38.2%;
+    flex-grow: 1;
+}
+
+.flex-row{
+    display: flex;
+    column-gap: 2rem;
+    margin: 2rem 0 2rem 0;
+}
+/* Grids */
 .basic-grid{
     margin: -1vw;
     padding: 0S;
@@ -92,7 +135,8 @@ video{
 .basic-container p{
     margin: 0;
 }
-/* CUSTOM ELEMENTS */
+
+/* Links */
 a {
     text-decoration: none;
 }
@@ -110,6 +154,7 @@ a:active {
     color: #d90504;
 }
 
+/* Big Links */
 a.biglink:link {
     color: white;
     font-weight: 600;
@@ -131,6 +176,7 @@ a.biglink:active {
     text-decoration: none;
 }
 
+/* Buttons */
 button{
     font-weight: 600;
     font-size: 2em;
@@ -156,7 +202,7 @@ button:active {
     border: 2px solid #d90504;
 }
 
-
+/* Big Back Button */
 #cellback svg:hover path {
     fill: #3c3c3c;
 }
@@ -175,8 +221,6 @@ button:active {
 #cellback svg:active line {
     stroke: #d90504;
 }
-
-
 
 /* ========================================================================= */
 /*                      SOME SPECIFIC HOMEPAGE STYLES                        */
