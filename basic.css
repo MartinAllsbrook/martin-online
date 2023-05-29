@@ -78,7 +78,7 @@ img{
 video{
     max-width: 100%;
 }
-span{
+span.bold{
     font-weight: bold;
 }
 section {
