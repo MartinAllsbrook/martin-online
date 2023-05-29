@@ -18,7 +18,35 @@ a{
     margin-bottom: 1rem;
 }
 
+.bigBox {
+    max-width: 61.8%;
+}
+
+.smallBox {
+    max-width: 38.2%;
+}
+
 iframe {
     width: 61.8%;
     height: 40rem;
+}
+
+header {
+    position: sticky;
+    top: 0rem;
+    margin: -2rem -2rem 1rem -2rem;
+    padding: 2rem 2rem 0 2rem;
+    background-color: #0C0C0C;
+}
+
+header a {
+    text-decoration: none;
+    font-size: 2rem;
+    line-height: 120%;
+    font-weight: 500;
+    margin-left: 1rem;
+}
+
+section {
+    margin: 0 0 3rem 0;
 }
