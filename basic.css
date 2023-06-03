@@ -12,7 +12,7 @@ body {
     color: white;
     background-color: #0C0C0C;
 
-    margin: 2rem;
+    padding: 2rem;
 }
 
 /* Font Styles */
@@ -62,6 +62,7 @@ header {
     margin: -2rem -2rem 2rem -2rem;
     padding: 2rem 2rem 0 2rem;
     background-color: #0C0C0C;
+    z-index: 1;
 }
 header a {
     text-decoration: none;
@@ -82,7 +83,7 @@ span.bold{
     font-weight: bold;
 }
 section {
-    margin: 0 0 3rem 0;
+    margin: 0 0 2rem 0;
 }
 /* Custom Flexbox Stuff */
 .flex{
@@ -118,7 +119,7 @@ section {
 .flex-row{
     display: flex;
     column-gap: 2rem;
-    margin: 2rem 0 2rem 0;
+    margin: 0 0 2rem 0;
 }
 /* Grids */
 .basic-grid{

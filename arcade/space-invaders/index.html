@@ -14,25 +14,41 @@
         <script type="module" src="main.js"></script>
     </head>
     <body>
-        <section class="flex">
-            <section id="GUI">
-                <h1>SPACE INVADERS</h1>
-                <h4 id="scoreDisplay">Score: 0</h4>
-                <h4>Directions: </h4>
-                <ul>
-                    <li>WASD or Arrow Keys to move</li>
-                    <li>Spacebar to fire</li>
-                    <li>Survive the waves of enemies as long as possible!</li>
-                </ul>
-                <button id="restartButton">RESTART</button>
-            </section>
-            
-            <section id="gameBoard">
-                <div id="gameOver">
-                    <h4 id="gameOverText">You shouldn't see this...</h4>
+        <header>
+            <div class="flex">
+                <div>
+                    <h1>SPACE INVADERS</h1>
                 </div>
-            </section>
-        </section>
+                <div class="flexBottomRight">
+                    <a href="../">BACK</a>
+                </div>
+            </div>
+            <hr>
+        </header>
+        <section class="flex-row">
+            <div class="bigBox">
+                <section id="gameBoard">
+                    <div id="gameOver">
+                        <h4 id="gameOverText">You shouldn't see this...</h4>
+                    </div>
+                </section>
+            </div>
+            <div class="smallBox">
+                <section id="GUI">
+                    <h4 id="scoreDisplay">Score: 0</h4>
+                    <h4>Directions: </h4>
+                    <ul>
+                        <li>WASD or Arrow Keys to move</li>
+                        <li>Spacebar to fire</li>
+                        <li>Survive the waves of enemies as long as possible!</li>
+                    </ul>
+                    <button id="restartButton">RESTART</button>
+                </section>
+            </div>
+
+
+        </div>
+
 
     </body>
 </html>
