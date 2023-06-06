@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.typekit.net/qjh4ggc.css">
+        
+        <title>The Guillotine</title>
+        <link rel="stylesheet" href="../../basic.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <div class="flex">
+                <div>
+                    <h1>THE GUILLOTINE</h1>
+                </div>
+                <div class="flexBottomRight">
+                    <a href="https://github.com/MartinAllsbrook/alt-acade-interfaces/tree/main/Tug%20Box" target="_blank">GITHUB</a>
+                    <a href="https://youtu.be/opKY8cLKrIY" target="_blank">YOUTUBE</a>
+                    <a href="../">BACK</a>
+                </div>
+            </div>
+            <hr>
+        </header>
+        <section>
+            <div class="flex">
+                <div class="bigBox">
+                    <p>
+                        The Guillotine is a Arduino controlled one on one tug-of-war like pub game that tests players’ strength and reaction. The game consists of countdown lights like those in F1 racing and two heavily spring loaded ropes. Once the lights go out the first player to fully extend their rope wins, but they must be careful not to pull too early. 
+                    </p>
+                </div>
+                <div class="smallBox">
+                    <p><span class="bold">Team:</span> Martin Allsbrook</p>
+                    <p><span class="bold">Role:</span> Ideation, Prototyping, Wiring, Scripting, Construction</p>
+                    <p><span class="bold">Tools used:</span> Arduino, Hand tools, Solder</p>
+                    <p><span class="bold">Timeline:</span> April – May 2023</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <video autoplay muted loop disablePictureInPicture controlsList="nodownload">
+                <source src="assets/playing-the-guillotine.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        <section>
+            <h2>Prototyping & Finding the Fun</h2>
+            <p>
+                My work on The Guillotine required a fair amount of finding the fun. The original idea for the game came from an assignment to design an alternative, arcade style controller for a game another student was making. The game was described as:
+            </p>
+            <div class="flex-center-row">
+                <div class="bigBox">
+                    <p>
+                        “...a two player luck based cooperation game, where each player can choose to go down their path based on what they think they see behind a wall. <span class="bold">players have to tug of war by pressing their respective button, either convincing their partner their side is good, or beating them in tug of war,</span> and the player who wins has their path chosen (left or right). It is a 50/50 chance for each path that there will be a buddy behind the wall that rewards points, or a bomb that will remove health from a shared HP pool, and the path continues for multiple levels with varying buddies or bombs.”
+                    </p>
+                </div>
+            </div>
+            <p>
+                The 50/50 chance at either door being the correct choice seemed to make many of the game’s preposed mechanics relatively inconsequential, however the tug-of-war idea immediately stuck out to me as one of the more interesting proposed mechanics. This is primarily because beating your friends at tug of war, even if the tug of war had to real effect on your score, would still be kind of fun. This lead me to focus my controller ideation on extracting as much fun from this mechanic as possible.
+            </p>
+        </section>
+        <section>
+            <div class="flex-row">
+                <div class="bigBox">
+                    <img src="" alt="">
+                </div>
+                <div class="smallBox">
+                    <h3>Makey Makey</h3>
+                    <p>
+                        My early prototypes all used a Makey Makey to send inputs to my laptop which was running the game. This made prototyping incredibly easy as the Makey Makey was made to act as a keyboard, and all I had to do was connect it to simple circuits that would close when the desired actions were performed. 
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h3>Early Prototypes</h3>
+            <p>
+                My earliest working prototype was fairly similar to the final product shown above, using two ropes loaded by springs with conductive tin foil balls at the end. Similar to the final product these tinfoil balls would complete a circuit when the rope was pulled completely, letting the Makey Makey know to send an input to the computer.
+            </p>
+            <p>
+                After some playtesting I saw that this prototype showed exactly what I had hypothesized when I read the original proposal, and the tug-of-war mechanic was one of the most fun parts of the game. Since this controller functional, and quite fun to use, I ended up submitting it for the project, however it still had a lot of potential to be explored especially as a standalone game.
+            </p>
+        </section>
+        <section>
+            <h2>Prototype Takeaways</h2>
+            <p>
+                My early Makey Makey based controller design ended up becoming a sort of prototype for The Guillotine's final form. I learned a lot from both playtesting the controller and using it in class. 
+            </p>
+            <div class="flex-row">
+                <div class="smallBox">
+                    <video autoplay muted loop disablePictureInPicture controlsList="nodownload">
+                        <source src="assets/guillotine-at-expo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>                
+                </div>
+                <div class="bigBox">
+                    <h3>It Works</h3>
+                    <p>
+                        First of all I saw that competing to be the first to pull the ropes was extremally fun and while somewhat difficult, could be done by almost anyone regardless of strength. 
+                    </p>
+                </div>
+            </div>
+            <div class="flex-row">
+                <div class="bigBox">
+                    <h3>Rules & Objectives</h3>
+                    <p>
+                        Secondly, I needed to define some more clear rules and objectives for the game, specifically some sort of indicator telling the players when they should start pulling and a score counter. 
+                    </p>
+                </div>
+                <div class="smallBox">
+                    <video autoplay muted loop disablePictureInPicture controlsList="nodownload">
+                        <source src="assets/lights-on.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="flex-row">
+                <div class="bigBox">
+                    <img src="assets/Bottom.JPG" alt="">
+                </div>
+                <div class="smallBox">
+                    <h3>Remove the Computer</h3>
+                    <p>
+                        I also found that a computer and screen aren’t necessary for the calculations required or information displayed, and an Arduino connected to some scoreboards could suffice and make the game much more compact, durable and arcade like. 
+                    </p>
+                </div>
+            </div>
+            <div class="flex-row">
+                <div class="smallBox">
+                    <h3>Propper Audience</h3>
+                    <p>
+                        Finally with the help of some feed back from my classmates I realized that the strength based and competitive nature of the game made it perfect for a bar or pub setting.
+                    </p>
+                </div>
+                <div class="bigBox">
+                    <video autoplay muted loop disablePictureInPicture controlsList="nodownload">
+                        <source src="assets/playing-the-guillotine.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
