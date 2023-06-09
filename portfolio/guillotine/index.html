@@ -25,10 +25,10 @@
             <hr>
         </header>
         <section>
-            <div class="flex">
+            <div class="flex-row">
                 <div class="bigBox">
                     <p>
-                        The Guillotine is a Arduino controlled one on one tug-of-war like pub game that tests players’ strength and reaction. The game consists of countdown lights like those in F1 racing and two heavily spring loaded ropes. Once the lights go out the first player to fully extend their rope wins, but they must be careful not to pull too early. 
+                        The Guillotine is a Arduino controlled, one on one, tug-of-war like pub game that tests players’ strength and reaction time. The game consists of countdown lights like those in F1 racing and two heavily spring loaded ropes. Once the lights go out the first player to fully extend their rope wins, but they must be careful not to pull too early. 
                     </p>
                 </div>
                 <div class="smallBox">
@@ -40,31 +40,36 @@
             </div>
         </section>
         <section>
-            <video autoplay muted loop disablePictureInPicture controlsList="nodownload">
-                <source src="assets/playing-the-guillotine.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <div class="flex-row">
+                <div class="bigBox">
+                    <video autoplay muted loop disablePictureInPicture controlsList="nodownload">
+                        <source src="assets/playing-the-guillotine.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            
         </section>
         <section>
             <h2>Prototyping & Finding the Fun</h2>
-            <p>
+            <p class="bottom-margin">
                 My work on The Guillotine required a fair amount of finding the fun. The original idea for the game came from an assignment to design an alternative, arcade style controller for a game another student was making. The game was described as:
             </p>
-            <div class="flex-center-row">
+            <div class="flex-center-row bottom-margin">
                 <div class="bigBox">
                     <p>
                         “...a two player luck based cooperation game, where each player can choose to go down their path based on what they think they see behind a wall. <span class="bold">players have to tug of war by pressing their respective button, either convincing their partner their side is good, or beating them in tug of war,</span> and the player who wins has their path chosen (left or right). It is a 50/50 chance for each path that there will be a buddy behind the wall that rewards points, or a bomb that will remove health from a shared HP pool, and the path continues for multiple levels with varying buddies or bombs.”
                     </p>
                 </div>
             </div>
-            <p>
+            <p class="bottom-margin">
                 The 50/50 chance at either door being the correct choice seemed to make many of the game’s preposed mechanics relatively inconsequential, however the tug-of-war idea immediately stuck out to me as one of the more interesting proposed mechanics. This is primarily because beating your friends at tug of war, even if the tug of war had to real effect on your score, would still be kind of fun. This lead me to focus my controller ideation on extracting as much fun from this mechanic as possible.
             </p>
         </section>
         <section>
             <div class="flex-row">
                 <div class="bigBox">
-                    <img src="" alt="">
+                    <img src="assets/makey-makey.jpg" alt="">
                 </div>
                 <div class="smallBox">
                     <h3>Makey Makey</h3>
@@ -76,16 +81,16 @@
         </section>
         <section>
             <h3>Early Prototypes</h3>
-            <p>
+            <p class="bottom-margin">
                 My earliest working prototype was fairly similar to the final product shown above, using two ropes loaded by springs with conductive tin foil balls at the end. Similar to the final product these tinfoil balls would complete a circuit when the rope was pulled completely, letting the Makey Makey know to send an input to the computer.
             </p>
-            <p>
+            <p class="bottom-margin">
                 After some playtesting I saw that this prototype showed exactly what I had hypothesized when I read the original proposal, and the tug-of-war mechanic was one of the most fun parts of the game. Since this controller functional, and quite fun to use, I ended up submitting it for the project, however it still had a lot of potential to be explored especially as a standalone game.
             </p>
         </section>
         <section>
             <h2>Prototype Takeaways</h2>
-            <p>
+            <p class="bottom-margin">
                 My early Makey Makey based controller design ended up becoming a sort of prototype for The Guillotine's final form. I learned a lot from both playtesting the controller and using it in class. 
             </p>
             <div class="flex-row">

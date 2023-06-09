@@ -45,7 +45,7 @@
             <div class="flex-row">
                 <div class="smallBox">
                     <h3>Ideation</h3>
-                    <p>
+                    <p class="bottom-margin">
                         The idea for this project came to me surprisingly quickly. Over the past few years I’ve developed an interesting habit of trying to do skateboard style flips with almost any object that ends up in my hands. Most often the object I’m flipping ends up being my phone. I find that the shape and weight of my phone work very well for many tricks, however constantly dropping my phone when I fail to land a trick isn’t the best for it. I’ve been trying to think of other objects that have a similar shape and weight to my phone but nothing has really come to mind other than a shaped metal block.
                     </p>
                     <h3>Early Ideas:</h3>
@@ -62,7 +62,7 @@
 
         <section>
             <h2>PROTOTYPING</h2>
-            <p>
+            <p class="bottom-margin">
                 The handboard went through quite a few stages of development. Originally I planned on using a 3-axis accelerometer to detect the movement of the board and I had designed a few prototypes using one as the sole sensor. The earliest prototype for the hand board was made by simply velcroing the accelerometer with the longest cables I could find connecting it to the arduino and my computer. The cables frequently interfered with measurements I was trying to take while the handbard was in thair air and I quickly realized I needed a “wireless” prototype.
             </p>
 
@@ -72,7 +72,7 @@
                 </div>
                 <div class="bigBox">
                     <h3>Second prototype:</h3>
-                    <p>
+                    <p class="bottom-margin">
                         Since I didn’t have the means to wirelessly connect the handboard to the arduino, I opted to condense all the hardware onto a single prototype. To do this I folded an extremely large amount of aluminum foil into a shape similar to my phone. Using tin foil was nice as it gave the handboard weight and allowed me to produce almost any shape. I proceed by gluing and zipting all the hardware I needed to the tinfoil brick and testing. What I quickly realized is that a single 3 axis accelerometer is not nearly enough information to discern what the board is doing.
                     </p>
                     <h3>Ditching accelerometer:</h3>
@@ -85,7 +85,7 @@
 
         <section>
             <h2>Enclosure & Profile</h2>
-            <p>
+            <p class="bottom-margin">
                 One of the most important factors I considered when designing the handboard was its shape. The specific shape of a skateboard dictates many of the tricks you can and can’t do, and in order to make the handboard flip like a real skateboard I had to make sure I got its shape and weight distribution perfect. The biggest consideration I made was making sure that the handboard had a considerably different length in all three dimensions. In the case of my handboard it turned out to be a length of 6 ¼” from tip to tail, a width of 3 ¼”, and a thickness of 1”. Having these three dimensions be considerably different makes the handboard flip similarly to a skateboard.
             </p>
             <div class="flex-row">
@@ -94,7 +94,7 @@
                 </div>
                 <div class="bigBox">
                     <h3>Profile:</h3>
-                    <p>
+                    <p class="bottom-margin">
                         The most noticeable effect of these dimensions is visible when trying an “imposible,” a skateboard trick where you spin a skateboard 360 degrees around its second shortest axis, in this case a line from one side to the other. This skate trick was given this name because anytime you attempt the trick the skateboard will end up making a 180 degree turn about its longest axis in addition to the 360 degree rotation, making the trick impossible. No amount of skill or finesse can prevent the unwanted rotation, in fact the unwanted rotation is unavoidable in any object with the profile described above.
                     </p>
                     <h3>Weight:</h3>
@@ -152,9 +152,13 @@
         <section>
             <h2>FUTURE PLANS</h2>
             <h3>Assistance from machine learning:</h3>
-            <p>I would like to add a few more tricks to the device other than the four currently available to add some depth to the game. I plan to do this by implementing a machine learning algorithm that will learn what a proper version of each trick looks like based on the data from the IMU. There are enough details in the data that I think an advanced algorithm could recognize complex patterns and indicators of a successful trick, allowing it to see past the noise and decipher between land and fail better than my current solution.</p>
+            <p class="bottom-margin">
+                I would like to add a few more tricks to the device other than the four currently available to add some depth to the game. I plan to do this by implementing a machine learning algorithm that will learn what a proper version of each trick looks like based on the data from the IMU. There are enough details in the data that I think an advanced algorithm could recognize complex patterns and indicators of a successful trick, allowing it to see past the noise and decipher between land and fail better than my current solution.
+            </p>
             <h3>Expand on the game potential:</h3>
-            <p>My original plan for the hand board was to have it be the controller for a more vast computer based game. The game would be somewhat like “Skate” for the Xbox and would allow players to explore and skateboard around an open world. I could use tilt sensing to steer the player left and right, similar to a traditional skateboard. Tricks would be done just as they are now, only the player's character would perform the same trick virtually. This idea gets me extremely excited and I hope to bring it to fruition eventually, possibly as my capstone project next year.</p>
+            <p class="bottom-margin">
+                My original plan for the hand board was to have it be the controller for a more vast computer based game. The game would be somewhat like “Skate” for the Xbox and would allow players to explore and skateboard around an open world. I could use tilt sensing to steer the player left and right, similar to a traditional skateboard. Tricks would be done just as they are now, only the player's character would perform the same trick virtually. This idea gets me extremely excited and I hope to bring it to fruition eventually, possibly as my capstone project next year.
+            </p>
         </section>
 
         <!-- <section>

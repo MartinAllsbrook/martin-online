@@ -55,11 +55,13 @@
 
         <!-- Procedural Generation & Challenges -->
         <section>
-            <div class="bigBox">
-                <h2>Procedural World Generation</h2>
-                <p>
-                    I’ve always had a love for large open game worlds, especially procedurally generated ones and the and the replicability they create in exploration games. Because of this one of my main goals for Xenoplanet was to explore implementing a procedural open world.
-                </p>
+            <div class="flex-row">
+                <div class="bigBox">
+                    <h2>Procedural World Generation</h2>
+                    <p>
+                        I’ve always had a love for large open game worlds, especially procedurally generated ones and the and the replicability they create in exploration games. Because of this one of my main goals for Xenoplanet was to explore implementing a procedural open world.
+                    </p>
+                </div>
             </div>
             <div class="flex-row">
                 <div class="bigBox">
@@ -85,14 +87,16 @@
         </section>
 
         <section>
-            <div class="bigBox">
-                <h3>Lag Free Chunk Generation</h3>
-                <p>
-                    To create Xenoplanet’s infinite world new chunks have to constantly be loaded around the player. Normally generating a chunk’s heightmap or placing grass would take much longer than the length of a frame, constantly causing annoying lag spikes for the player.
-                </p>
-                <p>
-                    I was able prevent lag spikes like this by breaking up large chunks of calculation with coroutines that allow them to be carried out over several frames. This allows a small amount of calculation to be done each frame rather than slowing down the game to do it all at once.
-                </p>
+            <div class="flex-row">
+                <div class="bigBox">
+                    <h3>Lag Free Chunk Generation</h3>
+                    <p class="bottom-margin">
+                        To create Xenoplanet’s infinite world new chunks have to constantly be loaded around the player. Normally generating a chunk’s heightmap or placing grass would take much longer than the length of a frame, constantly causing annoying lag spikes for the player.
+                    </p>
+                    <p>
+                        I was able prevent lag spikes like this by breaking up large chunks of calculation with coroutines that allow them to be carried out over several frames. This allows a small amount of calculation to be done each frame rather than slowing down the game to do it all at once.
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -111,12 +115,12 @@
             </div>
         </section>
 
-        <section>
+        <section class="bottom-margin">
             <h3>Saving Chunks</h3>
             <p>
                 When chunks are removed from the scene they are are deactivated and saved to a C# dictionary of every chunk that has been loaded so far. Whenever the player is loading new chunks the dictionary is checked first to make sure they chunk hasn’t already been generated. This allows the changes the player makes to chunks to be saved when the player returns to the chunk, and reduces loading time when visiting chunks that have already been generated. 
             </p>
-        </section>
+        </section> 
 
 
         <section>
