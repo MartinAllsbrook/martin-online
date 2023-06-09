@@ -85,6 +85,9 @@ span.bold{
 section {
     margin: 0 0 2rem 0;
 }
+.bottom-margin {
+    margin-bottom: 2rem;
+}
 /* Custom Flexbox Stuff */
 .flex{
     display: flex;
