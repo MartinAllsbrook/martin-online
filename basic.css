@@ -39,7 +39,7 @@ h4{
 }
 h5{
     font-size: 1.5rem;
-    line-height: 1.8rem;
+    line-height: 120%;
 }
 p {
     font-size: 1.5rem;
@@ -235,13 +235,13 @@ button:active {
     margin: 6rem;
 }
 #maincontent span {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1.2rem;
+    line-height: 120%;
     display: block;
 }
 h5 {
     text-align: top;
-    height: 31px;
+    height: 1.8rem;
 }
 
 #welcome {
@@ -295,15 +295,21 @@ h5 {
     html{
         font-size: 11px;
     }
+    #maincontent span {
+        font-size: 1rem;
+    }
 }
 @media screen and (max-width: 720px) {
     html{
         font-size: 10px;
     }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
     html{
         font-size: 9px;
+    }
+    #maincontent span {
+        font-size: 0.78rem;
     }
 }
 @media screen and (max-width: 480px) {
