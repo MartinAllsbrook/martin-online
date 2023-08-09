@@ -44,34 +44,32 @@
                 <div class="smallBox">
                     <h3>Contributions</h3>
                     <p>
-                        My contributions to Xenoplanet include developing all the scripts that procedurally generate the games infinite world at runtime. Designing and implementing combat mechanics and enemy interactions that aligned with our desired aesthetics. As well as working as the general scripter and designer, creating the inventory system, world interactions, item drops and more.
+                        My contributions to Xenonplanet include developing the game’s real time procedural generation systems from the ground up. Designing and implementing combat mechanics and enemy AI that aligned with our desired aesthetics. As well as working as the general scripter and designer, creating the inventory system, world interactions, item drops and more.
                     </p>
                 </div>
                 <div class="bigBox">
-                    <img src="assets/Forest 2 Cropped.png" alt="Hero Image of forest roacks and a temple in the background">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Q2dnyGdxMr0?si=5TOrhZ-ygDgA5EhL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                
                 </div>
-            </div>
+            </div>    
         </section>
 
         <!-- Procedural Generation & Challenges -->
         <section>
             <div class="flex-row">
-                <div class="bigBox">
+                <div>
                     <h2>Procedural World Generation</h2>
                     <p>
-                        I’ve always had a love for large open game worlds, especially procedurally generated ones and the and the replicability they create in exploration games. Because of this one of my main goals for Xenoplanet was to explore implementing a procedural open world.
+                        I’ve always had a love for large open game worlds, especially procedurally generated ones and the and the replayability they create in exploration games. Because of this one of my main goals for Xenoplanet was to explore implementing a procedural open world.
                     </p>
                 </div>
             </div>
             <div class="flex-row">
-                <div class="bigBox">
-                    <!-- <img src="assets/Temple at Night Cropped.png" alt=""> -->
-                    <video autoplay muted loop disablePictureInPicture controlsList="nodownload">
-                        <source src="assets/Loading Vid 2.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="smallBox">
+                <!-- <img src="assets/Temple at Night Cropped.png" alt=""> -->
+                <video autoplay muted loop disablePictureInPicture controlsList="nodownload">
+                    <source src="assets/Loading Vid 2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- <div class="smallBox">
                     <h3>Challenges</h3>
                     <p>
                         Creating an aesthetically pleasing and fully procedural world that could generate in real time as the player moved around the map brought many challenges. These included:
@@ -81,14 +79,14 @@
                             <li>Saving chunks</li>
                         </ul>
                     </p>
-                </div>
+                </div> -->
             </div>
 
         </section>
 
         <section>
             <div class="flex-row">
-                <div class="bigBox">
+                <div class="smallBox">
                     <h3>Lag Free Chunk Generation</h3>
                     <p class="bottom-margin">
                         To create Xenoplanet’s infinite world new chunks have to constantly be loaded around the player. Normally generating a chunk’s heightmap or placing grass would take much longer than the length of a frame, constantly causing annoying lag spikes for the player.
@@ -97,54 +95,104 @@
                         I was able prevent lag spikes like this by breaking up large chunks of calculation with coroutines that allow them to be carried out over several frames. This allows a small amount of calculation to be done each frame rather than slowing down the game to do it all at once.
                     </p>
                 </div>
+                <div class="bigBox">
+                    <img src="assets/Forest 2 Cropped.png" alt="Hero Image of forest roacks and a temple in the background">
+                </div>
             </div>
         </section>
 
         <section class="flex-row">
-            <div class="smallBox">
+            <div class="bigBox">
                 <img src="assets/Tree and House Cropped.png" alt="">
             </div>
-            <div class="bigBox">
+            <div class="smallBox">
                 <h3>Grass Placement</h3>
-                <p>
-                    Each chunk in Xenoplanet needed 4096 grass objects placed at specific heights and orientations, and in Unity the Instantiate method used to create new objects is notoriously slow. This created a unique challenge as even if broke up the grass instantiation with coroutines it would take a impractical amount of time
+                <p class="bottom-margin">
+                    Each chunk in Xenoplanet needed 4096 grass objects placed at specific heights and orientations, and in Unity the Instantiate method used to create new objects is notoriously slow. This created a unique challenge, as even if I broke up the grass instantiation with coroutines it would take a impractical amount of time
                 </p>
                 <p>
-                    The solution to this was to use object pooling. Rather than instantiating every grass object on each chunk I loaded the scene with 25 objects each containing one set of 4096 grass objects. I could then reuse these 25 objects by moving them to the 5x5 area of chunks around the player, making the world seem covered in grass without ever having to create any new.
+                    The solution to this was to use object pooling. Rather than instantiating every grass object on each chunk I loaded the scene with 25 objects each containing one set of 4096 grass objects. I could then reuse these 25 objects by moving them to the 5x5 area of chunks around the player, making the world seem covered in grass without ever having to create any new grass.
                 </p>
             </div>
         </section>
 
         <section class="bottom-margin">
-            <h3>Saving Chunks</h3>
-            <p>
-                When chunks are removed from the scene they are are deactivated and saved to a C# dictionary of every chunk that has been loaded so far. Whenever the player is loading new chunks the dictionary is checked first to make sure they chunk hasn’t already been generated. This allows the changes the player makes to chunks to be saved when the player returns to the chunk, and reduces loading time when visiting chunks that have already been generated. 
-            </p>
+            <div class="flex-row">
+                <div class="smallBox">
+                    <h3>Saving Chunks</h3>
+                    <p>
+                        When chunks are removed from the scene they are are deactivated and saved to a C# dictionary of every chunk that has been loaded so far. Whenever the player is loading new chunks the dictionary is checked first to make sure they chunk hasn’t already been generated. This allows the changes the player makes to chunks to be saved when the player returns to the chunk, and reduces loading time when visiting chunks that have already been generated. 
+                    </p>
+                </div>
+                <div class="bigBox">
+                    <img src="assets/Temple at Night.png" alt="">
+                </div>
+            </div>
+
         </section> 
 
 
         <section>
-            <h2>Enemies and Creating Intense Combat Encounters</h2>
-            <p class="textBlockText">
-                One of my main aesthetic goals when creating Xenoplanet was to create intense encounters that put the player on the edge of their seat. Many survival games accomplish this by putting the players hours of hard work on the line but that conflicted with our goal of creating a shorter term less grindy experience. In order to accomplish both these aesthetics I had to look towards the enemies and the dynamics of how the player interacts with them.
-            </p>
-            <iframe src="https://www.youtube.com/embed/_ix1BM9zldk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="flex-row">
+                <div>
+                    <h2>Creating Intense Combat Encounters</h2>
+                    <p>
+                        One of my main aesthetic goals when creating Xenoplanet was to create intense encounters that put the player on the edge of their seat. Many survival games accomplish this by putting the players hours of hard work on the line but that conflicted with our goal of creating a shorter term less grindy experience. In order to accomplish both these aesthetics I had to look towards the combat mechanics and dynamics between the player and enemies.
+                    </p>
+                </div>
 
-            <h3>Permadeath</h3>
-            <p class="textBlockText">
-                Our first decision was to make the game permadeath. This immediately increased the stakes of every enemy encounter as all the players progress was put on the line. Even though the game only lasts 10 minutes dying to an enemy would put the player right back where they started
-            </p>
-            <h3>Awareness and Spawning</h3>
-            <p class="textBlockText">
-                The second mechanic I implemented was enemy awareness. All enemies have a limited field of view and max view distance. However once the player is seen other enemies in the surrounding area are also alerted to the player's position and more difficult enemies are spawned. Together these two mechanics forced the player into a more methodical and sneaky playstyle where one wrong move meant serious consequences.
-            </p>
-            <h3>Limited Ammo and Critical Hits</h3>
-            <p class="textBlockText">
-                Finally we gave the player very limited ammo and added critical hit spots to the enemies. The player typically finds themselves with around 5 to 10 arrows in their inventory with a maximum of 20 (10 normal, 10 explosive). Without critical hits it takes around 3 to 6 arrows to kill an enemy depending on the type of arrow and enemy, around 60% of the arrows the player is typically holding. However by using critical hits the player can kill enemies in only 1 or 2 arrows greatly reducing the time to kill and the resources expended.
-            </p>
-            <p class="textBlockText">
-                These two mechanics combine in a way that allows precision to make or break a combat encounter. This inturn increases the pressure on the player to perform and increases the intensity of these encounters.
-            </p>
+            </div>
+            <div class="flex-row">
+                <img src="assets/Aiming at enemy.png" alt="">
+            </div>
+
+            <!-- <iframe src="https://www.youtube.com/embed/_ix1BM9zldk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        </section>
+
+        <section>
+            <div class="flex-row">
+                <div class="bigBox">
+                    <img src="assets/Killed by enemy.png" alt="">
+                </div>
+                <div class="smallBox">
+                    <h3>Permadeath</h3>
+                    <p class="textBlockText">
+                        Our first decision was to make the game permadeath. This immediately increased the stakes of every enemy encounter as all the players progress was put on the line. Even though the game only lasts 10 minutes dying to an enemy would put the player right back where they started
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <div class="flex-row">
+                <div class="smallBox">
+                    <h3>Awareness and Spawning</h3>
+                    <p class="textBlockText">
+                        The second mechanic I implemented was enemy awareness. All enemies have a limited field of view and max view distance. However once the player is seen other enemies in the surrounding area are also alerted to the player's position and more difficult enemies are spawned. Together these two mechanics forced the player into a more methodical and sneaky playstyle where one wrong move meant serious consequences.
+                    </p>
+                </div>
+                <div class="bigBox">
+                    <video autoplay muted loop disablePictureInPicture controlsList="nodownload">
+                        <source src="assets/Combat Vid.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="flex-row">
+                <div class="bixBox">
+                    <img src="assets/Hiding.png" alt="">
+                </div>
+                <div class="smallBox">
+                    <h3>Limited Ammo and Critical Hits</h3>
+                    <p class="textBlockText">
+                        Finally we gave the player very limited ammo and added critical hit spots to the enemies. The player typically finds themselves with around 5 to 10 arrows in their inventory with a maximum of 20 (10 normal, 10 explosive). Without critical hits it takes around 3 to 6 arrows to kill an enemy depending on the type of arrow and enemy, around 60% of the arrows the player is typically holding. However by using critical hits the player can kill enemies in only 1 or 2 arrows greatly reducing the time to kill and the resources expended.
+                    </p>
+                </div>
+            </div>
         </section>
     </body>
 </html>

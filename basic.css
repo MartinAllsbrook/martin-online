@@ -54,6 +54,10 @@ li{
     line-height: 130%;
     font-weight: 300;
 }
+iframe {
+    width: 100%;
+}
+
 
 /* Header */
 header {
@@ -77,7 +81,7 @@ img{
     width: 100%;
 }
 video{
-    max-width: 100%;
+    width: 100%;
 }
 span.bold{
     font-weight: bold;
