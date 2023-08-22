@@ -69,6 +69,11 @@ header {
     background-color: #0C0C0C;
     z-index: 1;
 }
+
+#homepage-header{
+    z-index: 0;
+}
+
 header a {
     text-decoration: none;
     font-size: 2rem;
