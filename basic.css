@@ -70,10 +70,6 @@ header {
     z-index: 1;
 }
 
-#homepage-header{
-    z-index: 0;
-}
-
 header a {
     text-decoration: none;
     font-size: 2rem;
@@ -239,17 +235,17 @@ button:active {
 /* ========================================================================= */
 /*                      SOME SPECIFIC HOMEPAGE STYLES                        */
 /* ========================================================================= */
+#homepage-body{
+    overflow: hidden;
+}
+#homepage-header{
+    z-index: 0;
+}
 
 #page-bottom{
     position:absolute;
     bottom: 0;
     padding-right: 2rem;
-}
-
-#page-bottom h1{
-    font-size: 13.5vw;
-    line-height: 90%;
-    font-weight: 600;
 }
 
 #featured-links{
@@ -265,16 +261,6 @@ button:active {
     height: 90%;
     object-fit: cover;
     margin-top: 1rem;
-}
-
-#maincontent {
-    display: flex;
-    margin: 6rem;
-}
-#maincontent span {
-    font-size: 1.2rem;
-    line-height: 120%;
-    display: block;
 }
 h5 {
     text-align: top;
@@ -325,25 +311,41 @@ h5 {
 }
 @media screen and (max-width: 1200px) {
     html{
-        font-size: 12px;
+        font-size: 11px;
     }
 }
 @media screen and (max-width: 960px) {
     html{
-        font-size: 11px;
+        font-size: 10px;
+    }
+    #homepage-body{
+        overflow: auto;
     }
     #maincontent span {
         font-size: 1rem;
     }
+    #page-bottom{
+        position: relative;
+        top: 0;
+        bottom: auto;
+        padding-right: 0;
+    }
+    #page-bottom .flex-row{
+        display: block;
+    }
+
+    #page-bottom .flexeven{
+        margin-bottom: 3rem;
+    }
 }
 @media screen and (max-width: 720px) {
     html{
-        font-size: 10px;
+        font-size: 9px;
     }
 }
 @media screen and (max-width: 600px) {
     html{
-        font-size: 9px;
+        font-size: 8px;
     }
     #maincontent span {
         font-size: 0.78rem;
@@ -351,6 +353,6 @@ h5 {
 }
 @media screen and (max-width: 480px) {
     html{
-        font-size: 8px;
+        font-size: 7px;
     }
 }
