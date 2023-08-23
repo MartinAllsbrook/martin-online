@@ -238,9 +238,9 @@ button:active {
 #homepage-body{
     overflow: hidden;
 }
-#homepage-header{
+/* #homepage-header{
     z-index: 0;
-}
+} */
 
 #page-bottom{
     position:absolute;
@@ -313,11 +313,6 @@ h5 {
     html{
         font-size: 11px;
     }
-}
-@media screen and (max-width: 960px) {
-    html{
-        font-size: 10px;
-    }
     #homepage-body{
         overflow: auto;
     }
@@ -336,6 +331,40 @@ h5 {
 
     #page-bottom .flexeven{
         margin-bottom: 3rem;
+        height: 50vh;
+    }
+    #featured-links{
+        height: auto;
+    }
+
+}
+@media screen and (max-width: 960px) {
+    html{
+        font-size: 10px;
+    }
+
+    .basic-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+    #homepage-header .flex{
+        display: block;
+    }
+
+    #homepage-header .flexBottomRight{
+        display: flex;
+        justify-content: left;
+        align-items: end;
+        flex-grow: 1;
+        margin: 0.15rem 0 0.15rem 0;
+    }
+    #homepage-header .flexBottomRight a{
+        margin-left: 0;
+        margin-right: 1rem;
+        /* flex-grow: 1; */
+    }
+
+    #homepage-header .flexBottomRight a.last-link{
+        flex-grow: 0;
     }
 }
 @media screen and (max-width: 720px) {
@@ -346,6 +375,9 @@ h5 {
 @media screen and (max-width: 600px) {
     html{
         font-size: 8px;
+    }
+    .basic-grid{
+        grid-template-columns: 1fr;
     }
     #maincontent span {
         font-size: 0.78rem;
