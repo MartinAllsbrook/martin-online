@@ -41,8 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     for(let i = 0; i < items.length; i++) {
         document.getElementById('main-grid').innerHTML += '<div class="basic-container" id="cell' +[i]+ '"> </div>';
-        document.getElementById('cell' + i).innerHTML += '<a href="' + items[i].link + '"><img src="assets/' + items[i].image + '" alt=""></a>';
-        document.getElementById('cell' + i).innerHTML += '<a href="' + items[i].link + '">' + items[i].title + '</a>';
+        document.getElementById('cell' + i).innerHTML += '<a href="' + items[i].link + '"><img src="assets/' + items[i].image + '" alt=""><h5>' + items[i].title + '</h5></a>';
     }
 
     document.getElementById('main-grid').innerHTML += '<div class="basic-container" id="cellback"> </div>';
