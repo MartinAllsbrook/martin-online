@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let titles = ['SNAKE', 'GLEE 2023', 'GROWAPP', 'TYPE SPECIMEN POSTER', 'HANDBOARD GAME POC', 'COLORADO SYMPHONY', 'BIG WORMS'];
     let images = ['snake.svg', 'glee-2023.svg', 'growapp.svg', 'type-specimen.svg', 'handboard-poc.svg', 'colorado-symphony.svg', 'big-worms.svg']
 
-    items.push(new Item('https://www.youtube.com/watch?v=8ViEOLSg4dc', 'ROAD RUNNER', 'roadrunnerthumb.png'));
+    items.push(new Item('https://www.youtube.com/watch?v=8ViEOLSg4dc', 'ROAD RUNNER', 'roadrunner2.png'));
     items.push(new Item('xenoplanet', 'XENOPLANET', 'xenoplanet2.png'));
     items.push(new Item('guillotine', 'THE GUILLOTINE', 'the-guillotine.png'));
     items.push(new Item('../arcade/snake-legacy', 'SNAKE', 'snake.svg'));
