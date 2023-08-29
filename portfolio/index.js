@@ -30,8 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
     items.push(new Item('https://www.youtube.com/watch?v=8ViEOLSg4dc', 'ROAD RUNNER', 'roadrunner2.png'));
     items.push(new Item('xenoplanet', 'XENOPLANET', 'xenoplanet2.png'));
     items.push(new Item('guillotine', 'THE GUILLOTINE', 'the-guillotine.png'));
-    items.push(new Item('../arcade/snake-legacy', 'SNAKE', 'snake.svg'));
     items.push(new Item('glee-2023', 'GLEE 2023', 'glee 2.png'));
+    items.push(new Item('aire-ux', 'AIRE UX DESIGN', 'AIRE Dubai.png'));
+    items.push(new Item('../arcade/snake-legacy', 'SNAKE', 'snake.svg'));
     items.push(new Item('growapp', 'GROWAPP', 'growapp.svg'));
     items.push(new Item('type-specimen', 'TYPE SPECIMEN POSTER', 'type-specimen.svg'));
     items.push(new Item('handboard-poc', 'HANDBOARD GAME', 'handboard-poc2.png'));
