@@ -12,7 +12,7 @@ body {
     color: white;
     background-color: #0C0C0C;
 
-    padding: 2rem;
+    padding: 1.4rem 2rem;
 }
 
 /* Font Styles */
@@ -64,8 +64,8 @@ iframe {
 header {
     position: sticky;
     top: 0rem;
-    margin: -2rem -2rem 2rem -2rem;
-    padding: 2rem 2rem 0 2rem;
+    margin: -1.5rem -2rem 1.5rem -2rem;
+    padding: 1.5rem 2rem 0 2rem;
     background-color: #0C0C0C;
     z-index: 1;
 }
