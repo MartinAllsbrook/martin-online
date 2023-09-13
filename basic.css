@@ -14,7 +14,9 @@ body {
 
     padding: 1.4rem 2rem;
 }
-
+.no-scroll-body{
+    overflow: hidden;
+}
 /* Font Styles */
 
 h1 {

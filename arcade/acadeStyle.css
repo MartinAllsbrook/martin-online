@@ -12,6 +12,12 @@
     justify-content: center;
     align-items: center;
 }
+#restart {
+    margin: 1vw 0vw;
+    padding: 1vw 2vw;
+    flex-grow: 1;
+    font-size: 2vw;
+}
 body {
     box-sizing: border-box;
     max-height: 100vh;

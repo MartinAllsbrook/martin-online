@@ -13,7 +13,7 @@
 
         <script type="module" src="main.js"></script>
     </head>
-    <body>
+    <body class="no-scroll-body">
         <header>
             <div class="flex">
                 <div>
@@ -26,23 +26,23 @@
             <hr>
         </header>
         <section class="flex-row">
-            <div class="bigBox">
+            <div class="smallBox">
                 <section id="gameBoard">
                     <div id="gameOver">
                         <h4 id="gameOverText">You shouldn't see this...</h4>
                     </div>
                 </section>
             </div>
-            <div class="smallBox">
+            <div class="bigBox">
                 <section id="GUI">
-                    <h4 id="scoreDisplay">Score: 0</h4>
-                    <h4>Directions: </h4>
+                    <h2 id="scoreDisplay">Score: 0</h2>
+                    <h2>Directions: </h2>
                     <ul>
                         <li>WASD or Arrow Keys to move</li>
                         <li>Spacebar to fire</li>
                         <li>Survive the waves of enemies as long as possible!</li>
                     </ul>
-                    <button id="restartButton">RESTART</button>
+                    <button id="restart">RESTART</button>
                 </section>
             </div>
 

@@ -7,7 +7,7 @@ class GUIController {
         this.gameOver = document.getElementById('gameOver');
         this.gameOverText = document.getElementById('gameOverText');
         
-        document.getElementById('restartButton').addEventListener('click', () => {
+        document.getElementById('restart').addEventListener('click', () => {
             this.restart();
         }, false);
     }

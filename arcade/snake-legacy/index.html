@@ -1,70 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> -->
-    <link rel="stylesheet" href="https://use.typekit.net/qjh4ggc.css">
-    
-    <title>Snake</title>
-    <link rel="stylesheet" href="../../basic.css">
-    <link rel="stylesheet" href="../portfoliostyle.css">
-    <link rel="stylesheet" href="snake.css">
-  </head>
-  <body>
-    <header>
-      <div class="flex">
-          <div>
-              <h1>SNAKE</h1>
-          </div>
-          <div class="flexBottomRight">
-              <a href="../">BACK</a>
-          </div>
-      </div>
-      <hr>
-    </header>
-    <section class="flex">
-      <section id="ui" class="flexbox">
-        <div class="textContent">
-          <h4 id="directions">DIRECTIONS:</h4>
-          <ul>
-            <li>WASD or arrow keys to move</li>
-            <li>Red squares are food</li>
-            <li>Score points and grow your snake by eating food</li>
-            <li>The game ends if the snake hits its self or the walls</li>
-          </ul>
-        </div>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> -->
+        <link rel="stylesheet" href="https://use.typekit.net/qjh4ggc.css">
         
-        <section id="scores" class="flex">
-          <h4 id="score" class="score">SCORE: 0</h4>
-          <h4 id="highscore" class="score">HIGH SCORE: 0</h4>
-        </section>
-
+        <title>Snake</title>
+        <link rel="stylesheet" href="../../basic.css">
+        <link rel="stylesheet" href="../acadeStyle.css">
+        <link rel="stylesheet" href="snake.css">
+    </head>
+    <body class="no-scroll-body">
+        <header>
+            <div class="flex">
+                <div>
+                    <h1 id="header">SNAKE</h1>
+                </div>
+                <div class="flexBottomRight">
+                    <a href="https://youtu.be/YPQV93vfk50" target="_blank">PROJECT PRESENTATION</a>
+                    <a href="../">BACK</a>
+                </div>
+            </div>
+            <hr>
+        </header>
         <section class="flex">
-          <button id="restart">RESTART</button>
+            <section id="ui" class="flexbox">
+                <div class="textContent">
+                    <h2 id="directions">DIRECTIONS</h2>
+                    <ul>
+                        <li>WASD or arrow keys to move</li>
+                        <li>Red squares are food</li>
+                        <li>Score points and grow your snake by eating food</li>
+                        <li>The game ends if the snake hits its self or the walls</li>
+                    </ul>
+                </div>
+                    
+                <section id="scores" class="flex">
+                    <h3 id="score" class="score">SCORE: 0</h3>
+                    <h3 id="highscore" class="score">HIGH SCORE: 0</h3>
+                </section>
+
+                <section class="flex">
+                    <button id="restart">RESTART</button>
+                </section>
+
+                <div class="textContent">
+                    <h2 id="difHead">CURRENT DIFFICULTY: MEDIUM [100ms/tick]</h2>
+                    <section class="flex" id="difficulties">
+                        <button class="difficulty" id="veryhard">VERY HARD</button>
+                        <button class="difficulty" id="hard">HARD</button>
+                        <button class="difficulty" id="medium">MEDIUM</button>
+                        <button class="difficulty" id="easy">EASY</button>
+                        <button class="difficulty last" id="veryeasy">VERY EASY</button>
+                    </section>
+                </div>
+            </section>
+
+            <section id="snakeBoard" class="flexbox"></section>
         </section>
 
-        <div class="textContent">
-          <h4 id="difHead">CURRENT DIFFICULTY: MEDIUM [100ms/tick]</h4>
-            <section class="flex" id="difficulties">
-              <button class="difficulty" id="veryhard">VERY HARD</button>
-              <button class="difficulty" id="hard">HARD</button>
-              <button class="difficulty" id="medium">MEDIUM</button>
-              <button class="difficulty" id="easy">EASY</button>
-              <button class="difficulty last" id="veryeasy">VERY EASY</button>
-            </section>
-        </div>
-
-        <div class="textContent">
-          <p><a class="biglink" href="https://youtu.be/YPQV93vfk50" target="_blank">PROJECT PRESENTATION</a> </p>
-          <p id="backlink"><a class="biglink"  href="../index.html">BACK</a></p>
-        </div>
-
-      </section>
-      <section id="snakeBoard" class="flexbox"></section>
-    </section>
-
-    <script src="index.js"></script>
-    <script src="../../backlink.js"></script>
-  </body>
+        <script src="index.js"></script>
+        <script src="../../backlink.js"></script>
+    </body>
 </html>

@@ -31,9 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
     items.push(new Item('xenoplanet', 'XENOPLANET', 'xenoplanet2.png'));
     items.push(new Item('guillotine', 'THE GUILLOTINE', 'the-guillotine.png'));
     items.push(new Item('glee-2023', 'GLEE 2023', 'glee 2.png'));
+    items.push(new Item('handboard-poc', 'HANDBOARD GAME', 'handboard-poc2.png'));
+    items.push(new Item('../arcade', 'ARCADE', 'snake.svg'));
     items.push(new Item('aire-ux', 'AIRE UX DESIGN', 'AIRE Dubai.png'));
-    items.push(new Item('handboard-poc', 'HANDBOARD GAME', 'handboard-poc2.png'))
-    items.push(new Item('../arcade/snake-legacy', 'SNAKE', 'snake.svg'));
     items.push(new Item('colorado-symphony', 'COLORADO SYMPHONY', 'colorado-symphony.svg'));
     items.push(new Item('type-specimen', 'TYPE SPECIMEN POSTER', 'type-specimen.svg'));
     items.push(new Item('growapp', 'GROWAPP', 'growapp.svg'));
