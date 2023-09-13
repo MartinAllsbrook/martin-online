@@ -78,7 +78,11 @@ a {
     line-height: 120%;
     font-weight: 500;
 }
-
+p a{
+    font-size: 1em;
+    font-weight: 300;
+    text-decoration: underline;
+}
 header a {
     margin-left: 1rem;
 }

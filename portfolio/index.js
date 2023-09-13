@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     items.push(new Item('road-runner', 'ROAD RUNNER', 'roadrunnerthumb.png'));
     items.push(new Item('xenoplanet', 'XENOPLANET', 'xenoplanet2.png'));
-    items.push(new Item('guillotine', 'THE GUILLOTINE', 'the-guillotine.png'));
+    items.push(new Item('guillotine', 'THE GUILLOTINE', 'the-guillotine.jpg'));
     items.push(new Item('glee-2023', 'GLEE 2023', 'glee 2.png'));
     items.push(new Item('handboard-poc', 'HANDBOARD GAME', 'handboard-poc2.png'));
     items.push(new Item('../arcade', 'ARCADE', 'snake.svg'));
