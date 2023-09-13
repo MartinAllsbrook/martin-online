@@ -9,98 +9,114 @@
         <!-- <meta charset="utf-8"> -->
         <title>GrowApp Case Study</title>
         <link rel="stylesheet" href="../../basic.css">
-        <link rel="stylesheet" href="style.css">
+        <!-- <link rel="stylesheet" href="style.css"> -->
     </head>
     <body>
         <header>
-            <h1>GrowApp - UX/UI Case Study</h1>
+            <div class="flex">
+                <div class="flex">
+                    <h1 id="header-text">GROWAPP CASE STUDY</h1>
+                </div>
+                <div class="flexBottomRight">
+                    <a href="https://www.figma.com/proto/vhIByguswyxFLXSkxKYjPQ/GROWAPP-HIGH-FIDELITY?kind=&node-id=34-491&page-id=0%3A1&scaling=scale-down&starting-point-node-id=34%3A491&viewport=241%2C48%2C0.29" target="_blank">INTERACTIVE DEMO</a>
+                    <a href="../">BACK</a>
+                </div>
+            </div>
+            <hr>
         </header>
 
-        <section class="flex">
-            <div class="flexleft">
-                <h2>OVERVIEW</h2>
-                <p><span>Designer:</span> Martin Allsbrook</p>
-                <p><span>Role:</span> UX designer, Graphic Designer, Researcher, Interviewer</p>
-                <p><span>Tools used:</span> Figma, Illustrator, Photoshop, Unsplash</p>
-                <p><span>Timeline:</span> January 2022 – April 2022</p>
+        <section class="flex bottom-margin">
+            <div class="bigBox">
+                <p>GrowApp is an all-in-one garden management system that solves the issue of plant owners being unsure of the needs of their plants. The system uses a set of internet connected sensors to monitor various factors that affect the health of our users plants. We then generate a calendar of what the user needs to do in order to keep their plants healthy, in addition to sending out notifications if the plants need care urgently. The platform also has other resources such as forums where users can discuss various plant related issues, a large database of plant information to help advise the user, and journals for the user to log information about their plants.</p>   
             </div>
-            <div class="flexright">
-                <h3>Summary:</h3>
+
+            <div class="smallBox">
+                <p><span class="bold">Designer:</span> Martin Allsbrook</p>
+                <p><span class="bold">Role:</span> UX designer, Graphic Designer, Researcher, Interviewer</p>
+                <p><span class="bold">Tools used:</span> Figma, Illustrator, Photoshop, Unsplash</p>
+                <p><span class="bold">Timeline:</span> January 2022 – April 2022</p>
+            </div>
+        </section>
+<!-- 
+        <section class="bottom-margin">
+                <h2>BACKGROUND</h2>
                 <p>A friend of mine had been struggling to properly care for some plants of his due to a variety of issues, particularly a lack of knowledge about what the plants needed at that time. This often ended up with him over caring for the plants out of fear that they were not receiving enough care. His brother, my roommate, then came up with the idea to create a cloud based moisture monitoring system that would alleviate the anxiety of not knowing. My roommate began developing prototypes for the sensor and I decided to join by doing some market research and designing a front end for the system.</p>
-            
-                <h3>Challenge:</h3>
-                <p>GrowApp is an all-in-one garden management system that solves the issue of plant owners being unsure of the needs of their plants. The system uses a set of internet connected sensors to monitor various factors that affect the health of our users plants. We then generate a calendar of what the user needs to do in order to keep their plants healthy, in addition to sending out notifications if the plants need care urgently. The platform also has other resources such as forums where users can discuss various plant related issues, a large database of plant information to help advise the user, and journals for the user to log information about their plants.</p>        
+        </section> -->
+
+        <section class="bottom-margin">
+            <h2>RESEARCH</h2>
+            <div class="flex">
+                <div class="smallBox">
+                    <p>A variety of research methods were employed in order to gather information about our consumers and competitors, including user interviews, affinity mapping and a competitive analysis.</p>
+                </div>
+                <div class="bigBox">
+                    <h3>Background:</h3>
+                    <p class="bottom-margin">The GrowApp application will be a system that connects to a set of moisture sensors in order to collect information about the user's plants. The system will then generate a calendar and alerts to notify users about when they need to water or care for their plants, in addition to supplying users with other other plant-care related features The app will be able to help more proficient users such as gardeners, nurseries, or grow ops, as well as casual users with house plants.</p>
+                
+                    <h3>Goals:</h3>
+                    <p>When conducting user interviews I had a few goals in mind in terms of what I wanted to get out of the user interviews. These were: </p>
+                        <ul class="bottom-margin">
+                            <li>Learn what tools or systems people currently use to keep track of the watering cycle of their plants, if any.</li>
+                            <li>Learn the types of plants people own and how they learned to take care of them.</li>
+                            <li>Learn about people's experiences growing and caring for plants of all types.</li>
+                        </ul>
+                    
+    
+                    <h3>Methodology:</h3>
+                    <p >I had few interviewees in mind already but I planned on finding most of my interviewees through friends of friends. I wanted to conduct my interviews mostly in person but if the circumstances didn't work out I was open to meeting via Zoom or the phone; however all the interviews ended up being conducted in person. The interviews were about 30 to 45 minutes each and I ended up conducting a total of 3.</p>
+                </div>
             </div>
         </section>
 
-        <section class="flex">
-            <div class="flexleft">
-                <h2>RESEARCH</h2>
-                <p>A variety of research methods were employed in order to gather information about our consumers and competitors, including user interviews, affinity mapping and a competitive analysis.</p>
-            </div>
-            <div class="flexright">
-                <h3>Background:</h3>
-                <p>The GrowApp application will be a system that connects to a set of moisture sensors in order to collect information about the user's plants. The system will then generate a calendar and alerts to notify users about when they need to water or care for their plants, in addition to supplying users with other other plant-care related features The app will be able to help more proficient users such as gardeners, nurseries, or grow ops, as well as casual users with house plants.</p>
-            
-                <h3>Goals:</h3>
-                <p>
-                    When conducting user interviews I had a few goals in mind in terms of what I wanted to get out of the user interviews. These were:
-                    <ul>
-                        <li>Learn what tools or systems people currently use to keep track of the watering cycle of their plants, if any.</li>
-                        <li>Learn the types of plants people own and how they learned to take care of them.</li>
-                        <li>Learn about people's experiences growing and caring for plants of all types.</li>
-                    </ul>
-                </p>
-
-                <h3>Methodology:</h3>
-                <p>I had few interviewees in mind already but I planned on finding most of my interviewees through friends of friends. I wanted to conduct my interviews mostly in person but if the circumstances didn't work out I was open to meeting via Zoom or the phone; however all the interviews ended up being conducted in person. The interviews were about 30 to 45 minutes each and I ended up conducting a total of 3.</p>
-            </div>
-        </section>
-
-        <section class="flex">
-            <div class="flexleft">
-                <h2>INTERVIEWING</h2>
-            </div>
-
-            <div class="flexright">
-                <h3>Example interview questions:</h3>
-                <p>
+        <section class="bottom-margin">
+            <h2>INTERVIEWING</h2>
+            <div class="flex">
+                <div class="smallBox">
+                    <h3>Example interview questions:</h3>
                     <ul>
                         <li>Tell me about your experience taking care of your plants.</li>
                         <li>How much value do your plants hold to you?</li>
                         <li>Do you use any tools to keep track of when to water your plants?</li>
                     </ul>
-                </p>
-    
-                <h3>Participant screening:</h3>
-                <p>
-                    While looking for interviewees there were a few criteria I wanted to make sure my interviewees met. These were:
-                    <ul>
-                        <li>Owner of multiple plants</li>
-                        <li>Preferably a gardener or grower that owns plants of value</li>
-                        <li>Preferably have had plants die on them in the past</li>
-                        <li>Need participants that have been both good and bad at taking care of their plants</li>
-                    </ul>
-                </p>
+                </div>
+                
+                <div class="bigBox bottom-margin">
+                    <h3>Participant screening:</h3>
+                    <p>
+                        While looking for interviewees there were a few criteria I wanted to make sure my interviewees met. These were:
+                        <ul>
+                            <li>Owner of multiple plants</li>
+                            <li>Preferably a gardener or grower that owns plants of value</li>
+                            <li>Preferably have had plants die on them in the past</li>
+                            <li>Need participants that have been both good and bad at taking care of their plants</li>
+                        </ul>
+                    </p>
 
-                <h3>Interview findings and insights:</h3>
-                <p>The interviewing process was extremely helpful in finding out what I should be focusing on in terms of the final product. One of the biggest insights was that multiple interviewees complained about issues with soil or sunlight. Although it wouldn't be as regular as a watering schedule, I realized we could add a few more sensors to the moisture level probes and GrowApp could automatically assist users with advice about plants lacking sunlight or nutrients when issues came up.</p>
+                    <h3>Interview findings and insights:</h3>
+                    <p>The interviewing process was extremely helpful in finding out what I should be focusing on in terms of the final product. One of the biggest insights was that multiple interviewees complained about issues with soil or sunlight. Although it wouldn't be as regular as a watering schedule, I realized we could add a few more sensors to the moisture level probes and GrowApp could automatically assist users with advice about plants lacking sunlight or nutrients when issues came up.</p>
+                </div>
             </div>
         </section>
 
-        <section class="centeralign">
-            <h3 class="centertext">“It's extremely stressful knowing one wrong move could end up killing the plants I've been caring for all year.”</h3>
+        <section class="flex-center-row bottom-margin">
+            <div class="bigBox bottom-margin">
+                <h3 class="centertext">“It's extremely stressful knowing one wrong move could end up killing the plants I've been caring for all year.”</h3>
+            </div>
         </section>
 
-        <section class="centeralign">
-            <h3 class="centertext">“My plants have become extremely valuable to me both sentimentally and literally.”</h3>
+        <section class="flex-center-row bottom-margin">
+            <div class="bigBox bottom-margin">
+                <h3 class="centertext">“My plants have become extremely valuable to me both sentimentally and literally.”</h3>
+            </div>
         </section>
 
-        <section class="centeralign">
-            <h3 class="centertext">“I currently use a calendar and notepad to track my watering and care schedule but there are far more variables than I could reasonably track myself”</h3>
+        <section class="flex-center-row bottom-margin">
+            <div class="bigBox bottom-margin">
+                <h3 class="centertext">“I currently use a calendar and notepad to track my watering and care schedule but there are far more variables than I could reasonably track myself”</h3>
+            </div>
         </section>
 
-        <section>
+        <section class="bottom-margin">
             <div class="centeralign"><h2>AFFINITY MAPPING</h2></div>
             <div class="flex">
                 <div class="centeralign"><img src="assets/affinity1.JPG" alt=""></div>
@@ -109,7 +125,7 @@
             </div>
         </section>
 
-        <section class="flex">
+        <section class="flex bottom-margin">
             <div class="flexleft">
                 <h2>COMPETITIVE ANALYSIS</h2>
                 <p>In addition to conducting a number of interviews with potential users, I performed a competitive analysis and researched a number of competitors and what they currently bring to the table. I've organized my findings in the table to the right.</p>
@@ -120,73 +136,83 @@
             </div>
         </section>
 
-        <section class="flex">
-            <div class="flexleft">
-                <h2>HOW MIGHT WE</h2>
-                <p>After concluding with my research I was able to come up with a few guiding “how might we” questions.</p>
+        <section class="bottom-margin">
+            <h2>HOW MIGHT WE</h2>
+            <div class="flex">
+                <div class="flexleft">
+                    <p>After concluding with my research I was able to come up with a few guiding “how might we” questions.</p>
+                </div>
+    
+                <div class="flexright">
+                    <ul>
+                        <li class="howmight">How might we provide users with accurate information about when to water their plants?</li>
+                        <li class="howmight">How might we make it so that users don't have to worry about watering their plants while away from home?</li>
+                        <li class="howmight">How might we make it easy for users to learn the needs of their plants and the best way to care for them?</li>
+                        <li class="howmight">How might we find helpful and credible information about many different plant varieties for our users to apply?</li>
+                        <li class="howmight">How might we encourage users to care for and water their plants on the optimal schedule even if the user isn't motivated when the plants need care?</li>
+                    </ul>
+                </div>
             </div>
-
-            <div class="flexright">
-                <ul>
-                    <li class="howmight">How might we provide users with accurate information about when to water their plants?</li>
-                    <li class="howmight">How might we make it so that users don't have to worry about watering their plants while away from home?</li>
-                    <li class="howmight">How might we make it easy for users to learn the needs of their plants and the best way to care for them?</li>
-                    <li class="howmight">How might we find helpful and credible information about many different plant varieties for our users to apply?</li>
-                    <li class="howmight">How might we encourage users to care for and water their plants on the optimal schedule even if the user isn't motivated when the plants need care?</li>
-                </ul>
-            </div>
+            
         </section>
 
-        <section class="flex">
-            <div class="flexleft">
-                <h2>DESIGN</h2>
-            </div>
+        <section>
+            <h2>DESIGN</h2>
 
             <div class="flexright">
                 <h3>Problem statement:</h3>
-                <p>(Plant) Growers need a consistent way to keep track of the needs of their plants because it's currently a very tedious and involved process.</p>
+                <p class="bottom-margin">(Plant) Growers need a consistent way to keep track of the needs of their plants because it's currently a very tedious and involved process.</p>
 
                 <h3>User flow:</h3>
-                <img src="assets/userFlow.svg" alt="">
+                <img class="bottom-margin" src="assets/userFlow.svg" alt="">
             </div>
         </section>
 
-        <section class="flex">
-            <div class="flexleft">
-                <h2>BRAND IDENTITY</h2>
-            </div>
+        <section class="bottom-margin">
+            <h2>BRAND IDENTITY</h2>
 
-            <div class="flexright">
-                <h3>This not that:</h3>
-                <ul>
-                    <li>Technical but not complex</li>
-                    <li>Refined but not high end (Sleek but affordable)</li>
-                    <li>Dependable but not ordinary</li>
-                    <li>Trusted but not serious</li>
-                    <li>Organic but not gentle</li>
-                </ul>
-
-                <img src="assets/colorPallet.png" alt="">
+            <div class="flex">
+                <div class="smallBox">
+                    <h3>This not that:</h3>
+                    <ul>
+                        <li>Technical but not complex</li>
+                        <li>Refined but not high end (Sleek but affordable)</li>
+                        <li>Dependable but not ordinary</li>
+                        <li>Trusted but not serious</li>
+                        <li>Organic but not gentle</li>
+                    </ul>
+                </div>
+                <div class="bigBox">
+                    <img src="assets/colorPallet.png" alt="">
+                </div>
             </div>
         </section>
 
         <section>
             <div class="centeralign"><h2>LOW FIDELITY WIREFRAMES</h2></div>
-            <div class="flex">
+            <div class="flex bottom-margin">
                 <div class="centeralign"><img src="assets/IMG_6013.JPG" alt=""></div>
                 <div class="centeralign"><img src="assets/IMG_6014.JPG" alt=""></div>
                 <div class="centeralign"><img src="assets/IMG_6015.JPG" alt=""></div>
             </div>
-            <div class="flex">
+            <div class="flex bottom-margin">
                 <div class="centeralign"><img src="assets/IMG_6016.JPG" alt=""></div>
                 <div class="centeralign"><img src="assets/IMG_6017.JPG" alt=""></div>
                 <div class="centeralign"><img src="assets/IMG_6018.JPG" alt=""></div>
             </div>
         </section>
 
-        <section>
-            <div class="centeralign"><h2>MID FIDELITY WIREFRAMES</h2></div>
-            <div class="centeralign"><a href="assets/midfidwire.pdf" target="_blank">View full mid fidelity wireframe PDF</a></div>
+        <section class="bottom-margin">
+            <div class="flex">
+                <div>
+                    <h2>MID FIDELITY WIREFRAMES</h2>
+                </div>
+                <div class="flexBottomRight">
+                    <a href="assets/midfidwire.pdf" target="_blank">VIEW FULL PDF</a>
+                </div>
+            </div>
+            <div class="centeralign"></div>
+            <div class="centeralign"></div>
             <div class="flex">
                 <div class="centeralign"><img src="assets/midfidHome.png" alt=""></div>
                 <div class="centeralign"><img src="assets/midfidAdd.png" alt=""></div>
@@ -194,55 +220,54 @@
             </div>
         </section>
 
-        <section>
-            <div class="centeralign"><h2>HIGH FIDELITY WIREFRAMES</h2></div>
-            <div class="centeralign"><a href="assets/highfidwire.pdf" target="_blank">View full high fidelity wireframe PDF</a></div>
+        <section class="bottom-margin">
             <div class="flex">
-                <div class="centeralign"><img src="assets/signin.png" alt=""></div>
-                <div class="centeralign"><img src="assets/collection.png" alt=""></div>
-                <div class="centeralign"><img src="assets/calendar.png" alt=""></div>
+                <div>
+                    <h2>HIGH FIDELITY WIREFRAMES</h2>
+                </div>
+                <div class="flexBottomRight">
+                    <a href="assets/highfidwire.pdf" target="_blank">VIEW FULL PDF</a>                </div>
+            </div>
+            <div class="flex">
+                <div class="flexeven"><img src="assets/signin.png" alt=""></div>
+                <div class="flexeven"><img src="assets/collection.png" alt=""></div>
+                <div class="flexeven"><img src="assets/calendar.png" alt=""></div>
             </div>
         </section>
 
-        <section>
+        <section class="bottom-margin">
             <div class="centeralign"><h2>HIGH FIDELITY PROTOTYPE</h2></div>
             <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="1000" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FvhIByguswyxFLXSkxKYjPQ%2FGROW-APP-HIGH-FIDELITY%3Fpage-id%3D0%253A1%26node-id%3D34%253A491%26viewport%3D241%252C48%252C0.29%26scaling%3Dscale-down%26starting-point-node-id%3D34%253A491" allowfullscreen></iframe>
         </section>
   
-        <section class="flex">
-            <div class="flexleft">
-                <h2>EVALUATION AND RESULTS</h2>
-            </div>
+        <section>
+            <h2>EVALUATION AND RESULTS</h2>
 
-            <div class="flexright">
-                <h3>Peer feedback:</h3>
-                <ol>
-                    <li>It's a little jarring being thrown right into the collection screen after signing up.</li>
-                    <li>I think it's a little hard to read my username and password on the sign in screen, maybe switch the colors used for the title and information?</li>
-                    <li>I found the email confirmation screen a little confusing and didn't understand that I couldn't press 'Submit'.</li>
-                </ol>
-                <h3>Design changes:</h3>
-                <ol>
-                    <li>The user is now guided to add a plant after they sign up. This will hopefully act as a little tutorial before the user is thrown into the app.</li>
-                    <li>The screen looked a little awkward with the colors swapped but I have darkened the information text color to make the screen more legible.</li>
-                    <li>The submit button now has a slightly lowered saturation until the required information is entered.</li>
-                </ol>
-            </div>
+            <h3>Peer feedback:</h3>
+            <ul class="bottom-margin">
+                <li>It's a little jarring being thrown right into the collection screen after signing up.</li>
+                <li>I think it's a little hard to read my username and password on the sign in screen, maybe switch the colors used for the title and information?</li>
+                <li>I found the email confirmation screen a little confusing and didn't understand that I couldn't press 'Submit'.</li>
+            </ul>
+
+            <h3>Design changes:</h3>
+            <ul class="bottom-margin">
+                <li>The user is now guided to add a plant after they sign up. This will hopefully act as a little tutorial before the user is thrown into the app.</li>
+                <li>The screen looked a little awkward with the colors swapped but I have darkened the information text color to make the screen more legible.</li>
+                <li>The submit button now has a slightly lowered saturation until the required information is entered.</li>
+            </ul>
         </section>
 
-        <section class="flex">
-            <div class="flexleft">
-                <h2>REFLECTION</h2>
-            </div>
+        <section>
+            <h2>REFLECTION</h2>
 
-            <div class="flexright">
-                <h3>Conclusion and reflection:</h3>
-                <p>This was my first fully fledged UX design project and I learned a lot from the process. One of the biggest takeaways I got was the importance of mid fidelity wireframes. After seeing some more examples of mid fidelity wireframes I've realized that mine is more of a digital low fidelity wireframe. At the time of creation I didn't quite realize how detailed a mid fidelity wireframe could get. Looking back I think my final high fidelity prototype would have benefitted from some more detail in the lower fidelity wireframes.</p>
-                
-                <h3>Future plans:</h3>
-                <p>Going forward I would love to turn GrowApp into a fully fledged product along with my roommate and friends working on a prototype for the physical sensor. Most of the physical hardware is out of my area of interest so I think I would primarily stick to the front end work I'm currently doing. In terms of front end I would love to start developing a good logo or graphic to represent the app and idea as a whole. I would also like to start developing some of my figma prototypes in HTML so that we can actually host an application.</p>
-            </div>
+            <h3>Conclusion and reflection:</h3>
+            <p class="bottom-margin">This was my first fully fledged UX design project and I learned a lot from the process. One of the biggest takeaways I got was the importance of mid fidelity wireframes. After seeing some more examples of mid fidelity wireframes I've realized that mine is more of a digital low fidelity wireframe. At the time of creation I didn't quite realize how detailed a mid fidelity wireframe could get. Looking back I think my final high fidelity prototype would have benefitted from some more detail in the lower fidelity wireframes.</p>
+            
+            <h3>Future plans:</h3>
+            <p>Going forward I would love to turn GrowApp into a fully fledged product along with my roommate and friends working on a prototype for the physical sensor. Most of the physical hardware is out of my area of interest so I think I would primarily stick to the front end work I'm currently doing. In terms of front end I would love to start developing a good logo or graphic to represent the app and idea as a whole. I would also like to start developing some of my figma prototypes in HTML so that we can actually host an application.</p>
         </section>
-        <script src="../../backlink.js"></script>
+
+        <script src="../../headerShrink.js"></script>
     </body>
 </html>
