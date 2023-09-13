@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const maxLineHeight = 120;
     const minLineHeight = 100;
 
-    const scaleRate = 0.01;
+    const scaleRate = 0.03;
     const lineHeightScrollRate = 20 / (2.8/scaleRate);
     //      3 / sR = 20 / lHSR
     //      (3 / sR) * lHSR = 20

@@ -13,29 +13,37 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <section class="maincontent">
-            <div>
-				<h1>GLEE 2023 GRAPHICS</h1>
-                <h4>OVERVIEW</h4>
+        <header>
+            <div class="flex">
+                <div class="flex">
+                    <h1 id="header-text">GLEE 2023 GRAPHICS</h1>
+                </div>
+                <div class="flexBottomRight">
+                    <a href="#othergraphics">GRAPHICS</a>
+                    <a href="assets/Layout.pdf" target="_blank">MOODBORD</a>
+                    <a href="https://www.instagram.com/gleemission/" target="_blank">GLEE INSTAGRAM</a>
+                    <a href="../">BACK</a>
+                </div>
+            </div>
+            <hr>
+        </header>
+
+        <section class="flex">
+            <div class="bigBox">   
+                <h3>OVERVIEW</h3>
                 <p><span>Designer:</span> Martin Allsbrook</p>
                 <p><span>Role:</span> Ideation, Moodboarding, Design</p>
                 <p><span>Tools used:</span> Illustrator</p>
-                <p><span>Timeline:</span> January 2022 – Febuary 2022</p>
+                <p class="bottom-margin"><span>Timeline:</span> January 2022 – Febuary 2022</p>
 
-				<h4>ABOUT THIS PROJECT</h4>
+				<h3>ABOUT THIS PROJECT</h3>
                 <p>This project was the winning entry of a logo design competition sponsored by NASA's Artemis Student Challenges and the Colorado Space Grant Consortium. The goal was to create a new logo for the GLEE lunar mission that represented the project and included imagery of the earth, moon, and “LunaSats” being sent. The competition ran from January 7th, to January 28th 2022, and the graphics I designed are used as the mission's logo.</p>
                 <!-- <p>The design shown was heavily inspired by the patches used by many American space missions. I wanted to keep the font simple and scientific but still give a futuristic feeling. I really like both the NASA worm and meatball logos and wanted to incorporate elements of each. I really like the way the letters connect in the NASA worm logo so I incorporated something similar with the GLEE letters without being too similar. I also gave a subtle nod to the NASA meatball logo by using the same star constellations featured in the background of the meatball. </p>
                 <p>I also created a series of simpler logos, shown below, that could be used in cases where the full patch design may be too noisy. These primarily focus on the GLEE lockup and representations of the earth and moon to show the connection the project is creating.</p> -->
             </div>
-			<div>
+			<div class="smallBox">
 				<img src="assets/glee-patch.svg" alt="">
 			</div>
-            <footer>
-                <h5><a class="biglink" href="#othergraphics">ADDITIONAL GRAPHICS BELOW</a></h5>
-                <h5><a class="biglink" href="assets/Layout.pdf" target="_blank">MOODBORD AND INITIAL IDEAS</a></h5>
-                <h5><a class="biglink" href="https://www.instagram.com/gleemission/" target="_blank">GLEE INSTAGRAM</a></h5>
-                <h5 id="backlink"><a class="biglink" href="../index.html">BACK</a></h5>
-            </footer>
         </section>
 
         <section id="othergraphics">
@@ -43,9 +51,8 @@
             <img src="assets/glee-graphic.svg" alt="">
             <img src="assets/glee-circle.svg" alt="">
             <img src="assets/glee-patch.svg" alt="">
-            <h5><a class="biglink" href="">BACK TO TOP</a></h5>
         </section>
         
-        <script src="../../backlink.js"></script>
+        <script src="../../headerShrink.js"></script>
     </body>
 </html>

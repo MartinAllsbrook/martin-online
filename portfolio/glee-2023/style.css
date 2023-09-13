@@ -18,6 +18,27 @@ body{
 
 
 /* Special link style for white background*/
+
+header {
+    background-color: white;
+    color: black;
+}
+a:link {
+    color: black;
+}
+a:visited {
+    color: black;
+}
+a:hover {
+    color: rgb(195, 195, 195);
+}
+a:active {
+    color: #d90504;
+}
+hr {
+    color: black;
+}
+
 a.biglink:link {
     color: black;
     font-weight: 600;
