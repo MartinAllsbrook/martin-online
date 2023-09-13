@@ -1,9 +1,4 @@
-#restart {
-    margin: 1vw 0vw;
-    padding: 1vw 2vw;
-    flex-grow: 1;
-    font-size: 2vw;
-}
+
 
 :root{
     --boardWidth: 600;
