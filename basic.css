@@ -384,10 +384,48 @@ h5 {
     #homepage-header .flexBottomRight a.last-link{
         flex-grow: 0;
     }
+
+    
 }
 @media screen and (max-width: 720px) {
     html{
         font-size: 9px;
+    }
+    .flex-row{
+        display: block;
+        margin-bottom: 0;
+        /* border-bottom: 1px solid rgb(54, 54, 54); */
+    }
+    .smallBox{
+        width: auto;
+        max-width: 100%;
+    }
+    .bigBox{
+        width: auto;
+        max-width: 100%;
+    }
+    .preview{
+        /* display: block; */
+        width: 50vw;
+        height: auto;
+    }
+    /* .smallBox{
+        margin-bottom: 2rem;
+    }
+    .bigBox {
+        margin-bottom: 2rem;
+    } */
+    img{
+        margin-bottom: 2rem;
+    }
+    p {
+        margin-bottom: 2rem;
+    }
+    video {
+        margin-bottom: 2rem;
+    }
+    iframe {
+        margin-bottom: 2rem;
     }
 }
 @media screen and (max-width: 600px) {
