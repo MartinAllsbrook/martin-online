@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return(this.image);
         }
     }
-
+    
     let items = [];
 
     let links = ['snake', 'glee-2023', 'growapp', 'type-specimen', 'handboard-poc', 'colorado-symphony', 'big-worms'];
