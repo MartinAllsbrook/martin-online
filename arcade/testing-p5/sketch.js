@@ -32,6 +32,6 @@ new p5(function(p5)
         p5.fill(p5.color(colorHue, 100, 100));
 
         physicsEngine.Draw(p5);
-        p5.ellipse(ball.position.x, ball.position.y, 80, 80);
+        // p5.ellipse(ball.position.x, ball.position.y, 80, 80);
     }
 });

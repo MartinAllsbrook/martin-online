@@ -16,10 +16,10 @@ export default class PhysicsEngine{
     }
 
     Update(){
-        // for(let i = 0; i < this.physicsObjects.length; i++){
-        //     const physicsObject = this.physicsObjects[i];
-        //     physicsObject.Update();
-        // }
+        for(let i = 0; i < this.physicsObjects.length; i++){
+            const physicsObject = this.physicsObjects[i];
+            physicsObject.Update();
+        }
         
         this.physicsObjects.forEach(object => {
             object.Update();
